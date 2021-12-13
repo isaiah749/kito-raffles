@@ -20,7 +20,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+
+
 
 
 // Getting Data From Firebase Based On Collection Name 'CustomerInfo'
@@ -39,4 +41,6 @@ const afterlifeData = getDocs(afterlifeCol)
                         })
 
 
-export { db, afterlifeData, afterlifeCol, addDoc };
+export default { db, afterlifeData, afterlifeCol, addDoc };
+
+

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Navbar from './components/Navbar'
+import Navbar from '../components/Navbar'
 import Image from 'next/image'
 
 function entrySuccess() {
