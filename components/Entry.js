@@ -138,7 +138,7 @@ function Entry() {
                 </div>
 
                 <div className='mt-5 flex items-center justify-end'>
-                    <button type='submit' className='bg-black text-white text-sm hover:bg-gray-300 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
+                    <button type='submit' form='entryForm' className='bg-black text-white text-sm hover:bg-gray-300 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
                 </div>
                             
             </form>
