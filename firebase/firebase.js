@@ -26,7 +26,7 @@ const app = initializeApp(firebaseConfig);
 
 
 // Getting Data From Firebase Based On Collection Name 'CustomerInfo'
-const db = getFirestore();
+const db = getFirestore(app);
 const afterlifeCol = collection(db, 'CustomerInfo')
 const afterlifeData = getDocs(afterlifeCol)
                         .then((snapshot) => {
@@ -41,6 +41,6 @@ const afterlifeData = getDocs(afterlifeCol)
                         })
 
 
-export default { db, afterlifeData, afterlifeCol, addDoc };
+export  { db, afterlifeData, afterlifeCol, addDoc };
 
 
