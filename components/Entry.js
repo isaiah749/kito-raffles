@@ -56,7 +56,7 @@ function Entry() {
             // Old function
             // form.classList.add('hide')
             // successSection.classList.remove('hide')
-            router.push('pages/entry-success')
+            router.push('/entry-success')
 
 
         })
@@ -65,7 +65,7 @@ function Entry() {
             // form.classList.classList.add('hide')
             // unsuccessfulSection.classList.remove('hide')
             console.log(error.message)
-            router.push('pages/entry-failed')
+            router.push('/entry-failed')
 
         })
     } else {
