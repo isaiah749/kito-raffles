@@ -36,7 +36,7 @@ function Entry() {
 
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        
         // const form = document.querySelector('#entryForm')
         // const successSection = document.querySelector('#submitSuccess')
         // const unsuccessfulSection = document.querySelector('#unsuccessful')
