@@ -35,8 +35,7 @@ function Entry() {
     const router = useRouter();
 
 
-    const handleSubmit = (e) => {
-        
+    const handleSubmit = () => {
         // const form = document.querySelector('#entryForm')
         // const successSection = document.querySelector('#submitSuccess')
         // const unsuccessfulSection = document.querySelector('#unsuccessful')
@@ -82,7 +81,7 @@ function Entry() {
 
     return (
         <div>
-            <form id='entryForm' onSubmit={handleSubmit} className='bg-testing bg-center bg-contain bg-no-repeat p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
+            <form id='entryForm' className='bg-testing bg-center bg-contain bg-no-repeat p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
                 {/* Form Title */}
                 <div className='mb-4'>
                     <h1 className='text-left text-2xl mb-1 text-white  font-title tracking-wider'>Afterlife Sneaker Raffle</h1>
@@ -138,7 +137,10 @@ function Entry() {
                 </div>
 
                 <div className='mt-5 flex items-center justify-end'>
-                    <button type='submit' className='bg-black text-white text-sm hover:bg-gray-300 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
+                    <button type='submit' onClick={(e) => {
+                        e.preventDefault();
+                        handleSubmit();
+                    }} className='bg-black text-white text-sm hover:bg-gray-300 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
                 </div>
                             
             </form>
