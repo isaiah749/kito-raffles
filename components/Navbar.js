@@ -14,7 +14,7 @@ function Navbar({toggle, reload}) {
                 <Link href="/"><a className='pt-2'>Kito-Raffles</a></Link>
             </div>
             {/* Nav Menu For Larger Screens */}
-            <div className="hidden sm:inline-flex pt-2 pr-2 text-lg">
+            <div className="hidden pr-8 sm:inline-flex pt-2 text-lg">
                 <ul className="text-white flex space-x-8 font-title tracking-widest">
                     <li onClick={reload} className="hover:underline hover:underline-offset-4"><Link href="/"><a>Home</a></Link></li>
                     <li className="hover:underline hover:underline-offset-4"><Link href="https://kito.online"><a>KITO.online</a></Link></li>

@@ -53,7 +53,7 @@ export default function Home() {
           </section>
           <div className="text-[1.6rem] font-title sm:pl-9 mt-8 sm:mt-12">About Kito-Raffles</div>
           <section className="h-64 w-screen bg-gray-400 text-center flex flex-col items-center text-lg justify-center">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolorem facere voluptatum ea. Molestiae non temporibus officiis excepturi dolor ex modi rerum quia rem labore!</p>
+            <p className='px-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolorem facere voluptatum ea. Molestiae non temporibus officiis excepturi dolor ex modi rerum quia rem labore!</p>
           </section>
         </main>
 

@@ -93,14 +93,14 @@ function afterlifeRaffle() {
                 <HamburgerDropdown isOpen={open} toggle={toggle} />
             </header>
             <main className='px-2'>
-                <form id='entryForm' onSubmit={handleSubmit} className='bg-blue-afterlife bg-center bg-contain bg-no-repeat p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
+                <form id='entryForm' onSubmit={handleSubmit} className='p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
                     {/* Form Title */}
                     <div className='mb-4'>
                         <h1 className='text-left text-2xl mb-1 font-bold font-title tracking-wider'>Afterlife Sneaker Raffle</h1>
                         <h2 className='text-md pl-2  font-bold'>Sign Up For Entry</h2>
                     </div>
                     {/* Form Content */}
-                    <div className='grid md:grid-cols-2'>
+                    <div className='grid place-items-center md:grid-cols-2'>
 
                         <div className='mb-4'>
                             <label htmlFor="firstName" className='text-xs block mb-1 font-bold'>First Name</label>
@@ -148,10 +148,48 @@ function afterlifeRaffle() {
 
                     </div>
 
-                    <div className='mt-5 flex items-center justify-end'>
-                        <button type='submit' form='entryForm' className='bg-black text-white text-sm hover:bg-gray-300 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
+                    <div className='mt-5 flex items-center justify-center h-14'>
+                        <button type='submit' form='entryForm' className='bg-black w-64 h-full text-white border border-black text-lg md:text-[1.2rem] hover:bg-white hover:text-black duration-500 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
                     </div>
                 </form>
+
+
+
+                <section className='mt-12 p-2 '>
+                    {/* Product Details */}
+                    <div className="text-[1.45rem] relative lg:left-12  max-w-3xl mb-1 font-bold tracking-widest font-title">Product Information</div>
+                    <div className=''>
+
+                        <div className='border-2 border-black h-auto mx-auto max-w-2xl py-2 px-3 rounded-md'>
+                            <p className='text-[1.1rem] tracking-wider font-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero eius quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis saepe doloremque voluptas iure modi laudantium magnam officiis atque? Ut vel iure sequi reprehenderit nesciunt dolor fugit impedit alias. Ipsa?</p>
+                            <p className='text-[1.1rem] tracking-wider font-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero eius quasi?</p>
+                            <p className='text-[1.1rem] tracking-wider font-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero eius quasi?</p>
+                                        
+                        </div>
+                                        
+                        {/* Product Image Display */}
+                        <div className='flex flex-wrap items-center max-w-4xl mx-auto border-2 border-black rounded-md mt-12'>
+                            <div className='mx-auto'>
+                                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0700.jpg?v=1638823550' height={250} width={250} />
+                            </div>
+                            <div className='mx-auto'>
+                                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' height={250} width={250} />
+                            </div>
+                            <div className='mx-auto'>
+                                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0702.jpg?v=1638823550' height={250} width={250} />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </section>
+
+
+
+
 
                 {/* Form Success */}
                 
