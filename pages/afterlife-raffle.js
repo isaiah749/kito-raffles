@@ -60,21 +60,24 @@ function afterlifeRaffle() {
         })
         .then(() => {
             // Old function
-            form.classList.add('hide')
+            // form.classList.add('hide')
+            form.style.display = 'none';
             successSection.classList.remove('hide')
 
 
         })
         .catch((error) => {
             // Old Function
-            form.classList.classList.add('hide')
+            // form.classList.classList.add('hide')
+            form.style.display = 'none';
             unsuccessfulSection.classList.remove('hide')
             console.log(error.message)
 
         })
     } else {
         // Old Function
-        form.classList.add('hide');
+        // form.classList.add('hide');
+        form.style.display = 'none';
         unsuccessfulSection.classList.remove('hide')
         console.log('Error')
     }
