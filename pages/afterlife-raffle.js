@@ -90,7 +90,9 @@ function afterlifeRaffle() {
         <div className='min-h-screen flex flex-col'>
             <header className='mb-5'>
                 <Navbar toggle={toggle} />
-                <HamburgerDropdown isOpen={open} toggle={toggle} />
+                <div className="mt-16">
+                    <HamburgerDropdown isOpen={open} toggle={toggle} />
+                </div>
             </header>
             <main className='px-2'>
                 <form id='entryForm' onSubmit={handleSubmit} className='p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
