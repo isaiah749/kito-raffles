@@ -159,7 +159,7 @@ function afterlifeRaffle() {
 
                 <section className='mt-12 p-2 '>
                     {/* Product Details */}
-                    <div className="text-[1.45rem] relative lg:left-12  max-w-3xl mb-1 font-bold tracking-widest font-title">Product Information</div>
+                    <div className="text-[1.45rem] relative lg:left-40 mb-6 max-w-3xl font-bold tracking-widest font-title">Product Information</div>
                     <div className=''>
 
                         <div className='border-2 border-black h-auto mx-auto max-w-2xl py-2 px-3 rounded-md'>

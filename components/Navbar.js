@@ -7,7 +7,7 @@ function Navbar({toggle, reload}) {
 
 
     return (
-        <div className='flex items-center w-screen fixed justify-between bg-black h-16'>
+        <div className='flex items-center z-50 w-screen fixed justify-between bg-black h-16'>
             {/* Title */}
             <div onClick={reload} className='text-3xl pl-2 cursor-pointer text-white font-title flex items-center tracking-widest'>
                 <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/SkullGraphicSpinningsmall.gif?v=1627671973' height={50} width={70} />
