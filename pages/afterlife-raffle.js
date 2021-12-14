@@ -170,7 +170,7 @@ function afterlifeRaffle() {
                         </div>
                                         
                         {/* Product Image Display */}
-                        <div className='flex flex-wrap items-center max-w-4xl mx-auto border-2 border-black rounded-md mt-12'>
+                        <div className='flex flex-wrap items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
                             <div className='mx-auto'>
                                 <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0700.jpg?v=1638823550' height={250} width={250} />
                             </div>
