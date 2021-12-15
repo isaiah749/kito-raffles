@@ -45,6 +45,7 @@ function afterlifeRaffle() {
         const form = document.querySelector('#entryForm')
         const successSection = document.querySelector('#submitSuccess')
         const unsuccessfulSection = document.querySelector('#unsuccessful')
+        const productInfo = document.querySelector('#productInfo');
 
         console.log(email, phone, selectedSize.shoeSize)
 
@@ -62,6 +63,7 @@ function afterlifeRaffle() {
             // Old function
             // form.classList.add('hide')
             form.style.display = 'none';
+            productInfo.style.display = 'none'
             successSection.classList.remove('hide')
 
 
@@ -70,6 +72,7 @@ function afterlifeRaffle() {
             // Old Function
             // form.classList.classList.add('hide')
             form.style.display = 'none';
+            productInfo.style.display = 'none'
             unsuccessfulSection.classList.remove('hide')
             console.log(error.message)
 
@@ -78,6 +81,7 @@ function afterlifeRaffle() {
         // Old Function
         // form.classList.add('hide');
         form.style.display = 'none';
+        productInfo.style.display = 'none'
         unsuccessfulSection.classList.remove('hide')
         console.log('Error')
     }
@@ -94,7 +98,7 @@ function afterlifeRaffle() {
                     <HamburgerDropdown isOpen={open} toggle={toggle} />
                 </div>
             </header>
-            <main className='px-2'>
+            <main className='px-2 mt-16'>
                 <form id='entryForm' onSubmit={handleSubmit} className='p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
                     {/* Form Title */}
                     <div className='mb-4'>
@@ -157,15 +161,25 @@ function afterlifeRaffle() {
 
 
 
-                <section className='mt-12 p-2 '>
+                <section id='productInfo' className='mt-12 p-2 '>
                     {/* Product Details */}
                     <div className="text-[1.45rem] relative lg:left-40 mb-6 max-w-3xl font-bold tracking-widest font-title">Product Information</div>
                     <div className=''>
 
                         <div className='border-2 border-black h-auto mx-auto max-w-2xl py-2 px-3 rounded-md'>
-                            <p className='text-[1.1rem] tracking-wider font-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero eius quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis saepe doloremque voluptas iure modi laudantium magnam officiis atque? Ut vel iure sequi reprehenderit nesciunt dolor fugit impedit alias. Ipsa?</p>
-                            <p className='text-[1.1rem] tracking-wider font-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero eius quasi?</p>
-                            <p className='text-[1.1rem] tracking-wider font-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero eius quasi?</p>
+                            <p className='text-[1.1rem] tracking-widest font-bold lg:text-[1.3rem] font-title'>Description</p>
+                            <p className='text-[.9rem] tracking-wider font-title pl-3 mb-3 lg:text-[1.1rem]'>These are the "Afterlife IV" sneakers by Kito Wares. This existential edition of a classic streetwear silhouette disguises its hellish inner workings beneath a shell of heaven-printed textile. Removing the shoe’s heavenly outer canvas, a landscape of dark imagery of premium canvas is brought to light. The shoes' religious packaging also includes a virtual reality headset to view a digital rendering of the pair. The shoe is coupled with a wing lace structure, mesh side panel, and extended heel tab. (Talk more about sole and structure)</p>
+                            <p className='text-[.9rem] tracking-wider font-title pl-3 lg:text-[1.1rem]'>"Afterlife" sneakers by Kito Wares. The classic silhouette features a printed image of the Heavens on a tearaway canvas upper hiding a Hellish printed canvas underneath. The shoe is coupled with a wing lace structure, mesh side panel, and extended heel tab.</p>
+                            <p className='text-[1.1rem] text-center mt-2 tracking-widest font-bold font-title lg:text-[1.3rem]'>Features</p>
+                            <ul className='text-center'>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Two layers of printed canvas</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Comfortable interior padding</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Includes limited edition virtual reality glasses</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Collectible Afterlife box</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Manufactured by Kito Wares</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>14-16 week delivery, product to made to order</li>
+                            </ul>
+                            
                                         
                         </div>
                                         
@@ -219,8 +233,8 @@ function afterlifeRaffle() {
                             <h1 className='text-black'>Submission Failed</h1>
                         </div>
                         <div className='p-3 bg-white rounded-md space-y-4'>
-                            <p className='text-center text-sm'>There was an error with your submission!</p>
-                            <p className='text-center text-sm'>If you believe that this is a website error, please reach out to <span className='font-bold'>info@kito.online</span> and let us know about the error.</p>
+                            <p className='text-center text-sm md:text-lg'>There was an error with your submission!</p>
+                            <p className='text-center text-sm md:text-lg'>If you believe that this is a website error, please reach out to <span className='font-bold'>info@kito.online</span> and let us know about the error.</p>
                         </div>
                     </div>
                 </div>
