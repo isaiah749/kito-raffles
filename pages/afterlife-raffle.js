@@ -90,26 +90,19 @@ function afterlifeRaffle() {
         <div className='min-h-screen flex flex-col'>
             <header className='mb-5'>
                 <Navbar toggle={toggle} />
-                <div className="mt-16">
+                <div className="">
                     <HamburgerDropdown isOpen={open} toggle={toggle} />
                 </div>
             </header>
             <main className='px-2'>
-
-                {/* Before Raffle Live */}
-                <div className="border border-black max-w-2xl mx-auto">
-                    <div className="font-title text-center text-2xl">Raffle Live This Friday @ 3PM EST</div>
-                </div>
-
-
-                {/* <form id='entryForm' onSubmit={handleSubmit} className='p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'> */}
+                <form id='entryForm' onSubmit={handleSubmit} className='p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
                     {/* Form Title */}
-                    {/* <div className='mb-4'>
+                    <div className='mb-4'>
                         <h1 className='text-left text-2xl mb-1 font-bold font-title tracking-wider'>Afterlife Sneaker Raffle</h1>
                         <h2 className='text-md pl-2  font-bold'>Sign Up For Entry</h2>
-                    </div> */}
+                    </div>
                     {/* Form Content */}
-                    {/* <div className='grid place-items-center md:grid-cols-2'>
+                    <div className='grid place-items-center md:grid-cols-2'>
 
                         <div className='mb-4'>
                             <label htmlFor="firstName" className='text-xs block mb-1 font-bold'>First Name</label>
@@ -160,13 +153,13 @@ function afterlifeRaffle() {
                     <div className='mt-5 flex items-center justify-center h-14'>
                         <button type='submit' form='entryForm' className='bg-black w-64 h-full text-white border border-black text-lg md:text-[1.2rem] hover:bg-white hover:text-black duration-500 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
                     </div>
-                </form> */}
+                </form>
 
 
 
-                {/* <section className='mt-12 p-2 '> */}
+                <section className='mt-12 p-2 '>
                     {/* Product Details */}
-                    {/* <div className="text-[1.45rem] relative lg:left-40 mb-6 max-w-3xl font-bold tracking-widest font-title">Product Information</div>
+                    <div className="text-[1.45rem] relative lg:left-40 mb-6 max-w-3xl font-bold tracking-widest font-title">Product Information</div>
                     <div className=''>
 
                         <div className='border-2 border-black h-auto mx-auto max-w-2xl py-2 px-3 rounded-md'>
@@ -174,10 +167,10 @@ function afterlifeRaffle() {
                             <p className='text-[1.1rem] tracking-wider font-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero eius quasi?</p>
                             <p className='text-[1.1rem] tracking-wider font-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero eius quasi?</p>
                                         
-                        </div> */}
+                        </div>
                                         
                         {/* Product Image Display */}
-                        {/* <div className='flex flex-wrap items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
+                        <div className='flex flex-wrap items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
                             <div className='mx-auto'>
                                 <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0700.jpg?v=1638823550' height={250} width={250} />
                             </div>
@@ -194,7 +187,7 @@ function afterlifeRaffle() {
 
 
 
-                </section> */}
+                </section>
 
 
 
@@ -202,7 +195,7 @@ function afterlifeRaffle() {
 
                 {/* Form Success */}
                 
-            {/* <section id='submitSuccess' className='hide min-h-screen p-2'>
+            <section id='submitSuccess' className='hide min-h-screen p-2'>
                 <div>
                     <div className='border-2 flex flex-col items-center mx-auto border-black rounded-md p-2 max-w-xl mb-2'>
                         <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' width={450} height={300} objectFit='contain' />
@@ -214,11 +207,11 @@ function afterlifeRaffle() {
                             <p className='text-center text-sm'>If the information entered is incorrect, please reach out to <span className='font-bold'>info@kito.online</span> and let us know about the error. Sending a screenshot of this message will best help our customer service team.</p>
                         </div>
                     </div>
-                </div> */}
-            {/* </section> */}
+                </div>
+            </section>
 
             {/* Form Unsuccessful */}
-            {/* <section id='unsuccessful' className='hide min-h-screen p-2'>
+            <section id='unsuccessful' className='hide min-h-screen p-2'>
                 <div>
                     <div className='border-2 flex flex-col items-center mx-auto border-black rounded-md p-2 max-w-xl mb-2'>
                         <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' width={450} height={300} objectFit='contain' />
@@ -231,7 +224,7 @@ function afterlifeRaffle() {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
 
 
 
