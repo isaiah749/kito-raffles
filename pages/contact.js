@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useState } from 'react'
 import HamburgerDropdown from '../components/HamburgerDropdown'
 import Navbar from '../components/Navbar'
@@ -16,6 +17,10 @@ function contact() {
     return (
         <div className='min-h-screen flex flex-col'>
             
+            <Head>
+                <title>Contact</title>
+            </Head>
+
             <Navbar toggle={toggle} />
             <HamburgerDropdown isOpen={open} toggle={toggle} />
               
