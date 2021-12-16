@@ -56,8 +56,8 @@ export default function Home() {
         <div className="text-[1.6rem] font-title lg:pl-5 mt-12 sm:mt-12">About Kito-Raffles</div>
         <section className='max-w-7xl mt-5 mx-auto'>
           <div className="w-full h-auto border-2 border-black p-2 text-center px-2 flex flex-col items-center text-lg justify-center">
-            <p className='px-3 max-w-3xl font-title text-[1.4rem] my-2 sm:text-[1.5rem]'>Welcome to Kito-Raffles!</p>
-            <p className="px-3 max-w-3xl font-title text-[1rem] sm:text-[1.2rem]">All Kito Raffles will be held on this website. It does not cost anything to enter the raffle and you will receive an invoice if you entry was selected! If you believe that there was an error with your submission or if you would like to delete your entry, please reach out to <span className='font-bold tracking-widest'>info@kito.online</span> and let them know your request.</p>
+            <p className='px-3 max-w-3xl font-title text-[1.4rem] lg:text-[1.75rem] my-2 sm:text-[1.5rem]'>Welcome to Kito-Raffles!</p>
+            <p className="px-3 max-w-3xl font-title text-[1rem] lg:text-[1.3rem] sm:text-[1.2rem]">All Kito Raffles will be held on this website. It does not cost anything to enter the raffle and you will receive an invoice if you entry was selected! If you believe that there was an error with your submission or if you would like to delete your entry, please reach out to <span className='font-bold tracking-widest'>info@kito.online</span> and let them know your request.</p>
           </div>
         </section>
 

@@ -177,7 +177,7 @@ function afterlifeRaffle() {
                                 <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Includes limited edition virtual reality glasses</li>
                                 <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Collectible Afterlife box</li>
                                 <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Manufactured by Kito Wares</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>14-16 week delivery, product to made to order</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>14-16 week delivery, product to made to order, no refunds</li>
                             </ul>
                             
                                         
