@@ -15,9 +15,10 @@ function Navbar({toggle, reload}) {
             </div>
             {/* Nav Menu For Larger Screens */}
             <div className="hidden pr-8 md:inline-flex pt-2 text-lg">
-                <ul className="text-white flex space-x-8 font-title tracking-widest">
+                <ul className="text-white flex lg:space-x-8 md:space-x-4 font-title tracking-widest">
                     <li onClick={reload} className="hover:underline hover:underline-offset-4"><Link href="/"><a>Home</a></Link></li>
                     <li className="hover:underline hover:underline-offset-4"><Link href="/contact"><a>Contact</a></Link></li>
+                    <li className="hover:underline hover:underline-offset-4"><Link href="/policy"><a>Policy</a></Link></li>
                     <li className="hover:underline hover:underline-offset-4"><Link href="https://kito.online"><a>KITO.online</a></Link></li>
                 </ul>
             </div>
