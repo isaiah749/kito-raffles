@@ -217,7 +217,7 @@ function afterlifeRaffle() {
                             <h1 className='text-black'>Submission Recieved</h1>
                         </div>
                         <div className='p-3 bg-white rounded-md space-y-4'>
-                            <p className='text-center text-sm'>Thank you for entering the Afterlife Sneaker Raffle! The sneakers are Made-to-Order, therefore please allow at least 14-16 weeks for orders to ship</p>
+                            <p className='text-center text-sm'>Thank you for entering the Afterlife Sneaker Raffle! The sneakers are Made-to-Order, therefore please allow at least 14-16 weeks from the official realease (December 31st, 2021) for orders to ship</p>
                             <p className='text-center text-sm'>If you believe the information entered is incorrect, please reach out to <span className='font-bold'>info@kito.online</span> and let us know about the error. Sending a screenshot of this message will best help our customer service team.</p>
                         </div>
                     </div>

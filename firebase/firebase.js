@@ -23,6 +23,8 @@ const app = initializeApp(firebaseConfig);
 
 
 
+let allData = [];
+
 
 
 // Getting Data From Firebase Based On Collection Name 'CustomerInfo'
@@ -30,11 +32,16 @@ const db = getFirestore(app);
 const afterlifeCol = collection(db, 'CustomerInfo')
 const afterlifeData = getDocs(afterlifeCol)
                         .then((snapshot) => {
-                            let users = [];
                             snapshot.docs.forEach((doc) => {
-                                users.push({ ...doc.data(), id: doc.id })
+                                allData.push({ ...doc.data(), id: doc.id })
                             })
-                            // console.log(users)
+                            allData.forEach(function (item) {
+                                // const email = item.Email
+                                // const phone = item.Phone
+                                // const size = item.ShoeSize.shoeSize
+                                // console.log('Email:',email, " Phone:", phone, 'ShoeSize:', size)
+                            })
+                    
                         })
                         .catch(error => {
                             // console.log(error.message)
