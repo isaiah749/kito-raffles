@@ -32,7 +32,7 @@ function contact() {
                     {/* Content */}
                     <div>
                         <p className='px-3 text-[.9rem] md:text-[1.1rem]'>
-                            You can reach out to <span className="font-bold tracking-wider">info@kito.online</span> about any questions and concerns. Our customer service team will respond as soon as possible.
+                            You can reach out to <span className="font-bold tracking-wider">info@kito.online</span> about any questions and concerns. Our customer success team will respond as soon as possible.
                         </p>
                     </div>
 

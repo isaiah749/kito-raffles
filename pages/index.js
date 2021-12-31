@@ -8,6 +8,7 @@ import Image from 'next/image'
 import Hero from '../components/Hero'
 import afterlifeRaffle from './afterlife-raffle'
 import gif from './styles/TEARAWAY_WIDE.gif'
+import Subscribe from '../components/Subscribe'
 
 export default function Home() {
 
@@ -48,8 +49,16 @@ export default function Home() {
         <section className='h-auto'>
           <div className="hero-image-container h-60 sm:h-auto border-2 border-black flex items-center justify-center relative">
             <Image src={gif} width={1000} height={600} />
-            <div className="font-title absolute md:top-2 top-1 lg:text-3xl text-2xl">Afterlife Sneaker - <span className='font-bold'>Live Now</span></div>
-            <div className="font-title cursor-pointer absolute hover:bg-white hover:text-black duration-500 bottom-1 lg:text-3xl text-white border border-black bg-black p-2 md:bottom-2 rounded-md text-2xl"><Link href='/afterlife-raffle'><a>Enter Raffle</a></Link></div>
+            <div className="font-title absolute md:top-2 top-1 lg:text-3xl text-2xl">Afterlife Sneaker - <span className='font-bold'>Drop Live Now</span></div>
+            <div className="font-title cursor-pointer absolute hover:bg-white hover:text-black duration-500 bottom-1 lg:text-3xl text-white border border-black bg-black p-2 md:bottom-2 rounded-md text-2xl"><Link href='https://kito.online/collections/afterlife-sneakers/products/afterlife-sneakers'><a>Afterlife Release</a></Link></div>
+          </div>
+        </section>
+
+        <div className="text-[1.6rem] font-title lg:pl-5 mt-12 sm:mt-12">Don't Miss Out</div>
+        <section className='max-w-7xl mt-5 mx-auto'>
+          <div className="w-full h-auto border-2 border-black p-2 text-center px-2 flex flex-col items-center text-lg justify-center">
+            <p className='px-3 max-w-3xl font-title text-[1.4rem] lg:text-[1.75rem] my-2 sm:text-[1.5rem]'>Subscribe To Be Notified About The Next Release</p>
+            <Subscribe />
           </div>
         </section>
 
@@ -60,6 +69,8 @@ export default function Home() {
             <p className="px-3 max-w-3xl font-title text-[1rem] lg:text-[1.3rem] sm:text-[1.2rem]">All Kito Raffles will be held on this website. It does not cost anything to enter the raffle and you will receive an invoice if you entry was selected! If you believe that there was an error with your submission or if you would like to delete your entry, please reach out to <span className='font-bold tracking-widest'>info@kito.online</span> and let them know your request.</p>
           </div>
         </section>
+
+        
 
         <div className="text-[1.6rem] font-title lg:pl-5 mt-8 sm:mt-12">Gallery</div>
 
