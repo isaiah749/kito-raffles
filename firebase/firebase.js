@@ -30,17 +30,17 @@ let allData = [];
 // Getting Data From Firebase Based On Collection Name 'CustomerInfo'
 const db = getFirestore(app);
 const afterlifeCol = collection(db, 'CustomerInfo')
-const afterlifeData = getDocs(afterlifeCol)
-                        .then((snapshot) => {
-                            let users = [];
-                            snapshot.docs.forEach((doc) => {
-                                users.push({ ...doc.data(), id: doc.id })
-                            })
-                            // console.log(users)
-                        })
-                        .catch(error => {
-                            // console.log(error.message)
-                        })
+// const afterlifeData = getDocs(afterlifeCol)
+//                         .then((snapshot) => {
+//                             let users = [];
+//                             snapshot.docs.forEach((doc) => {
+//                                 users.push({ ...doc.data(), id: doc.id })
+//                             })
+//                             // console.log(users)
+//                         })
+//                         .catch(error => {
+//                             // console.log(error.message)
+//                         })
 
 const subscriptionCol = collection(db, 'CustomerSubscribe')
 
