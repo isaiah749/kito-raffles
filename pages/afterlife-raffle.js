@@ -89,6 +89,8 @@ function afterlifeRaffle() {
         
 
     }
+    // Line 105 begins form title
+    // Line 110 begins form content
 
     return (
         <div className='min-h-screen flex flex-col'>
@@ -99,13 +101,19 @@ function afterlifeRaffle() {
                 </div>
             </header>
             <main className='px-2 mt-16'>
+            <div className="text-[1.45rem] relative lg:left-40 mb-6 max-w-3xl font-bold tracking-wide font-title">Enter The Raffle</div>
+                {/* <section className="p-2 py-5 max-h-[55rem] rounded-lg flex items-center justify-center flex-col border-2 border-black max-w-xl mx-auto">
+                    <div className="font-title text-xl">The Afterlife Raffle Is Now Over</div>
+                    <div className="font-title text-xl">Thank you to all who entered and best luck!</div>
+
+                </section> */}
                 <form id='entryForm' onSubmit={handleSubmit} className='p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
-                    {/* Form Title */}
+                    
                     <div className='mb-4'>
                         <h1 className='text-left text-2xl mb-1 font-bold font-title tracking-wider'>Afterlife Sneaker Raffle</h1>
                         <h2 className='text-md pl-2  font-bold'>Sign Up For Entry</h2>
                     </div>
-                    {/* Form Content */}
+                    
                     <div className='grid place-items-center md:grid-cols-2'>
 
                         <div className='mb-4'>
@@ -136,7 +144,7 @@ function afterlifeRaffle() {
                             <label htmlFor="size" className="after:content-['*'] after:ml-0.5 after:text-red-500  text-xs block mb-1  font-bold ">Shoe Size</label>
                             <Listbox  id="size" name="size" as='div' className='border-black border-2 rounded-sm focus:outline-none w-64 mb-16 p-1 ml-1 bg-white ' value={selectedSize} onChange={setSelectedSize}>
                                 <Listbox.Button><div className='w-64 font-bold pr-3'>Selected: {selectedSize.shoeSize}</div></Listbox.Button>
-                                <Listbox.Options className='border-black border-t-2 border-r-2 border-l-2 border-b-0 max-h-16 md:max-h-12 w-full overflow-scroll'>
+                                <Listbox.Options className='border-black border-t-2 border-r-2 border-l-2 border-b-0 max-h-32 md:max-h-52 w-full overflow-scroll'>
                                     {sizes.map((size) => (
                                         <Listbox.Option className='border border-black border-t-0 border-l-0 border-r-0 text-center border-b-2 cursor-pointer hover:bg-gray-400'
                                         key={size.id}
