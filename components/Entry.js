@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Image  from 'next/image'
 import { useRouter } from 'next/router'
 import { Listbox} from '@headlessui/react'
-import { db, afterlifeData, afterlifeCol, addDoc } from '../firebase/firebase'
+import { db, afterlifeCol, addDoc } from '../firebase/firebase'
 
 
 const sizes = [

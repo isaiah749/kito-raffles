@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Image  from 'next/image'
 import { Listbox} from '@headlessui/react'
-import { db, afterlifeData, afterlifeCol, addDoc } from '../firebase/firebase'
+import { db, afterlifeCol, addDoc } from '../firebase/firebase'
 import Navbar from '../components/Navbar'
 import HamburgerDropdown from '../components/HamburgerDropdown'
 

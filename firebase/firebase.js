@@ -45,7 +45,7 @@ const afterlifeCol = collection(db, 'CustomerInfo')
 const subscriptionCol = collection(db, 'CustomerSubscribe')
 
 
-export  { db, afterlifeCol, afterlifeData, subscriptionCol, addDoc };
+export  { db, afterlifeCol, subscriptionCol, addDoc };
 
 
 
