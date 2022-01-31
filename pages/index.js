@@ -22,14 +22,7 @@ export default function Home() {
     setIsOpen(!isOpen)
   }
 
-//   useEffect(() => {
-//     const hideMenu = () => {
-//       if(window.innerWidth > 768 && isOpen) {
-//         setIsOpen(false)
-//       }
-//     }
-//     window.addEventListener('resize', hideMenu)
-//   })
+
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -47,14 +40,7 @@ export default function Home() {
 
         <div className="font-title text-[1.6rem] lg:pl-5 mt-3">Happening Now</div>
         <section className='h-auto'>
-          {/* <div className="hero-image-container h-[280px] sm:mx-auto sm:h-[500px] lg:w-full xl:w-full sm:max-w-[600px] border-2 border-black flex items-center justify-center relative">
-            <div className="max-w-[500px] max-h-[500px] h-full sm:h-[500px]">
-              <Image src={heroImg} />
-            </div>
-            <div className="font-title absolute md:top-2 top-1 lg:text-3xl text-white text-2xl">Root of All Evil - <span className='font-bold'>Raffle Live</span></div>
-            
-            <div className="font-title cursor-pointer absolute hover:bg-white hover:text-black duration-500 bottom-1 lg:text-3xl text-white border border-black bg-black p-2 md:bottom-2 rounded-md text-2xl"><Link href='/RAE-raffle'><a>Enter Now</a></Link></div>
-          </div> */}
+
           <div className="hero-img-container border border-black flex items-center justify-center relative mx-auto max-w-[650px]">
             <Image src={heroImg} />
             <div className="text-white font-title absolute top-0 left-0 right-0 text-center pt-2 text-[1.4rem] md:text-[1.8rem] xl:text-[2rem]">
@@ -102,7 +88,7 @@ export default function Home() {
           
           <img className='w-full h-[150px] sm:h-[100%] object-cover lg:row-start-3 lg:row-end-5 lg:col-start-2 lg:col-end-4' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/A7_9778.jpg?v=1613550854" alt="" />
           
-          {/* <img className='w-full h-[150px] sm:h-[100%] object-cover lg:row-start-3 lg:row-end-5 lg:col-start-3 lg:col-end-4' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Catacomb_AF1_Green_Story.jpg?v=1613550854" alt="" /> */}
+
           
           <img className='w-full h-[150px] sm:h-[100%] object-cover lg:' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/A7_0978-Edit_1.jpg?v=1637769033" alt="" />
 
@@ -112,25 +98,7 @@ export default function Home() {
       </main>
 
 
-      {/* <section className='flex-col items-center justify-center min-h-screen p-2'>
-
-        <main className='mt-2 font-sans'>
-          <div className="text-[1.6rem]  font-title sm:pl-9 sm:mb-3">Happening Now</div>
-          <section className='border-black flex flex-col justify-between relative border bg-center max-w-7xl mx-auto bg-blue-afterlife h-96 bg-no-repeat bg-contain w-full'>
-            <div className='text-center pt-2 font-title text-[1.4rem] tracking-wider sm:my-2 sm:py-2 md:text-[1.7rem]'>Afterlife Sneaker - <span className='font-bold'>LIVE NOW</span></div>
-            <Hero />
-            <div className='text-center font-title text-[1.4rem] flex items-center sm:my-2 sm:py-2 justify-center bg-white h-14'>
-              <h2 className='border border-black py-1 px-3 cursor-pointer md:text-[1.7rem] hover:text-white duration-500 hover:bg-black'><Link href='/afterlife-raffle'><a>Enter Raffle</a></Link></h2>
-            </div>
-          </section>
-          <div className="text-[1.6rem] font-title sm:pl-9 mt-8 sm:mt-12">About Kito-Raffles</div>
-          <section className="h-64 w-full bg-gray-400 text-center px-2 flex flex-col items-center text-lg justify-center">
-            <p className='px-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolorem facere voluptatum ea. Molestiae non temporibus officiis excepturi dolor ex modi rerum quia rem labore!</p>
-          </section>
-        </main>
-
-
-        </section> */}
+    
     </div>
   )
 }

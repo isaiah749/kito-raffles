@@ -102,11 +102,6 @@ function afterlifeRaffle() {
             </header>
             <main className='px-2 mt-16'>
             <div className="text-[1.45rem] relative lg:left-40 mb-6 max-w-3xl font-bold tracking-wide font-title">Enter The Raffle</div>
-                {/* <section className="p-2 py-5 max-h-[55rem] rounded-lg flex items-center justify-center flex-col border-2 border-black max-w-xl mx-auto">
-                    <div className="font-title text-xl">The Afterlife Raffle Is Now Over</div>
-                    <div className="font-title text-xl">Thank you to all who entered and best luck!</div>
-
-                </section> */}
                 <form id='entryForm' onSubmit={handleSubmit} className='p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
                     
                     <div className='mb-4'>
