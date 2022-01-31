@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Entry from '../components/Entry-template'
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
 import HamburgerDropdown from '../components/HamburgerDropdown'
@@ -39,7 +38,7 @@ export default function Home() {
       <main className="px-5 pb-5 mt-16 ">
 
         <div className="font-title text-[1.6rem] lg:pl-5 mt-3">Happening Now</div>
-        <section className='h-auto'>
+        <section className='h-auto border-black border-2 max-w-full lg:p-2'>
 
           <div className="hero-img-container border border-black flex items-center justify-center relative mx-auto max-w-[650px]">
             <Image src={heroImg} />
