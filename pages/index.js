@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Entry from '../components/Entry'
+import Entry from '../components/Entry-template'
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
 import HamburgerDropdown from '../components/HamburgerDropdown'
@@ -7,7 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Hero from '../components/Hero'
 import afterlifeRaffle from './afterlife-raffle'
-import gif from './styles/TEARAWAY_WIDE.gif'
+import heroImg from './styles/RAE/15.png'
 import Subscribe from '../components/Subscribe'
 
 export default function Home() {
@@ -47,18 +47,34 @@ export default function Home() {
 
         <div className="font-title text-[1.6rem] lg:pl-5 mt-3">Happening Now</div>
         <section className='h-auto'>
-          <div className="hero-image-container h-60 sm:h-auto border-2 border-black flex items-center justify-center relative">
-            <Image src={gif} width={1000} height={600} />
-            <div className="font-title absolute md:top-2 top-1 lg:text-3xl text-2xl">Afterlife Sneaker - <span className='font-bold'>Raffle Live</span></div>
-            <div className="font-title cursor-pointer absolute hover:bg-white hover:text-black duration-500 bottom-1 lg:text-3xl text-white border border-black bg-black p-2 md:bottom-2 rounded-md text-2xl"><Link href='/afterlife-raffle'><a>Best of luck!</a></Link></div>
+          {/* <div className="hero-image-container h-[280px] sm:mx-auto sm:h-[500px] lg:w-full xl:w-full sm:max-w-[600px] border-2 border-black flex items-center justify-center relative">
+            <div className="max-w-[500px] max-h-[500px] h-full sm:h-[500px]">
+              <Image src={heroImg} />
+            </div>
+            <div className="font-title absolute md:top-2 top-1 lg:text-3xl text-white text-2xl">Root of All Evil - <span className='font-bold'>Raffle Live</span></div>
+            
+            <div className="font-title cursor-pointer absolute hover:bg-white hover:text-black duration-500 bottom-1 lg:text-3xl text-white border border-black bg-black p-2 md:bottom-2 rounded-md text-2xl"><Link href='/RAE-raffle'><a>Enter Now</a></Link></div>
+          </div> */}
+          <div className="hero-img-container border border-black flex items-center justify-center relative mx-auto max-w-[650px]">
+            <Image src={heroImg} />
+            <div className="text-white font-title absolute top-0 left-0 right-0 text-center pt-2 text-[1.4rem] md:text-[1.8rem] xl:text-[2rem]">
+              Root of All Evil - <span className="font-bold tracking-wide">Live Now</span>
+            </div>
+            <div className="text-white font-title absolute bottom-0 left-0 right-0 mx-auto pt-2 text-[1.4rem] md:text-[1.8rem] h-[50px] flex items-center justify-center w-[150px] mb-2 border border-white cursor-pointer">
+              <Link href='/RAE-raffle'><a className=''>Enter Now</a></Link>
+            </div>
           </div>
+
+
+
         </section>
 
         <div className="text-[1.6rem] font-title lg:pl-5 mt-12 sm:mt-12">Don't Miss Out</div>
         <section className='max-w-7xl mt-5 mx-auto'>
           <div className="w-full h-auto border-2 border-black p-2 text-center px-2 flex flex-col items-center text-lg justify-center">
             <p className='px-3 max-w-3xl font-title text-[1.4rem] lg:text-[1.75rem] my-2 sm:text-[1.5rem]'>Subscribe To Be Notified About The Next Release</p>
-            {/* <Subscribe /> */}
+            <p className='px-3 max-w-3xl font-title text-[1.05rem] lg:text-[1.4rem] sm:text-[1.2rem]'>Stay up to date on upcoming releases and news</p>
+            <Subscribe />
           </div>
         </section>
 

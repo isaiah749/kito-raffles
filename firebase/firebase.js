@@ -43,9 +43,33 @@ const afterlifeCol = collection(db, 'CustomerInfo')
 //                         })
 
 const subscriptionCol = collection(db, 'CustomerSubscribe')
+const subscribeData = getDocs(afterlifeCol)
+                        .then((snapshot) => {
+                            let users = [];
+                            snapshot.docs.forEach((doc) => {
+                                users.push({ ...doc.data(), id: doc.id })
+                            })
+                            // console.log(users)
+                        })
+                        .catch(error => {
+                            // console.log(error.message)
+                        })
 
 
-export  { db, afterlifeCol, subscriptionCol, addDoc };
+const raeCol = collection(db, 'RAE-raffle')
+const raeData = getDocs(afterlifeCol)
+                        .then((snapshot) => {
+                            let users = [];
+                            snapshot.docs.forEach((doc) => {
+                                users.push({ ...doc.data(), id: doc.id })
+                            })
+                            // console.log(users)
+                        })
+                        .catch(error => {
+                            // console.log(error.message)
+                        })
+
+export  { db, afterlifeCol, subscriptionCol, raeCol, addDoc };
 
 
 
