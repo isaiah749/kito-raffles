@@ -24,6 +24,65 @@ const sizes = [
     { id: 16, shoeSize: '14', unavailable: false },
 ]
 
+const countries = [
+    {id: 1, country: 'USA'},
+    {id: 2, country: 'GBR'},
+    {id: 3, country: 'CAN'},
+    {id: 4, country: 'GER'},
+    {id: 5, country: 'FRA'},
+    {id: 6, country: 'PRI'},
+    {id: 7, country: 'NLD'},
+    {id: 8, country: 'JPN'},
+    {id: 9, country: 'ITA'},
+    {id: 10, country: 'AUS'},
+    {id: 11, country: 'PRK'},
+    {id: 12, country: 'CHE'},
+    {id: 13, country: 'AUT'},
+    {id: 14, country: 'MEX'},
+    {id: 15, country: 'CHL'},
+    {id: 16, country: 'BEL'},
+    {id: 17, country: 'IRL'},
+    {id: 18, country: 'FIN'},
+    {id: 19, country: 'DNK'},
+    {id: 20, country: 'CZE'},
+    {id: 21, country: 'RUS'},
+    {id: 22, country: 'ISR'},
+    {id: 23, country: 'SWE'},
+    {id: 24, country: 'POL'},
+    {id: 25, country: 'ROU'},
+    {id: 26, country: 'IND'},
+    {id: 27, country: 'TUR'},
+    {id: 28, country: 'HGK'},
+    {id: 29, country: 'NOR'},
+    {id: 30, country: 'BRA'},
+    {id: 31, country: 'ZAF'},
+    {id: 32, country: 'MYS'},
+    {id: 33, country: 'PHL'},
+    {id: 34, country: 'ARE'},
+    {id: 35, country: 'CHN'},
+    {id: 36, country: 'PRT'},
+    {id: 37, country: 'TWN'},
+    {id: 38, country: 'SVK'},
+    {id: 39, country: 'HUN'},
+    {id: 40, country: 'LUX'},
+    {id: 41, country: 'GRC'},
+    {id: 42, country: 'COL'},
+    {id: 43, country: 'ECU'},
+    {id: 44, country: 'ARG'},
+    {id: 45, country: 'IDN'},
+    {id: 46, country: 'CRI'},
+    {id: 47, country: 'PAK'},
+    {id: 48, country: 'THA'},
+    {id: 49, country: 'GTM'},
+    {id: 50, country: 'SAU'},
+    {id: 51, country: 'UKR'},
+    {id: 52, country: 'VNM'},
+    {id: 53, country: 'SVN'},
+    {id: 54, country: 'GHA'},
+    {id: 55, country: 'HRV'},
+    {id: 56, country: 'NGA'}
+]
+
 
 function afterlifeRaffle() {
 
@@ -32,6 +91,7 @@ function afterlifeRaffle() {
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
     const [selectedSize, setSelectedSize] = useState(sizes[0])
+    const [country, setCountry] = useState(countries[0])
 
     const [open, setOpen] = useState(false)
 
@@ -134,11 +194,34 @@ function afterlifeRaffle() {
 
                         </div>
 
-                        <div className='mb-4'>
+                        {/* <div className='mb-4'>
                             <label className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-xs mb-1  font-bold" htmlFor="phone">Phone Number</label>
-                            <input value={phone} onChange={(e) => setPhone(e.target.value)} type='phone' id="phone" name="phone" className='w-64 ml-1 p-1 border border-black rounded-sm focus:outline-none text-sm' placeholder='+1 (555)-555-5555' />
+                            <input value={phone} onChange={(e) => setPhone(e.target.value)} type='number' id="phone" name="phone" className='w-64 ml-1 p-1 border border-black rounded-sm focus:outline-none text-sm' placeholder='1234567890' />
 
+                        </div> */}
+
+                        <div className="my-4' ml-[-1.5rem] md:ml-[-1.45rem] col-start-1 col-end-1 mb-5 flex flex-wrap">
+                            <div className="country-container">
+                            <label htmlFor="country" className='text-xs block mb-1 font-bold after:content-["*"] after:ml-0.5 after:text-red-500'>Country:</label>
+                            <Listbox id='country' name='country' as='div' className='border-black border text-center rounded-sm focus:outline-none w-24 mb-4' value={country} onChange={setCountry}>
+                                <Listbox.Button className=''>
+                                    <div className="text-sm text-center font-bold">{country.country}</div>
+                                </Listbox.Button>
+                                <Listbox.Options className='border-black border border-l-0 border-r-0 border-b-0 text-sm max-h-16 w-full overflow-scroll'>
+                                    {countries.map((country) => (
+                                        <Listbox.Option className='border border-black border-t-0 border-l-0 border-r-0' key={countries.id} value={country}>
+                                            {country.country}
+                                        </Listbox.Option>
+                                    ))}
+                                </Listbox.Options>
+                            </Listbox>
+
+                            <div className="phone-container">
+                                <label htmlFor="phone" className='text-xs block mb-1 font-bold after:content-["*"] after:ml-0.5 after:text-red-500'>Phone Number:</label>
+                                <input type="number" value={phone} onChange={(e) => setSubPhone(e.target.value)} id='phone' name='phone' className='w-56 ml-1 focus:outline-none p-1 border border-black rounded-sm text-sm' placeholder='Phone Number' />
+                            </div>
                         </div>
+                </div>
 
                         <div className='md:col-start-1 md:justify-self-center md:col-end-3'>
                             <label htmlFor="size" className="after:content-['*'] after:ml-0.5 after:text-red-500  text-xs block mb-1  font-bold ">Shoe Size</label>
@@ -167,7 +250,18 @@ function afterlifeRaffle() {
                     </div>
                 </form>
 
-
+                 {/* Product Image Display */}
+                    <div className='flex flex-wrap items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
+                        <div className='mx-auto'>
+                            <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0700.jpg?v=1638823550' height={250} width={250} />
+                        </div>
+                        <div className='mx-auto'>
+                            <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' height={250} width={250} />
+                        </div>
+                        <div className='mx-auto'>
+                            <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0702.jpg?v=1638823550' height={250} width={250} />
+                        </div>
+                    </div>                        
 
                 <section id='productInfo' className='mt-12 p-2 '>
                     {/* Product Details */}
@@ -191,18 +285,7 @@ function afterlifeRaffle() {
                                         
                         </div>
                                         
-                        {/* Product Image Display */}
-                        <div className='flex flex-wrap items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
-                            <div className='mx-auto'>
-                                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0700.jpg?v=1638823550' height={250} width={250} />
-                            </div>
-                            <div className='mx-auto'>
-                                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' height={250} width={250} />
-                            </div>
-                            <div className='mx-auto'>
-                                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0702.jpg?v=1638823550' height={250} width={250} />
-                            </div>
-                        </div>
+  
 
                     </div>
 

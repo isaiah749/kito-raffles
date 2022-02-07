@@ -24,7 +24,7 @@ function contact() {
             <Navbar toggle={toggle} />
             <HamburgerDropdown isOpen={open} toggle={toggle} />
               
-            <main className='mt-12 flex items-center p-2 justify-center'>
+            <main className='mt-4 flex items-center p-2 justify-center'>
                 <div className='border-2 mt-12 w-[45rem]
                 text-center font-title tracking-wide p-2 rounded-md border-black'>
                     {/* Title */}

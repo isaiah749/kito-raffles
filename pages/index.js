@@ -40,12 +40,14 @@ export default function Home() {
         <div className="font-title text-[1.6rem] lg:pl-5 mt-3">Happening Now</div>
         <section className='h-auto border-black border-2 max-w-full lg:p-2'>
 
-          <div className="hero-img-container border border-black flex items-center justify-center relative mx-auto max-w-[650px]">
-            <Image src={heroImg} />
+          <div className="hero-img-container flex items-center justify-center relative mx-auto max-w-[650px]">
+            <Link  href='/RAE-raffle'>
+              <Image className='cursor-pointer' src={heroImg} alt='Root of All Evil Raffle' />
+            </Link>
             <div className="text-white font-title absolute top-0 left-0 right-0 text-center pt-2 text-[1.4rem] md:text-[1.8rem] xl:text-[2rem]">
               Root of All Evil - <span className="font-bold tracking-wide">Live Now</span>
             </div>
-            <div className="text-white font-title absolute bottom-0 left-0 right-0 mx-auto pt-2 text-[1.4rem] md:text-[1.8rem] h-[50px] flex items-center justify-center w-[150px] mb-2 border border-white cursor-pointer">
+            <div className="text-white font-title absolute pt-2 text-[1.5rem] sm:text-[2rem] md:text-[1.8rem] h-[50px] w-[150px] sm:h-[75px] flex items-center justify-center sm:w-[200px] mb-2 border border-white cursor-pointer">
               <Link href='/RAE-raffle'><a className=''>Enter Now</a></Link>
             </div>
           </div>
@@ -79,7 +81,7 @@ export default function Home() {
 
           <img className='w-full h-[150px] sm:h-[100%] object-cover' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/catadunkprodshot2.jpg?v=1630549242" alt="" />
           
-          <video className='w-full h-[150px] sm:h-[100%] object-cover lg:col-start-2 lg:col-end-4 lg:row-start-1 lg:row-end-3' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/KitoTextFlickerOnlione.mp4?v=1626217097" autoPlay loop muted alt="" />
+          <img className='w-full h-[150px] sm:h-[100%] object-cover lg:col-start-2 lg:col-end-4 lg:row-start-1 lg:row-end-3' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/TEARAWAY_SQUARE.gif?v=1639504220" alt="" />
           
           <img className='w-full h-[150px] sm:h-[100%] object-cover lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-4' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0295.jpg?v=1628176585" alt="" />
           
@@ -89,7 +91,7 @@ export default function Home() {
           
 
           
-          <img className='w-full h-[150px] sm:h-[100%] object-cover lg:' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/A7_0978-Edit_1.jpg?v=1637769033" alt="" />
+          <img className='w-full h-[150px] sm:h-[100%] object-cover' src="https://cdn.shopify.com/s/files/1/0274/1351/2301/files/A7_0978-Edit_1.jpg?v=1637769033" alt="" />
 
         </section>
 
