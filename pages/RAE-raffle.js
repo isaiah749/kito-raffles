@@ -120,30 +120,16 @@ function afterlifeRaffle() {
             ShoeSize: selectedSize
         })
         .then(() => {
-            // Old function
-            // form.classList.add('hide')
-            form.style.display = 'none';
-            productInfo.style.display = 'none'
-            successSection.classList.remove('hide')
+            window.location.href = '/entry-success'
 
 
         })
         .catch((error) => {
-            // Old Function
-            // form.classList.classList.add('hide')
-            form.style.display = 'none';
-            productInfo.style.display = 'none'
-            unsuccessfulSection.classList.remove('hide')
-            console.log(error.message)
+            window.location.href = '/entry-unsuccessful'
 
         })
     } else {
-        // Old Function
-        // form.classList.add('hide');
-        form.style.display = 'none';
-        productInfo.style.display = 'none'
-        unsuccessfulSection.classList.remove('hide')
-        console.log('Error')
+        window.location.href = '/entry-unsuccessful'
     }
 
         
@@ -194,12 +180,6 @@ function afterlifeRaffle() {
 
                         </div>
 
-                        {/* <div className='mb-4'>
-                            <label className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-xs mb-1  font-bold" htmlFor="phone">Phone Number</label>
-                            <input value={phone} onChange={(e) => setPhone(e.target.value)} type='number' id="phone" name="phone" className='w-64 ml-1 p-1 border border-black rounded-sm focus:outline-none text-sm' placeholder='1234567890' />
-
-                        </div> */}
-
                         <div className="my-4' ml-[-1.5rem] md:ml-[-1.45rem] col-start-1 col-end-1 mb-5 flex flex-wrap">
                             <div className="country-container">
                             <label htmlFor="country" className='text-xs block mb-1 font-bold after:content-["*"] after:ml-0.5 after:text-red-500'>Country:</label>
@@ -218,7 +198,7 @@ function afterlifeRaffle() {
 
                             <div className="phone-container">
                                 <label htmlFor="phone" className='text-xs block mb-1 font-bold after:content-["*"] after:ml-0.5 after:text-red-500'>Phone Number:</label>
-                                <input type="number" value={phone} onChange={(e) => setSubPhone(e.target.value)} id='phone' name='phone' className='w-56 ml-1 focus:outline-none p-1 border border-black rounded-sm text-sm' placeholder='Phone Number' />
+                                <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} id='phone' name='phone' className='w-56 ml-1 focus:outline-none p-1 border border-black rounded-sm text-sm' placeholder='Phone Number' />
                             </div>
                         </div>
                 </div>
@@ -300,7 +280,7 @@ function afterlifeRaffle() {
 
                 {/* Form Success */}
                 
-            <section id='submitSuccess' className='hide min-h-screen p-2'>
+            {/* <section id='submitSuccess' className='hide min-h-screen p-2'>
                 <div>
                     <div className='border-2 flex flex-col items-center mx-auto border-black rounded-md p-2 max-w-xl mb-2'>
                         <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' width={450} height={300} objectFit='contain' />
@@ -313,10 +293,10 @@ function afterlifeRaffle() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Form Unsuccessful */}
-            <section id='unsuccessful' className='hide min-h-screen p-2'>
+            {/* <section id='unsuccessful' className='hide min-h-screen p-2'>
                 <div>
                     <div className='border-2 flex flex-col items-center mx-auto border-black rounded-md p-2 max-w-xl mb-2'>
                         <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' width={450} height={300} objectFit='contain' />
@@ -328,8 +308,8 @@ function afterlifeRaffle() {
                             <p className='text-center text-sm md:text-lg'>If you believe that this is a website error, please reach out to <span className='font-bold'>info@kito.online</span> and let us know about the error.</p>
                         </div>
                     </div>
-                </div>
-            </section>
+                </div> */}
+            {/* </section> */}
 
 
 

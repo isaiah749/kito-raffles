@@ -136,7 +136,7 @@ function Subscribe() {
                     </div>
                     <div className="sub-phone-container">
                         <label htmlFor="subPhoneNumber" className='text-xs block mb-1 font-bold'>Phone Number:</label>
-                        <input type="number" value={subPhone} onChange={(e) => setSubPhone(e.target.value)} id='subPhone' name='subPhone' className='w-56 ml-1 focus:outline-none p-1 border border-black rounded-sm text-sm' placeholder='Phone Number' />
+                        <input type="number" value={subPhone} onChange={(e) => setSubPhone(e.target.value)} id='subPhone' name='subPhone' className='w-56 ml-1 focus:outline-none p-1 border border-black rounded-sm text-sm' placeholder='5555555555' />
                     </div>
                 </div>
 
