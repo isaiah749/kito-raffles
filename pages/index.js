@@ -42,7 +42,7 @@ export default function Home() {
 
           <div className="hero-img-container flex items-center justify-center relative mx-auto max-w-[650px]">
             <Link  href='/RAE-raffle'>
-              <Image className='cursor-pointer' src={heroImg} alt='Root of All Evil Raffle' />
+              <Image className='cursor-pointer' src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_1890.png?v=1644856720' height={550} width={500} alt='Root of All Evil Raffle' />
             </Link>
             <div className="text-white font-title absolute top-0 left-0 right-0 text-center pt-2 text-[1.4rem] md:text-[1.8rem] xl:text-[2rem]">
               Root of All Evil - <span className="font-bold tracking-wide">Live Now</span>
