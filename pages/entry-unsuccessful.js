@@ -23,9 +23,9 @@ function entryUnsuccessful() {
         </header>
         <div>
             <div className='border-2 flex flex-col items-center mx-auto border-black rounded-md p-2 max-w-xl mb-2'>
-                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' width={450} height={300} objectFit='contain' />
+                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_1890.png?v=1644856720' width={550} height={400} objectFit='contain' />
                 <div className='text-center font-title tracking-wider mt-5 font-bold text-2xl'>
-                    <h1 className='text-black'>Submission Failed</h1>
+                    <h1 className='text-red-500'>Submission Failed</h1>
                 </div>
                 <div className='p-3 bg-white rounded-md space-y-4'>
                     <p className='text-center text-sm md:text-lg'>There was an error with your submission! Please try entering again!</p>

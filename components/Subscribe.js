@@ -63,18 +63,29 @@ const countries = [
 ]
 
 
+
+
 function Subscribe() {
     const [subFirstName, setSubFirstName] = useState("")
     const [subLastName, setSubLastName] = useState("")
     const [subEmail, setSubEmail] = useState("")
     const [subPhone, setSubPhone] = useState("")
     const [subCountry, setSubCountry] = useState(countries[0])
+    const [subMarketing, setSubMarketing] = useState(true)
+
+    const unsub = () => {
+        setSubMarketing(!subMarketing)
+    }
+
+    
+    
 
     const subSubmit = (e) => {
         e.preventDefault();
         const form = document.querySelector('#subForm');
         const subSuccess = document.querySelector('#subSuccess')
         const subFail = document.querySelector('#subFail')
+        // const checkbox = document.querySelector('#myCheck')
 
         if (subEmail != '' || subPhone != "" || subCountry != '') {
             console.log('success');
@@ -83,7 +94,8 @@ function Subscribe() {
                 LastName: subLastName,
                 Email: subEmail,
                 Phone: subPhone,
-                Country: subCountry
+                Country: subCountry,
+                Marketing: subMarketing
             })
             .then(() => {
                 form.style.display = 'none';
@@ -93,7 +105,8 @@ function Subscribe() {
                 form.style.display = 'none';
                 subFail.classList.remove('hide')
             })
-        } else {
+        }        
+        else {
             console.log('error')
             form.style.display = 'none';
             subFail.classList.remove('hide')
@@ -137,6 +150,14 @@ function Subscribe() {
                     <div className="sub-phone-container">
                         <label htmlFor="subPhoneNumber" className='text-xs block mb-1 font-bold'>Phone Number:</label>
                         <input type="number" value={subPhone} onChange={(e) => setSubPhone(e.target.value)} id='subPhone' name='subPhone' className='w-56 ml-1 focus:outline-none p-1 border border-black rounded-sm text-sm' placeholder='5555555555' />
+                    </div>
+                    <div className="checkbox-container relative block">
+                        {/* <input className='absolute left-0 top-0' id='myCheck' type="checkbox" /> */}
+                        <input type="checkbox" id='subCheckbox' className="absolute left-0 my-1 top-0" checked={subMarketing} onChange={unsub}  />
+                        <label htmlFor='subCheckbox' className="checkmark text-xs">
+                            <p className='mt-5'>I would like to receive text messages, and agree to the <span className='text-underline'>Terms of Serivce & Privacy Policy.</span> Reply <span className="font-bold">STOP</span> to cancel, <span className="font-bold">HELP</span> for help. Msg* & data rates may apply.
+                            </p>
+                        </label>
                     </div>
                 </div>
 

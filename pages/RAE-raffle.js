@@ -92,6 +92,11 @@ function afterlifeRaffle() {
     const [phone, setPhone] = useState("")
     const [selectedSize, setSelectedSize] = useState(sizes[0])
     const [country, setCountry] = useState(countries[0])
+    const [sub, setSub] = useState(true)
+
+    const unsub = () => {
+        setSub(!sub)
+    }
 
     const [open, setOpen] = useState(false)
 
@@ -106,6 +111,7 @@ function afterlifeRaffle() {
         const successSection = document.querySelector('#submitSuccess')
         const unsuccessfulSection = document.querySelector('#unsuccessful')
         const productInfo = document.querySelector('#productInfo');
+        // const checkbox = document.querySelector('#myCheck');
 
         console.log(email, phone, selectedSize.shoeSize)
 
@@ -117,7 +123,8 @@ function afterlifeRaffle() {
             LastName: lastName,
             Email: email,
             Phone: phone,
-            ShoeSize: selectedSize
+            ShoeSize: selectedSize,
+            Marketing: sub
         })
         .then(() => {
             window.location.href = '/entry-success'
@@ -128,7 +135,9 @@ function afterlifeRaffle() {
             window.location.href = '/entry-unsuccessful'
 
         })
-    } else {
+    } 
+    
+    else {
         window.location.href = '/entry-unsuccessful'
     }
 
@@ -224,6 +233,13 @@ function afterlifeRaffle() {
                         </div>
 
                     </div>
+                    <div className="checkbox-container relative block">
+                        <input className='absolute left-0 top-0' checked={sub} onChange={unsub} id='raeCheckbox' type="checkbox" />
+                        <label htmlFor='raeCheckbox' className="checkmark text-xs">
+                            <p className='mt-3'>I would like to receive text messages, and agree to the <span className='text-underline'>Terms of Serivce & Privacy Policy.</span> Reply <span className="font-bold">STOP</span> to cancel, <span className="font-bold">HELP</span> for help. Msg*&data rates may apply.
+                            </p>
+                        </label>
+                    </div>
 
                     <div className='mt-5 flex items-center justify-center h-14'>
                         <button type='submit' form='entryForm' className='bg-black w-64 h-full text-white border border-black text-lg md:text-[1.2rem] hover:bg-white hover:text-black duration-500 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
@@ -231,16 +247,8 @@ function afterlifeRaffle() {
                 </form>
 
                  {/* Product Image Display */}
-                    <div className='flex flex-wrap items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
-                        <div className='mx-auto'>
-                            <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0700.jpg?v=1638823550' height={250} width={250} />
-                        </div>
-                        <div className='mx-auto'>
-                            <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550' height={250} width={250} />
-                        </div>
-                        <div className='mx-auto'>
-                            <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0702.jpg?v=1638823550' height={250} width={250} />
-                        </div>
+                    <div className='flex flex-wrap justify-center items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
+                        <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_1890.png?v=1644856720' height={400} width={400} classNam='mx-auto' />
                     </div>                        
 
                 <section id='productInfo' className='mt-12 p-2 '>
@@ -250,16 +258,16 @@ function afterlifeRaffle() {
 
                         <div className='border-2 border-black h-auto mx-auto max-w-2xl py-2 px-3 rounded-md'>
                             <p className='text-[1.1rem] tracking-widest font-bold lg:text-[1.3rem] font-title'>Description</p>
-                            <p className='text-[.9rem] tracking-wider font-title pl-3 mb-3 lg:text-[1.1rem]'>These are the "Afterlife IV" sneakers by Kito Wares. This existential edition of a classic streetwear silhouette disguises its hellish inner workings beneath a shell of heaven-printed textile. Removing the shoe’s heavenly outer canvas, a landscape of dark imagery of premium canvas is brought to light. The shoes' religious packaging also includes a virtual reality headset to view a digital rendering of the pair. The shoe is coupled with a wing lace structure, mesh side panel, and extended heel tab. (Talk more about sole and structure)</p>
-                            <p className='text-[.9rem] tracking-wider font-title pl-3 lg:text-[1.1rem]'>"”Afterlife" sneakers by Kito Wares. The classic silhouette features a printed image of the Heavens on a tearaway canvas upper hiding a Hellish printed canvas underneath. The shoe is coupled with a wing lace structure, mesh side panel and extended heel tab.</p>
-                            <p className='text-[1.1rem] text-center mt-2 tracking-widest font-bold font-title lg:text-[1.3rem]'>Features</p>
+                            <p className='text-[.9rem] tracking-wider font-title pl-3 mb-3 lg:text-[1.1rem]'>The Kitowares "Root of All Evil" Skate Low, pink leather upper with corrupted money pattern printed canvase overlays. From there, a matching woven tongue label, heel tab, and sole completes the design.</p>
+                            <p className='text-[.9rem] tracking-wider font-title pl-3 lg:text-[1.1rem]'></p>
+                            <p className='text-[1.1rem] text-center mt-2 tracking-widest font-bold font-title lg:text-[1.3rem]'>Kitowares Root of All Evil Skate Low</p>
                             <ul className='text-center'>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Two layers of printed canvas</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Canvas Upper</li>
                                 <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Comfortable interior padding</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Includes limited edition virtual reality glasses</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Collectible Afterlife box</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Manufactured by Kito Wares</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>14-16 week delivery, product to made to order, no refunds</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Root of All Evil Design Box</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Puffy Mesh Skateboard Tongue for Impact Protection</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Kito Embroidery on Heel</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Manufactured by KITO</li>
                             </ul>
                             
                                         
