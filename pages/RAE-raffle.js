@@ -214,7 +214,7 @@ function afterlifeRaffle() {
 
                         <div className='md:col-start-1 md:justify-self-center md:col-end-3'>
                             <label htmlFor="size" className="after:content-['*'] after:ml-0.5 after:text-red-500  text-xs block mb-1  font-bold ">Shoe Size</label>
-                            <Listbox  id="size" name="size" as='div' className='border-black border-2 rounded-sm focus:outline-none w-64 mb-16 p-1 ml-1 bg-white ' value={selectedSize} onChange={setSelectedSize}>
+                            <Listbox  id="size" name="size" as='div' className='border-black border-2 rounded-sm focus:outline-none w-64 mb-5 p-1 ml-1 bg-white ' value={selectedSize} onChange={setSelectedSize}>
                                 <Listbox.Button><div className='w-64 font-bold pr-3'>Selected: {selectedSize.shoeSize}</div></Listbox.Button>
                                 <Listbox.Options className='border-black border-t-2 border-r-2 border-l-2 border-b-0 max-h-32 md:max-h-52 w-full overflow-scroll'>
                                     {sizes.map((size) => (
@@ -236,7 +236,7 @@ function afterlifeRaffle() {
                     <div className="checkbox-container relative block">
                         <input className='absolute left-0 top-0' checked={sub} onChange={unsub} id='raeCheckbox' type="checkbox" />
                         <label htmlFor='raeCheckbox' className="checkmark text-xs">
-                            <p className='mt-3'>I would like to receive text messages, and agree to the <span className='text-underline'>Terms of Serivce & Privacy Policy.</span> Reply <span className="font-bold">STOP</span> to cancel, <span className="font-bold">HELP</span> for help. Msg*&data rates may apply.
+                            <p className='ml-4 text-center'>I would like to receive text messages, and agree to the <span className='text-underline'>Terms of Serivce & Privacy Policy.</span> Reply <span className="font-bold">STOP</span> to cancel, <span className="font-bold">HELP</span> for help. Msg*&data rates may apply.
                             </p>
                         </label>
                     </div>
