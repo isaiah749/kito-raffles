@@ -27,7 +27,6 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Head>
         <title>Kito Raffles ~ Home</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Navbar toggle={toggle}  />

@@ -40,12 +40,12 @@ function entrySuccess() {
                     <h1 className='text-black'>Root of All Evil Hoodie</h1>
                 </div>
                 <div className='p-3 bg-white rounded-md space-y-4'>
-                 <p className="text-center text-sm">Premium cut and sew hoodie with own developed pattern featuring a boxy fit, dropped shoulders and added chest measurements for oversized drape under the arms. Highest quality fabric made out of densely knitted brushed fleece for a buttery hand feel.</p>
+                 <p className="text-center text-sm">Premium cut and sew hoodie with own developed pattern featuring a boxy fit, dropped shoulders, and added chest measurements for oversized drape under the arms. Highest quality fabric made out of densely knitted brushed fleece for a buttery hand feel.</p>
                  <ul className='text-sm'>
                      <li>- 28 oz 100% Organic Cotton</li>
-                     <li>- Heavyweight Frabric</li>
+                     <li>- Heavyweight Fabric</li>
                      <li>- Lint-Free inside</li>
-                     <li>- Double Stictched Shoulders, Sleeves and Bottom Cuffs</li>
+                     <li>- Double Stitched Shoulders, Sleeves, and Bottom Cuffs</li>
                      <li>- Thick Ribbing</li>
                      <li>- Double Lined Hood</li>
                      <li>- Kangaroo Pocket</li>
