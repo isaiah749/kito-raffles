@@ -52,7 +52,7 @@ function entrySuccess() {
                      <li>- Manufactured in Spain</li>
                      <li>- Care Info: Wash cold, below 30 degrees Celsius. Do not iron or bleach.</li>
                  </ul>
-                <Link href='https://kito.online'>
+                <Link href='https://kito.online/products/root-of-all-evil-hoodie?_pos=1&_sid=79ba36445&_ss=r'>
                     <div className='h-12 w-32 border-black border mx-auto flex items-center justify-center text-center font-bold cursor-pointer hover:bg-black hover:text-white duration-500'>Buy Now</div>
                 </Link>
                 </div>
