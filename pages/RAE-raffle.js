@@ -242,13 +242,17 @@ function afterlifeRaffle() {
                     </div>
 
                     <div className='mt-5 flex items-center justify-center h-14'>
-                        <button type='submit' form='entryForm' className='bg-black w-64 h-full text-white border border-black text-lg md:text-[1.2rem] hover:bg-white hover:text-black duration-500 p-2 md:text-base rounded-md font-title tracking-widest'>Submit Entry</button>
+                        <button type='submit' form='entryForm' className='bg-black w-64 h-full text-white border border-black text-lg md:text-[1.2rem] hover:bg-white hover:text-black duration-500 p-2 md:text-base rounded-md shadow-lg font-title tracking-widest'>Submit Entry</button>
                     </div>
                 </form>
 
                  {/* Product Image Display */}
-                    <div className='flex flex-wrap justify-center items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
+                    <div className='flex flex-wrap justify-center py-2 items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
                         <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_1890.png?v=1644856720' height={400} width={400} classNam='mx-auto' />
+                        <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_1933.png?v=1648052079' height={400} width={400} classNam='mx-auto' />
+                        <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/roaeprojection1.png?v=1648052079' height={400} width={400} classNam='mx-auto' />
+                        <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Image_20220318_125641.jpg?v=1648052080' height={400} width={400} classNam='mx-auto' />
+
                     </div>                        
 
                 <section id='productInfo' className='mt-12 p-2 '>
@@ -258,7 +262,9 @@ function afterlifeRaffle() {
 
                         <div className='border-2 border-black h-auto mx-auto max-w-2xl py-2 px-3 rounded-md'>
                             <p className='text-[1.1rem] tracking-widest font-bold lg:text-[1.3rem] font-title'>Description</p>
-                            <p className='text-[.9rem] tracking-wider font-title pl-3 mb-3 lg:text-[1.1rem]'>The Kitowares "Root of All Evil" Skate Low, pink leather upper with corrupted money pattern printed canvase overlays. From there, a matching woven tongue label, heel tab, and sole completes the design.</p>
+                            <p className='text-[.9rem] tracking-wider font-title pl-3 mb-3 lg:text-[1.1rem]'>
+                                The Kitowares "Root of All Evil" Skate Low features a pink leather upper with a corrupted money pattern printed canvas overlay. From there, a matching woven tongue label, heel tab, as well as sole completes this unique design.
+                            </p>
                             <p className='text-[.9rem] tracking-wider font-title pl-3 lg:text-[1.1rem]'></p>
                             <p className='text-[1.1rem] text-center mt-2 tracking-widest font-bold font-title lg:text-[1.3rem]'>Kitowares Root of All Evil Skate Low</p>
                             <ul className='text-center'>
