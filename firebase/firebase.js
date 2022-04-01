@@ -44,12 +44,13 @@ const afterlifeCol = collection(db, 'CustomerInfo')
 
 const subscriptionCol = collection(db, 'CustomerSubscribe')
 
-
-
 const raeCol = collection(db, 'RAE-raffle')
 
+const pompeiiCol = collection(db, 'pompeii-raffle')
 
-export  { db, afterlifeCol, subscriptionCol, raeCol, addDoc };
+
+
+export  { db, afterlifeCol, subscriptionCol, pompeiiCol, raeCol, addDoc };
 
 
 

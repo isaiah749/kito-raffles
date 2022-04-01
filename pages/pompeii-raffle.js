@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import Image  from 'next/image'
 import { Listbox} from '@headlessui/react'
-import { db, raeCol, addDoc } from '../firebase/firebase'
+import { db, pompeiiCol, addDoc } from '../firebase/firebase'
 import Navbar from '../components/Navbar'
 import HamburgerDropdown from '../components/HamburgerDropdown'
+import destructionImg from './styles/Pompeii/destruction-bg.jpg'
+import whiteBg from './styles/Pompeii/white-bg.jpg'
 
 
 const sizes = [
@@ -84,7 +86,7 @@ const countries = [
 ]
 
 
-function afterlifeRaffle() {
+function pompeii() {
 
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
@@ -118,7 +120,7 @@ function afterlifeRaffle() {
         if (email != '' || phone != '') {
             console.log('success')
         
-        addDoc(raeCol, {
+        addDoc(pompeiiCol, {
             FirstName: firstName,
             LastName: lastName,
             Email: email,
@@ -165,7 +167,7 @@ function afterlifeRaffle() {
                 <form id='entryForm' onSubmit={handleSubmit} className='p-2 py-5 max-h-[55rem] rounded-lg grid border-2 border-black max-w-xl mx-auto'>
                     
                     <div className='mb-4'>
-                        <h1 className='text-left text-2xl mb-1 font-bold font-title tracking-wide'>Root of All Evil Raffle</h1>
+                        <h1 className='text-left text-2xl mb-1 font-bold font-title tracking-wide'>Destruction of Pompeii Raffle</h1>
                         <h2 className='text-md pl-2 font-bold'>Sign Up For Entry</h2>
                     </div>
                     
@@ -234,8 +236,8 @@ function afterlifeRaffle() {
 
                     </div>
                     <div className="checkbox-container relative block">
-                        <input className='absolute left-0 top-0' checked={sub} onChange={unsub} id='raeCheckbox' type="checkbox" />
-                        <label htmlFor='raeCheckbox' className="checkmark text-xs">
+                        <input className='absolute left-0 top-0' checked={sub} onChange={unsub} id='pompeiiCheckbox' type="checkbox" />
+                        <label htmlFor='pompeiiCheckbox' className="checkmark text-xs">
                             <p className='ml-4 text-center'>I would like to receive text messages, and agree to the <span className='text-underline'>Terms of Serivce & Privacy Policy.</span> Reply <span className="font-bold">STOP</span> to cancel, <span className="font-bold">HELP</span> for help. Msg*&data rates may apply.
                             </p>
                         </label>
@@ -247,11 +249,11 @@ function afterlifeRaffle() {
                 </form>
 
                  {/* Product Image Display */}
-                    <div className='flex flex-wrap justify-center py-2 items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
-                        <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_1890.png?v=1644856720' height={400} width={400} className='mx-auto' />
-                        <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_1933.png?v=1648052079' height={400} width={400} className='mx-auto' />
-                        <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/roaeprojection1.png?v=1648052079' height={400} width={400} className='mx-auto' />
-                        <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Image_20220318_125641.jpg?v=1648052080' height={400} width={400} className='mx-auto' />
+                    <div className='flex flex-wrap justify-center space-x-5 items-center max-w-6xl mx-auto border-2 border-black rounded-md mt-12'>
+                        <Image src={destructionImg} height={400} width={400} className='mx-auto' />
+                        <Image src={whiteBg} height={400} width={550} className='mx-auto' />
+                        {/* <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/roaeprojection1.png?v=1648052079' height={400} width={400} classNam='mx-auto' /> */}
+                        {/* <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Image_20220318_125641.jpg?v=1648052080' height={400} width={400} classNam='mx-auto' /> */}
 
                     </div>                        
 
@@ -263,17 +265,16 @@ function afterlifeRaffle() {
                         <div className='border-2 border-black h-auto mx-auto max-w-2xl py-2 px-3 rounded-md'>
                             <p className='text-[1.1rem] tracking-widest font-bold lg:text-[1.3rem] font-title'>Description</p>
                             <p className='text-[.9rem] tracking-wider font-title pl-3 mb-3 lg:text-[1.1rem]'>
-                                The Kitowares "Root of All Evil" Skate Low features a pink leather upper with a corrupted money pattern printed canvas overlay. From there, a matching woven tongue label, heel tab, as well as sole completes this unique design.
+                            The Pompeii Custom NB 550 Low features a airbrushed graphic of the eruption of Mount Vesuvius across the side of the shoe. This is applied through a very time consuming process executed by hand. The blue color references ancient artifacts and serves as a direct contradiction to the normally red and orange tones that would be used to depict a volcanic eruption.
                             </p>
                             <p className='text-[.9rem] tracking-wider font-title pl-3 lg:text-[1.1rem]'></p>
-                            <p className='text-[1.1rem] text-center mt-2 tracking-widest font-bold font-title lg:text-[1.3rem]'>Kitowares Root of All Evil Skate Low</p>
+                            <p className='text-[1.1rem] text-center mt-2 tracking-widest font-bold font-title lg:text-[1.3rem]'>Pompeii Custom NB 550</p>
                             <ul className='text-center'>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Canvas Upper</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Leather Upper</li>
                                 <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Comfortable interior padding</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Root of All Evil Design Box</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Puffy Mesh Skateboard Tongue for Impact Protection</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Kito Embroidery on Heel</li>
-                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Manufactured by KITO</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>NB 550 Box</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Classic Sneaker Shape</li>
+                                <li className='font-title text-[.9rem] tracking-wider lg:text-[1.1rem]'>Hand Painted</li>
                             </ul>
                             
                                         
@@ -332,4 +333,4 @@ function afterlifeRaffle() {
     )
 }
 
-export default afterlifeRaffle
+export default pompeii

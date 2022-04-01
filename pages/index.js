@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Hero from '../components/Hero'
 import afterlifeRaffle from './afterlife-raffle'
-import heroImg from './styles/RAE/15.png'
+import heroImg from './styles/Pompeii/destruction-bg.jpg'
 import Subscribe from '../components/Subscribe'
 
 export default function Home() {
@@ -40,15 +40,17 @@ export default function Home() {
         <section className='h-auto border-black border-2 max-w-full lg:p-2'>
 
           <div className="hero-img-container flex items-center justify-center relative mx-auto max-w-[650px]">
-            <Link  href='/RAE-raffle'>
-              <Image className='cursor-pointer' src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_1890.png?v=1644856720' height={550} width={500} alt='Root of All Evil Raffle' />
+            <Link  href='/pompeii-raffle'>
+              <Image className='cursor-pointer' src={heroImg} height={550} width={500} alt='Root of All Evil Raffle' />
             </Link>
             <div className="text-white font-title absolute top-0 left-0 right-0 text-center pt-2 text-[1.4rem] md:text-[1.8rem] xl:text-[2rem]">
-              Root of All Evil - <span className="font-bold tracking-wide">Live Now</span>
+              Raffle - <span className="font-bold tracking-wide">Live Now</span>
             </div>
+          <Link href='/pompeii-raffle'>
             <div className="text-white font-title absolute pt-2 text-[1.5rem] sm:text-[2rem] md:text-[1.8rem] h-[50px] w-[150px] sm:h-[75px] flex items-center justify-center sm:w-[200px] mb-2 border border-white cursor-pointer">
-              <Link href='/RAE-raffle'><a className=''>Enter Now</a></Link>
+                <a className=''>Enter Now</a>
             </div>
+          </Link>
           </div>
 
 
