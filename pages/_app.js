@@ -1,5 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import './styles/main.css'
+import { Provider } from 'react-redux'
+import { store } from '../app/store'
 
 // function MyApp({ Component, pageProps }) {
 //   return <Component {...pageProps} />
@@ -46,7 +48,9 @@ const App = ({ Component, pageProps }) => {
           `,
         }}
       />
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   )
 }
