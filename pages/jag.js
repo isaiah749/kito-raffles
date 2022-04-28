@@ -99,7 +99,7 @@ export default function Jag() {
 						{sizeData.map(({ id, size }) => (
 							<RadioGroup key={id} value={sizeSelected} onChange={setSizeSelected}>
 								<RadioGroup.Option
-									className='h-12 w-[4.5rem] md:w-36 flex items-center justify-center'
+									className='h-12 w-[4.5rem] lg:w-36 flex items-center justify-center'
 									value={size}>
 									{({ checked }) => (
 										<span
