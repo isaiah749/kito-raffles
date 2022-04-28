@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import HamburgerDropdown from '../components/HamburgerDropdown';
 import Image from 'next/image';
-import jag from './styles/Jag/jag-2.png';
+import jag from './styles/Jag/Jag.jpg';
 import sizeData from './context/shoeSizeData.json';
 import { RadioGroup } from '@headlessui/react';
 import bagIcon from './styles/Icons/bag-icon.svg';
@@ -14,12 +14,10 @@ import jagTwo from './styles/Jag/jag-2.png';
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
-loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 export default function Jag() {
 	const dispatch = useDispatch();
 
 	const [ open, setOpen ] = useState(false);
-	let [ plan, setPlan ] = useState('startup');
 	const [ sizeSelected, setSizeSelected ] = useState('');
 
 	const toggle = () => {
@@ -28,7 +26,8 @@ export default function Jag() {
 
 	const addToBag = () => {
 		const title = 'Kito Jag Foam Shoes';
-		const price = '$120';
+		const price = 98;
+		const image = 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948';
 		const description =
 			'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium natus facilis architecto quos, laudantium hic voluptatibus vitae vel quidem asperiores cum inventore ea molestiae fugit sit deserunt omnis quae dicta?';
 		if (sizeSelected == '') {
@@ -38,7 +37,8 @@ export default function Jag() {
 				title,
 				sizeSelected,
 				price,
-				description
+				description,
+				image
 			};
 
 			dispatch(addToBasket(product));
@@ -70,37 +70,35 @@ export default function Jag() {
 				</div>
 			</header>
 			{/* MOBILE AND TABLET LAYOUT */}
-			<main className='pt-24 w-full h-full relative xl:hidden'>
+			<main className='pt-24 w-full h-[200vh] relative xl:hidden'>
 				<section className='w-full'>
 					<div className='px-5'>
 						<h2 className='font-title text-[2.15rem] tracking-wide lg:text-[2.4rem] '>
 							Kito Jag Foam Shoe
 						</h2>
 						<h3 className='font-title text-xl tracking-wide -mt-1 pl-2 lg:text-2xl '>Men's Foam Shoes</h3>
-						<p className='font-title text-xl mt-4 pl-2 lg:text-2xl '>$150</p>
+						<p className='font-title text-xl mt-4 pl-2 lg:text-2xl '>$98</p>
 					</div>
 
-					<div className='relative mt-10 h-full  lg:items-center lg:justify-center lg:hidden lg:mb-16 '>
-						<Image src={jag} height={420} width={420} objectFit='cover' />
+					<div className='relative mt-10 h-full md:hidden '>
+						<Image src={jag} loading='lazy' height={450} width={450} objectFit='cover' />
 					</div>
 
-					<div className='hidden relative mt-10 h-full lg:flex lg:items-center lg:justify-center lg:mb-16 '>
-						<Image src={jag} height={620} width={620} objectFit='cover' />
+					<div className='hidden relative mt-10 h-full md:flex md:items-center md:justify-center md:mb-16 '>
+						<Image src={jag} loading='lazy' height={620} width={620} objectFit='cover' />
 					</div>
 				</section>
 
 				<section className='flex items-center justify-around space-x-20 mt-8 lg:justify-between lg:space-x-0 lg:px-10 mb-2 '>
 					<h3 className='font-semibold lg:text-lg '>Select Size</h3>
-					<h3 className='font-semibold text-gray-500 lg:text-lg'>Size Guide</h3>
+					<h3 className='font-semibold text-gray-500 lg:text-lg'>US Men's Size</h3>
 				</section>
 
 				<section className='w-full'>
-					<form className='grid grid-cols-5 items-center justify-items-center gap-1 py-2 px-4 w-full'>
+					<form className='grid grid-cols-2 lg:grid-cols-4 items-center justify-items-center gap-1 py-2 px-4 w-full'>
 						{sizeData.map(({ id, size }) => (
 							<RadioGroup key={id} value={sizeSelected} onChange={setSizeSelected}>
-								<RadioGroup.Option
-									className='h-12 w-[4.5rem] lg:w-36 flex items-center justify-center'
-									value={size}>
+								<RadioGroup.Option className='h-12 w-40 flex items-center justify-center' value={size}>
 									{({ checked }) => (
 										<span
 											className={
@@ -118,7 +116,7 @@ export default function Jag() {
 						))}
 					</form>
 
-					<section className='px-4 mt-5 w-full h-[400px]'>
+					<section className='px-4 mt-5 mb-[5rem] w-full h-[400px]'>
 						<h2 className='font-title text-2xl lg:px-7 lg:text-3xl '>Product Description</h2>
 						<p className='text-md w-[300px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae consequatur et veritatis,
@@ -157,7 +155,7 @@ export default function Jag() {
 			<div className='hidden xl:block text-black xl:pb-5 xl:relative xl:mt-[5rem] '>
 				<main className='grid grid-cols-12 relative w-full h-[100vh] '>
 					{/* LEFT SECTION */}
-					<section className='col-span-8 2xl:col-span-9 w-full h-[200vh] border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
+					<section className='col-span-8 2xl:col-span-9 w-full h-[200vh] main-background border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
 						<div className='relative h-[750px] w-full'>
 							<Image
 								src={jag}
@@ -168,10 +166,12 @@ export default function Jag() {
 							/>
 						</div>
 
-						<h2 className='font-title my-10 text-center text-3xl '>Product Description</h2>
+						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+							Product Description
+						</h2>
 
-						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] space-x-6 2xl:space-x-16'>
-							<div className='mt-10'>
+						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] main-background py-5 space-x-6 2xl:space-x-16'>
+							<div className='mt-10 bg-white p-2 border-2 border-black'>
 								<h1 className='font-title text-4xl tracking-wide font-semibold '>KITO Jag Foam Shoe</h1>
 								<h3 className='font-title text-2xl tracking-wide text-black mt-3 italic '>
 									Each shoe features premium eva foam + jaguar skull mold
@@ -190,7 +190,9 @@ export default function Jag() {
 							</div>
 						</div>
 
-						<h2 className='font-title mt-20 mb-10 text-center text-3xl '>Gallery</h2>
+						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-2 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+							Gallery
+						</h2>
 
 						<div className='w-full relative flex flex-wrap items-center justify-center space-x-5 mx-auto px-[4.4rem] h-[max-content] '>
 							<div className=''>
@@ -204,12 +206,12 @@ export default function Jag() {
 						</div>
 					</section>
 					{/* RIGHT SECTION */}
-					<section className='col-span-4 2xl:col-span-3 w-full z-50 h-full relative px-8 py-5 '>
+					<section className='col-span-4 2xl:col-span-3 w-full z-20 h-full relative px-8 py-5 '>
 						<div className='fixed'>
 							<div className=''>
 								<h3 className='font-title italic text-[1.75rem] '>US Men's Shoe</h3>
 								<h1 className='font-title text-[2.35rem] -mt-2 font-bold '>Kito Jag Foam Shoe</h1>
-								<h3 className='font-title text-[1.65rem] mt-3 '>$120</h3>
+								<h3 className='font-title text-[1.65rem] mt-3 '>$98</h3>
 							</div>
 
 							<div className=''>
@@ -223,7 +225,7 @@ export default function Jag() {
 
 							<div className='mt-6 flex items-center justify-between px-5 '>
 								<p className='font-semibold text-md'>Select Size</p>
-								<p className='font-semibold text-gray-500 text-md'>Size Guide</p>
+								<p className='font-semibold text-gray-500 text-md'>US Men's Size</p>
 							</div>
 
 							<form className='grid grid-cols-2 items-center justify-items-center gap-1 py-2 px-4 w-full'>
@@ -254,7 +256,7 @@ export default function Jag() {
 									addToBag();
 									console.log({ sizeSelected });
 								}}
-								className='py-2 h-14 border-2 border-black rounded-xl flex items-center justify-center shadow-xl mt-5 bg-black text-white w-full font-title text-[1.6rem] '>
+								className='py-2 h-14 border-2 border-black rounded-xl flex items-center active:scale-90 transition duration-300 justify-center shadow-xl mt-5 bg-black text-white w-full font-title text-[1.6rem] '>
 								<p className='mr-2'>Add to bag</p>
 								<div className='pt-1'>
 									<Image src={bagIcon} height={35} width={35} />

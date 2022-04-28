@@ -9,10 +9,33 @@ import afterlifeRaffle from './afterlife-raffle';
 import heroImg from './styles/Jag/Jag.jpg';
 import Subscribe from '../components/Subscribe';
 import { useRouter } from 'next/router';
+import Slideshow from '../components/Slideshow';
+import jagPlane from './styles/Jag/jag-plane.jpg';
+import Typed from 'react-typed';
 
 export default function Home() {
 	const router = useRouter();
 	const [ isOpen, setIsOpen ] = useState(false);
+
+	const images = [
+		{
+			link: 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Image_20220318_125641.jpg?v=1648052080',
+			name: 'Roots'
+		},
+		{
+			link: 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0701.jpg?v=1638823550',
+			name: 'Afterlife'
+		},
+		{
+			link: 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/MM-Shoe.jpg?v=1632757060',
+			name: 'Mary'
+		},
+		{
+			link:
+				'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/catadunkprodshot2_9220204c-d6cc-489e-bb1c-9e63cb5c5566.jpg?v=1637766112',
+			name: 'Catacombs'
+		}
+	];
 
 	//   const reload = () => {
 	//     window.location.reload()
@@ -33,97 +56,64 @@ export default function Home() {
 				<HamburgerDropdown isOpen={isOpen} toggle={toggle} />
 			</div>
 
-			<main className='px-5 pb-5 mt-20 '>
-				<div className='font-title text-[1.6rem] lg:pl-5 mt-3'>Happening Now</div>
-				<section className='h-auto border-black border-2 max-w-full lg:p-2'>
-					<div className='hero-img-container flex items-center justify-center relative mx-auto max-w-[650px]'>
-						<Image
-							className='cursor-pointer'
-							onClick={() => router.push('/jag')}
-							src={heroImg}
-							height={550}
-							width={500}
-							alt='Jag Foam'
-						/>
-
-						<div className='text-black font-title absolute top-0 left-0 right-0 text-center pt-2 text-[1.4rem] md:text-[1.8rem] xl:text-[2rem]'>
-							Raffle - <span className='font-bold tracking-wide'>Live Now</span>
-						</div>
-						<Link href='/jag'>
-							<div className='text-black font-title absolute pt-2 text-[1.5rem] sm:text-[2rem] md:text-[1.8rem] h-[50px] w-[150px] sm:h-[75px] flex items-center justify-center sm:w-[200px] mb-2 border border-black cursor-pointer'>
-								<a className=''>Enter Now</a>
-							</div>
-						</Link>
-					</div>
+			<main className='mt-[5rem] min-h-screen w-full'>
+				<section className='w-full '>
+					<Slideshow />
 				</section>
 
-				<div className='text-[1.6rem] font-title lg:pl-5 mt-12 sm:mt-12'>Don't Miss Out</div>
-				<section className='max-w-7xl mt-5 mx-auto'>
-					<div className='w-full h-auto border-2 border-black p-2 text-center px-2 flex flex-col items-center text-lg justify-center'>
-						<p className='px-3 max-w-3xl font-title text-[1.4rem] lg:text-[1.75rem] my-2 sm:text-[1.5rem]'>
-							Subscribe To Be Notified About The Next Release
-						</p>
-						<p className='px-3 max-w-3xl font-title text-[1.05rem] lg:text-[1.4rem] sm:text-[1.2rem]'>
-							Stay up to date on upcoming releases and news
-						</p>
+				<h2 className='font-title text-3xl text-center mt-10 mb-3 lg:text-[2.6rem] '>Don't Miss Out</h2>
+
+				<p className='text-center px-5 lg:w-[600px] lg:mx-auto text-lg  '>
+					Just because the Jag Foam isn't for you doesn't mean you have to say goodbye forever! Sign up below
+					to receive release announcements, updates, and more from Kito.
+				</p>
+
+				<section className='my-10 px-2 py-2 lg:px-0 lg:w-[700px] lg:mx-auto '>
+					<div className='border-2 border-black '>
 						<Subscribe />
 					</div>
 				</section>
 
-				<div className='text-[1.6rem] font-title lg:pl-5 mt-12 sm:mt-12'>About Kito-Raffles</div>
-				<section className='max-w-7xl mt-5 mx-auto'>
-					<div className='w-full h-auto border-2 border-black p-2 text-center px-2 flex flex-col items-center text-lg justify-center'>
-						<p className='px-3 max-w-3xl font-title text-[1.4rem] lg:text-[1.75rem] my-2 sm:text-[1.5rem]'>
-							Welcome to Kito-Raffles!
+				<section className='mt-5 py-5 px-2 lg:px-0 h-[max-content] mx-auto lg:w-[700px] '>
+					<div className='border-2 border-black flex-col items-center'>
+						<h2 className='font-title text-3xl p-2 text-center lg:text-4xl lg:pt-4 '>
+							What's Happening Now
+						</h2>
+						<p className='font-title text-lg text-center p-2 text-gray-500 mb-10 lg:text-2xl tracking-wide '>
+							The Jag Foam raffle is live now! Click below to enter. This shoe features premium eva foam,
+							sizes range from 6-14. Please note that there are no half sizes for this product.{' '}
 						</p>
-						<p className='px-3 max-w-3xl font-title text-[1rem] lg:text-[1.3rem] sm:text-[1.2rem]'>
-							All Kito Raffles will be held on this website. It does not cost anything to enter the raffle
-							and you will receive an invoice if you entry was selected! If you believe that there was an
-							error with your submission or if you would like to delete your entry, please reach out to{' '}
-							<span className='font-bold tracking-widest'>info@kito.online</span> and let them know your
-							request.
-						</p>
+						<div className='flex items-center justify-center relative h-[300px] w-full lg:h-[475px] '>
+							<Image src={jagPlane} loading='lazy' alt='jag' layout='fill' objectFit='cover' />
+							<button
+								onClick={() => router.push('/jag')}
+								className='absolute top-1/3 bottom-1/2 flex items-center justify-center border-[1px] border-gray-100 shadow-lg rounded-lg bg-blur-background backdrop-blur-sm w-[250px] px-4 py-2 h-[50px] lg:border-2 lg:shadow-xl lg:w-[350px] lg:py-8 '>
+								<p className='font-title text-[1.5rem] flex items-center justify-center font-semibold tracking-wide lg:text-[2rem] '>
+									{' '}
+									<Typed
+										strings={[ 'Jag Foam Raffle', 'Enter Now' ]}
+										typeSpeed={100}
+										backSpeed={50}
+										loop
+									/>
+								</p>
+							</button>
+						</div>
 					</div>
 				</section>
-
-				<div className='text-[1.6rem] font-title lg:pl-5 mt-8 sm:mt-12'>Gallery</div>
-
-				<section className='max-w-7xl mt-5 mx-auto h-auto max-w-96 border-2 border-black grid gap-2 md:grid-cols-2 md:w-[80%] lg:grid-cols-4 grid-rows-md-mason p-3'>
-					<img
-						className='w-full h-[150px] sm:h-[100%] object-cover'
-						src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/catadunkprodshot2.jpg?v=1630549242'
-						alt=''
-					/>
-
-					<img
-						className='w-full h-[150px] sm:h-[100%] object-cover lg:col-start-2 lg:col-end-4 lg:row-start-1 lg:row-end-3'
-						src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/TEARAWAY_SQUARE.gif?v=1639504220'
-						alt=''
-					/>
-
-					<img
-						className='w-full h-[150px] sm:h-[100%] object-cover lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-4'
-						src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0295.jpg?v=1628176585'
-						alt=''
-					/>
-
-					<img
-						className='w-full h-[150px] sm:h-[100%] object-cover md:row-start-2 md:row-end-4 md:col-start-2 md:col-end-2 lg:col-start-1 lg:col-end-1 lg:row-start-2 lg:row-end-6'
-						src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/IMG_0294.jpg?v=1628104438'
-						alt=''
-					/>
-
-					<img
-						className='w-full h-[150px] sm:h-[100%] object-cover lg:row-start-3 lg:row-end-5 lg:col-start-2 lg:col-end-4'
-						src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/A7_9778.jpg?v=1613550854'
-						alt=''
-					/>
-
-					<img
-						className='w-full h-[150px] sm:h-[100%] object-cover'
-						src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/A7_0978-Edit_1.jpg?v=1637769033'
-						alt=''
-					/>
+				<section className='mt-10 py-5 px-2 lg:px-0 max-w-[700px] h-[max-content] mx-auto '>
+					<div className='border-2 border-black flex-col items-center'>
+						<h2 className='font-title text-3xl p-2 text-center lg:p-4 lg:text-4xl '>Gallery</h2>
+					</div>
+					<div className='grid grid-cols-1 gap-y-5 mt-5 lg:grid-cols-2 lg:gap-y-0 lg:gap-5 '>
+						{images.map((image, index) => (
+							<div
+								key={index}
+								className='h-[400px] border-b-2 md:border-b-0 border-black w-[full] relative '>
+								<Image src={image.link} alt={image.name} layout='fill' objectFit='contain' />
+							</div>
+						))}
+					</div>
 				</section>
 			</main>
 		</div>

@@ -1,62 +1,50 @@
 [
 	{
 		"id": "1",
-		"size": "6"
+		"size": "6",
+		"image": "/styles/Jag/Jag.jpg"
 	},
 	{
 		"id": "2",
-		"size": "7"
-	},
-	{
-		"id": "3",
-		"size": "7.5"
+		"size": "7",
+		"image": "/styles/Jag/Jag.jpg"
 	},
 	{
 		"id": "4",
-		"size": "8"
+		"size": "8",
+		"image": "/styles/Jag/Jag.jpg"
 	},
-	{
-		"id": "5",
-		"size": "8.5"
-	},
+
 	{
 		"id": "6",
-		"size": "9"
-	},
-	{
-		"id": "7",
-		"size": "9.5"
+		"size": "9",
+		"image": "/styles/Jag/Jag.jpg"
 	},
 	{
 		"id": "8",
-		"size": "10"
+		"size": "10",
+		"image": "/styles/Jag/Jag.jpg"
 	},
-	{
-		"id": "9",
-		"size": "10.5"
-	},
+
 	{
 		"id": "10",
-		"size": "11"
+		"size": "11",
+		"image": "/styles/Jag/Jag.jpg"
 	},
-	{
-		"id": "11",
-		"size": "11.5"
-	},
+
 	{
 		"id": "12",
-		"size": "12"
-	},
-	{
-		"id": "13",
-		"size": "12.5"
+		"size": "12",
+		"image": "/styles/Jag/Jag.jpg"
 	},
 	{
 		"id": "14",
-		"size": "13"
+		"size": "13",
+		"image": "/styles/Jag/Jag.jpg"
 	},
 	{
 		"id": "15",
-		"size": "14"
+		"size": "14",
+		"image": "/styles/Jag/Jag.jpg"
 	}
 ]

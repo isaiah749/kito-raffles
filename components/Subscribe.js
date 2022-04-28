@@ -107,11 +107,12 @@ function Subscribe() {
 	};
 
 	return (
-		<div className='w-full h-full'>
+		<div className='w-full bg-white h-full'>
+			<h2 className='font-title text-2xl pt-4 pl-3 -mb-2'>Subscribe For Updates</h2>
 			<form
 				onSubmit={subSubmit}
 				id='subForm'
-				className='p-2 py-5 max-h-[55rem] flex flex-wrap items-center justify-center border-2 border-black border-l-0 border-r-0 border-b-0 max-w-xl mx-auto'>
+				className='p-2 py-5 max-h-[55rem] flex flex-wrap items-center justify-center  max-w-xl mx-auto'>
 				<div className='mb-4 sm:m-2 md:m-4'>
 					<label htmlFor='subFirstName' className='text-xs block mb-1 font-bold'>
 						First Name:
@@ -163,7 +164,7 @@ function Subscribe() {
 							id='subCountry'
 							name='subCountry'
 							as='div'
-							className='border-black border rounded-sm focus:outline-none w-24 mb-4'
+							className='border-black border rounded-sm flex items-center justify-center py-1 focus:outline-none w-24 mb-4'
 							value={subCountry}
 							onChange={setSubCountry}>
 							<Listbox.Button className=''>
@@ -219,7 +220,7 @@ function Subscribe() {
 					<button
 						type='submit'
 						form='subForm'
-						className='bg-black w-64 h-full text-white border border-black text-lg md:text-[1.2rem] hover:bg-white hover:text-black duration-500 p-2 md:text-base rounded-md font-title tracking-widest'>
+						className='bg-black w-64 h-full text-white border border-black text-lg md:text-[1.2rem] lg:text-[1.4rem] hover:bg-white hover:text-black duration-500 p-2 md:text-base rounded-md font-title tracking-widest'>
 						Subscribe
 					</button>
 				</div>
