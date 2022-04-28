@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import jag from '../pages/styles/Jag/Jag.jpg';
+import jag from '../pages/styles/Jag/jag-2.png';
 import { useDispatch } from 'react-redux';
 import { removeFromBasket } from '../slices/basketSlice';
 
