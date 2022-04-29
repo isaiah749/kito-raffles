@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Hero from '../components/Hero';
 import afterlifeRaffle from './afterlife-raffle';
-import heroImg from './styles/Jag/Jag.jpg';
+import heroImg from './styles/Jag/jag-1.jpg';
 import Subscribe from '../components/Subscribe';
 import { useRouter } from 'next/router';
 import Slideshow from '../components/Slideshow';

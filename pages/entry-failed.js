@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import HamburgerDropdown from '../components/HamburgerDropdown';
 import Link from 'next/link';
-import jag from './styles/Jag/Jag.jpg';
+import jag from './styles/Jag/jag-1.jpg';
 import { useRouter } from 'next/router';
 
 function entryUnsuccessful() {

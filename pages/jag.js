@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import HamburgerDropdown from '../components/HamburgerDropdown';
 import Image from 'next/image';
-import jag from './styles/Jag/Jag.jpg';
+import jag from './styles/Jag/jag-1.jpg';
 import sizeData from './context/shoeSizeData.json';
 import { RadioGroup } from '@headlessui/react';
 import bagIcon from './styles/Icons/bag-icon.svg';
