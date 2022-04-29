@@ -12,7 +12,7 @@ function Navbar({ toggle, reload }) {
 	const items = useSelector(selectItems);
 
 	return (
-		<div className='bg-black grid grid-cols-3 h-20 w-full z-50 fixed shadow-lg xl:px-8 xl:py-2'>
+		<div className='bg-black grid grid-cols-3 h-20 w-full z-[1000] fixed shadow-lg xl:px-8 xl:py-2'>
 			<div className=' flex items-center text-white cursor-pointer font-title tracking-widest text-[1.7rem] col-span-2 xl:col-span-1 md:text-4xl '>
 				<Image
 					onClick={() => router.push('/')}

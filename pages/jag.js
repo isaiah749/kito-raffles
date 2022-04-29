@@ -11,6 +11,8 @@ import bagIcon from './styles/Icons/bag-icon.svg';
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '../slices/basketSlice';
 import jagTwo from './styles/Jag/jag-2.png';
+import checkmark from './styles/Icons/check-icon.svg';
+import { useRouter } from 'next/router';
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -18,7 +20,9 @@ export default function Jag() {
 	const dispatch = useDispatch();
 
 	const [ open, setOpen ] = useState(false);
-	const [ sizeSelected, setSizeSelected ] = useState('');
+	const [ sizeSelected, setSizeSelected ] = useState('6');
+
+	const router = useRouter();
 
 	const toggle = () => {
 		setOpen(!open);
@@ -33,6 +37,37 @@ export default function Jag() {
 		if (sizeSelected == '') {
 			alert('nothing selected');
 		} else {
+			const header = document.querySelector('#header');
+			let html = `<div id='modal' class='flex items-center mt-28 fixed justify-center z-[100] w-full '>
+			<div class='border-2 h-10 w-[max-content] px-4 font-semibold lg:text-lg text-green-600 rounded-full bg-white flex items-center justify-center absolute '>
+				Added to bag
+			</div>
+		</div>`;
+			let redirectModal = `<div id='modal' class='flex items-center mt-28 fixed justify-center z-[100] w-full '>
+			<div class='border-2 h-10 w-[max-content] px-4 lg:text-lg font-semibold text-green-600 rounded-full bg-white flex items-center justify-center absolute '>
+				Redirecting to checkout
+			</div>
+		</div>`;
+
+			header.insertAdjacentHTML('afterend', html);
+
+			const removeModal = () => {
+				let modal = document.querySelector('#modal');
+				modal.classList.add('hide');
+			};
+
+			setTimeout(removeModal, 2000);
+
+			const redirect = () => {
+				header.insertAdjacentHTML('afterend', redirectModal);
+				function toCheckout() {
+					router.push('/checkout');
+				}
+				setTimeout(toCheckout, 2650);
+			};
+
+			setTimeout(redirect, 2200);
+
 			const product = {
 				title,
 				sizeSelected,
@@ -63,12 +98,18 @@ export default function Jag() {
 				<title>KITO Jag Raffle</title>
 			</Head>
 
-			<header className=' relative '>
+			<header id='header' className=' relative '>
 				<Navbar toggle={toggle} />
 				<div className=''>
 					<HamburgerDropdown isOpen={open} toggle={toggle} />
 				</div>
 			</header>
+			{/* <div className='flex items-center mt-28 absolute justify-center z-[100] w-full '>
+				<div className='border-2 text-green-600 font-semibold h-10 w-36 rounded-full bg-white flex items-center justify-center absolute '>
+					Added to bag
+				</div>
+			</div> */}
+
 			{/* MOBILE AND TABLET LAYOUT */}
 			<main className='pt-24 w-full h-[200vh] relative xl:hidden'>
 				<section className='w-full'>

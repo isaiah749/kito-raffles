@@ -21,7 +21,10 @@ const Checkout = () => {
 	const router = useRouter();
 	const [ open, setOpen ] = useState(false);
 
+	const [ buy, setBuy ] = useState(false);
+
 	const createCheckoutSession = async () => {
+		setBuy(true);
 		const stripe = await stripePromise;
 
 		// Call the backend to create a checkout session.. this is our own backend that we will create
@@ -134,7 +137,7 @@ const Checkout = () => {
 								role='link'
 								onClick={createCheckoutSession}
 								className='bg-black rounded-sm font-title mb-2 shadow-lg w-[250px] h-12 text-[1.4rem] text-white tracking-widest active:scale-90 transition duration-300 flex items-center justify-between px-3 '>
-								<p className=''>Checkout</p>
+								<p className=''>{buy ? 'Loading...' : 'Checkout'}</p>
 								<Image src={rightArrow} height={25} width={25} />
 							</button>
 						</div>
@@ -216,7 +219,7 @@ const Checkout = () => {
 							role='link'
 							onClick={createCheckoutSession}
 							className='bg-black font-title w-[90%] lg:w-[70%] xl:w-[30%] mx-auto left-0 right-0 rounded-sm h-12 active:scale-90 transition ease-in-out duration-300 text-[1.4rem] shadow-lg text-white tracking-wider flex items-center justify-between px-3 fixed bottom-2 '>
-							<p className=''>Checkout</p>
+							<p className=''>{buy ? 'Loading...' : 'Checkout'}</p>
 							<Image src={rightArrow} height={25} width={25} />
 						</button>
 					</div>
