@@ -56,17 +56,17 @@ export default function Jag() {
 				modal.classList.add('hide');
 			};
 
-			setTimeout(removeModal, 2000);
+			setTimeout(removeModal, 1500);
 
 			const redirect = () => {
 				header.insertAdjacentHTML('afterend', redirectModal);
 				function toCheckout() {
 					router.push('/checkout');
 				}
-				setTimeout(toCheckout, 2650);
+				setTimeout(toCheckout, 2350);
 			};
 
-			setTimeout(redirect, 2200);
+			setTimeout(redirect, 2000);
 
 			const product = {
 				title,
