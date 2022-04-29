@@ -12,8 +12,7 @@ const Slideshow = () => {
 		indicators: false,
 		scale: 1.2,
 		duration: 3750,
-		transitionDuration: 500,
-		Infinity
+		transitionDuration: 500
 	};
 
 	return (
