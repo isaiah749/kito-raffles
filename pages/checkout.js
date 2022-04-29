@@ -5,12 +5,16 @@ import Head from 'next/head';
 import rightArrow from './styles/Icons/right-arrow.svg';
 import Image from 'next/image';
 import { selectItems } from '../slices/basketSlice';
-import { useSelector } from 'react-redux/es/exports';
+import { useSelector } from 'react-redux';
 import CheckoutProduct from '../components/CheckoutProduct';
 import { useRouter } from 'next/router';
 import { loadStripe } from '@stripe/stripe-js';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+
+// export async function getServerSideProps(context) {
+
+// }
 
 const Checkout = () => {
 	const items = useSelector(selectItems);
@@ -28,13 +32,26 @@ const Checkout = () => {
 			items: items
 		});
 
+		axios.interceptors.response.use(undefined, (error) => {
+			const { status, data, config } = error.response;
+			if (status === 404) {
+				router.push('/');
+			}
+			if (status === 400) {
+				router.push('/');
+			}
+			if (status === 500) {
+				router.push('/');
+			}
+		});
+
 		// Redirect the user to Stripe Checkout
 		const result = await stripe.redirectToCheckout({
 			sessionId: checkoutSession.data.id
 		});
 
 		if (result.error) {
-			alert(result.error.message);
+			router.push('/');
 		}
 	};
 

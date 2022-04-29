@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 function entryUnsuccessful() {
 	const [ open, setOpen ] = useState(false);
-
+	const router = useRouter();
 	const toggle = () => {
 		setOpen(!open);
 	};
