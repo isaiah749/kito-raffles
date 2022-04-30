@@ -14,12 +14,20 @@ function Navbar({ toggle, reload }) {
 	return (
 		<div className='bg-black grid grid-cols-3 h-20 w-full z-[1000] fixed shadow-lg xl:px-8 xl:py-2'>
 			<div className=' flex items-center text-white cursor-pointer font-title tracking-widest text-[1.7rem] col-span-2 xl:col-span-1 md:text-4xl '>
-				<Image
+				{/* <Image
 					onClick={() => router.push('/')}
 					src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/SkullGraphicSpinningsmall.gif?v=1627671973'
 					height={55}
 					width={75}
-				/>
+				/> */}
+
+				<div className='h-[75px] w-[100px] flex items-center justify-center'>
+					<img
+						src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/SkullGraphicSpinningsmall.gif?v=1627671973'
+						className='w-full'
+						alt=''
+					/>
+				</div>
 
 				<Link href='/'>
 					<a className='pt-2 -ml-2 md:-ml-1 '>Kito-Raffles</a>
