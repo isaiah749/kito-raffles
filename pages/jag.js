@@ -29,11 +29,11 @@ export default function Jag() {
 	};
 
 	const addToBag = () => {
-		const title = 'Kito Jag Foam Shoes';
+		const title = 'Fossil-X Jaguar Runner';
 		const price = 98;
 		const image = 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948';
 		const description =
-			'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium natus facilis architecto quos, laudantium hic voluptatibus vitae vel quidem asperiores cum inventore ea molestiae fugit sit deserunt omnis quae dicta?';
+			"Eye-catching footwear with a natural touch. Inspired by 850,000 years of evolution, the Fossil-X Jaguar Runner encapsulates the sleek nature of the Jaguar's natural bonearchitecture.";
 		if (sizeSelected == '') {
 			alert('nothing selected');
 		} else {
@@ -43,7 +43,7 @@ export default function Jag() {
 				Added to bag
 			</div>
 		</div>`;
-			let redirectModal = `<div id='modal' class='flex items-center mt-28 fixed justify-center z-[100] w-full '>
+			let redirectModal = `<div id='modal' class='flex items-center mt-28 fixed justify-center z-[110] w-full '>
 			<div class='border-2 h-10 w-[max-content] px-4 lg:text-lg font-semibold text-green-600 rounded-full bg-white flex items-center justify-center absolute '>
 				Redirecting to checkout
 			</div>
@@ -56,17 +56,17 @@ export default function Jag() {
 				modal.classList.add('hide');
 			};
 
-			setTimeout(removeModal, 1500);
+			setTimeout(removeModal, 2000);
 
 			const redirect = () => {
 				header.insertAdjacentHTML('afterend', redirectModal);
 				function toCheckout() {
 					router.push('/checkout');
 				}
-				setTimeout(toCheckout, 2350);
+				setTimeout(toCheckout, 3000);
 			};
 
-			setTimeout(redirect, 2000);
+			setTimeout(redirect, 2200);
 
 			const product = {
 				title,
@@ -93,7 +93,7 @@ export default function Jag() {
 	}, []);
 
 	return (
-		<div className='h-[100vh] relative pb-5 w-full flex flex-col '>
+		<div className='h-[max-content] pb-[8rem] relative w-full flex flex-col '>
 			<Head>
 				<title>KITO Jag Raffle</title>
 			</Head>
@@ -111,13 +111,15 @@ export default function Jag() {
 			</div> */}
 
 			{/* MOBILE AND TABLET LAYOUT */}
-			<main className='pt-24 w-full h-[200vh] relative xl:hidden'>
+			<main className='pt-24 w-full h-[max-content] relative xl:hidden'>
 				<section className='w-full'>
 					<div className='px-5'>
 						<h2 className='font-title text-[2.15rem] tracking-wide lg:text-[2.4rem] '>
-							Kito Jag Foam Shoe
+							Fossil-X Jaguar Runner
 						</h2>
-						<h3 className='font-title text-xl tracking-wide -mt-1 pl-2 lg:text-2xl '>Men's Foam Shoes</h3>
+						<h3 className='font-title italic text-xl tracking-wide -mt-1 pl-2 lg:text-2xl '>
+							Men's Foam Shoes
+						</h3>
 						<p className='font-title text-xl mt-4 pl-2 lg:text-2xl '>$98</p>
 					</div>
 
@@ -157,18 +159,99 @@ export default function Jag() {
 						))}
 					</form>
 
-					<section className='px-4 mt-5 mb-[5rem] w-full h-[400px]'>
-						<h2 className='font-title text-2xl lg:px-7 lg:text-3xl '>Product Description</h2>
-						<p className='text-md w-[300px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae consequatur et veritatis,
-							quos non, optio, perspiciatis iste dolorum accusantium reiciendis aperiam. Ab natus
-							voluptatum repellendus! Similique rerum dignissimos quam eum.
+					<section className='px-4 py-2 my-2 w-full h-[max-content]'>
+						<h2 className='font-title text-2xl lg:px-7 lg:text-3xl lg:mb-8 '>Product Description</h2>
+						<h3 className='font-title text-[1.3rem] pl-3 mt-5 lg:text-[1.65rem] lg:text-center '>
+							Overview
+						</h3>
+						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
+							Eye-catching footwear with a natural touch. Inspired by 850,000 years of evolution, the
+							Fossil-X Jaguar Runner encapsulates the sleek nature of the Jaguar's natural bone
+							architecture.
 						</p>
-						<p className='text-md w-[300px] lg:w-[500px] mt-3 mx-auto pl-1 text-gray-400 '>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae consequatur et veritatis,
-							quos non, optio, perspiciatis iste dolorum accusantium reiciendis aperiam. Ab natus
-							voluptatum repellendus! Similique rerum dignissimos quam eum.
+					</section>
+
+					<section className='px-4 py-2 my-2 w-full h-[max-content]'>
+						<h3 className='font-title text-[1.3rem] pl-3 mt-5 lg:text-[1.65rem] lg:text-center '>
+							Benefits
+						</h3>
+						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
+							Very lightweight. Created from a luxurious plastic foam in Los Angeles, this model has been
+							made for comfort and utility.
 						</p>
+					</section>
+
+					<section className='px-4 py-2 my-2 w-full h-[max-content]'>
+						<h3 className='font-title text-[1.3rem] pl-3 mt-5 lg:text-[1.65rem] lg:text-center '>
+							Structured
+						</h3>
+						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
+							A beast-like upper and a unique tread (referencing bone fissures) allows for a simple and
+							functional wear.
+						</p>
+					</section>
+
+					<section className='px-4 py-2 my-2 w-full h-[max-content]'>
+						<h3 className='font-title text-[1.3rem] pl-3 mt-5 lg:text-[1.65rem] lg:text-center '>
+							Eye-catching
+						</h3>
+						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
+							Designed using the skull of a jaguar, these paris are hard to miss.
+						</p>
+					</section>
+
+					<section className='px-4 py-2 my-2 w-full h-[max-content]'>
+						<h3 className='font-title text-[1.3rem] pl-3 mt-5 lg:text-[1.65rem] lg:text-center '>
+							Features
+						</h3>
+						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
+							Foam jaguar skull design. Comfortable and breathable materials allow for not onlyh a unique
+							design with precise detail, but a one of a kind experience as well.
+						</p>
+					</section>
+
+					<section className='px-4 py-2 my-2 w-full h-[max-content]'>
+						<h3 className='font-title text-[1.3rem] pl-3 mt-5 lg:text-[1.65rem] lg:text-center '>
+							Kitowares Stamp
+						</h3>
+						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
+							First of many in the Fossil-X series, this pair feature a debossed logo on both the insole
+							and tread of the shoe.
+						</p>
+					</section>
+
+					<section className='px-4 py-2 my-2 w-full h-[max-content]'>
+						<h3 className='font-title text-[1.3rem] pl-3 mt-5 lg:text-[1.65rem] lg:text-center '>
+							Cracked Tread
+						</h3>
+						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
+							Create for both functionality and a unique look, the tread of the Jaguar Runners evoke the
+							age and detail of a real jaguar skull.
+						</p>
+					</section>
+
+					<section className='px-4 py-2 my-2 w-full h-[max-content] max-w-[650px] mx-auto '>
+						<h2 className='font-title text-[1.3rem] pl-3 mt-5 lg:text-[1.65rem] lg:text-center '>
+							Details
+						</h2>
+						<ul className='mx-auto mt-2 flex-col space-y-4 px-2 '>
+							<li className='flex items-center justify-between border-b-[1px] border-black '>
+								<p className='text-gray-400 '>Colorway</p>
+								<p className='text-gray-400 font-semibold '>Aged Bone</p>
+							</li>
+							<li className='flex items-center justify-between border-b-[1px] border-black '>
+								<p className='text-gray-400 '>Waterproof</p>
+								<p className='text-gray-400 font-semibold '>Yes</p>
+							</li>
+							<li className='flex items-center justify-between border-b-[1px] border-black '>
+								<p className='text-gray-400 '>Collection</p>
+								<p className='text-gray-400 font-semibold '>Fossil-X</p>
+							</li>
+							<li className='flex items-center justify-between border-b-[1px] border-black '>
+								<p className='text-gray-400 '>Lining</p>
+								<p className='text-gray-400 font-semibold '>N/A</p>
+							</li>
+						</ul>
 					</section>
 				</section>
 			</main>
@@ -196,7 +279,7 @@ export default function Jag() {
 			<div className='hidden xl:block text-black xl:pb-5 xl:relative xl:mt-[5rem] '>
 				<main className='grid grid-cols-12 relative w-full h-[100vh] '>
 					{/* LEFT SECTION */}
-					<section className='col-span-8 2xl:col-span-9 w-full h-[200vh] main-background border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
+					<section className='col-span-8 2xl:col-span-9 w-full h-[max-content] pb-[5rem] main-background border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
 						<div className='relative h-[750px] w-full'>
 							<Image
 								src={jag}
@@ -213,23 +296,86 @@ export default function Jag() {
 
 						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] main-background py-5 space-x-6 2xl:space-x-16'>
 							<div className='mt-10 bg-white p-2 border-2 border-black'>
-								<h1 className='font-title text-4xl tracking-wide font-semibold '>KITO Jag Foam Shoe</h1>
+								<h1 className='font-title text-4xl tracking-wide font-semibold '>
+									Fossil-X Jaguar Runner
+								</h1>
 								<h3 className='font-title text-2xl tracking-wide text-black mt-3 italic '>
 									Each shoe features premium eva foam + jaguar skull mold
 								</h3>
 								<p className='font-title text-lg max-w-[500px] 2xl:max-w-[600px] tracking-wide mt-5 '>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium qui ducimus
-									similique et aspernatur, officia ullam dolorum modi alias amet consectetur non!
-									Numquam illo corporis expedita doloremque velit, magni impedit. Lorem ipsum dolor
-									sit, amet consectetur adipisicing elit. Voluptate ratione neque autem maiores porro?
-									Ex ea harum voluptas eos eum ratione blanditiis voluptate, repellat labore atque
-									deserunt natus itaque dolorum.
+									Eye-catching footwear with a natural touch. Inspired by 850,000 years of evolution,
+									the Fossil-X Jaguar Runner encapsulates the sleek nature of the Jaguar's natural
+									bone architecture.
+								</p>
+								<p className='font-title text-lg max-w-[500px] 2xl:max-w-[600px] tracking-wide mt-3 '>
+									Very lightweight, created from a luxurious plastic foam in Los Angeles, this model
+									has been made for comfort and utility.
+								</p>
+								<p className='font-title text-lg max-w-[500px] 2xl:max-w-[600px] tracking-wide mt-5 '>
+									A beast-like upper and a unique tread (referencing bone fissures) allows for a
+									simple and functional wear. Designed with the skull of a Jaguar, these pairs are
+									hard to miss.
 								</p>
 							</div>
 							<div className='2xl:h-[400px] 2xl:w-[400px] h-[350px] w-[350px] relative '>
 								<Image src={jagTwo} layout='fill' loading='lazy' objectFit='cover' />
 							</div>
 						</div>
+
+						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+							Product Features
+						</h2>
+
+						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] main-background py-5 space-x-6 2xl:space-x-16'>
+							<div className='2xl:h-[400px] 2xl:w-[400px] h-[350px] w-[350px] relative '>
+								<Image src={jag} layout='fill' loading='lazy' objectFit='cover' />
+							</div>
+							<div className='mt-10 bg-white p-2 border-2 border-black'>
+								<h1 className='font-title text-4xl tracking-wide font-semibold '>Custom Foam Design</h1>
+								<h3 className='font-title text-2xl tracking-wide text-black mt-3 italic '>
+									Extremely Comfortable and breathable
+								</h3>
+								<p className='font-title text-lg max-w-[500px] 2xl:max-w-[600px] tracking-wide mt-5 '>
+									The materials allow for not only a unique design with precise detail, but a one of a
+									kind experience as well.
+								</p>
+								<p className='font-title text-lg max-w-[500px] 2xl:max-w-[600px] tracking-wide mt-3 '>
+									<span className='font-semibold text-xl'>Kitowares stamp</span> - First of many in
+									the Fossil-X series, this pair feature a debossed logo on both the insole and tread
+									of the shoe.
+								</p>
+								<p className='font-title text-lg max-w-[500px] 2xl:max-w-[600px] tracking-wide mt-5 '>
+									<span className='font-semibold text-xl'>Cracked Tread</span> - Created for both
+									functionality and a unique look, the tread of the of the Jaguar Runners evoke the
+									age and detail of a real Jaguar skull
+								</p>
+							</div>
+						</div>
+
+						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-2 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+							Details
+						</h2>
+
+						<section className='px-4 w-full h-[max-content] max-w-[650px] bg-white border-2 border-black py-5 mx-auto '>
+							<ul className='mx-auto mt-2 flex-col space-y-4 px-2 '>
+								<li className='flex items-center justify-between border-b-[1px] border-black '>
+									<p className='text-gray-400 '>Colorway</p>
+									<p className='text-gray-400 font-semibold '>Aged Bone</p>
+								</li>
+								<li className='flex items-center justify-between border-b-[1px] border-black '>
+									<p className='text-gray-400 '>Waterproof</p>
+									<p className='text-gray-400 font-semibold '>Yes</p>
+								</li>
+								<li className='flex items-center justify-between border-b-[1px] border-black '>
+									<p className='text-gray-400 '>Collection</p>
+									<p className='text-gray-400 font-semibold '>Fossil-X</p>
+								</li>
+								<li className='flex items-center justify-between border-b-[1px] border-black '>
+									<p className='text-gray-400 '>Lining</p>
+									<p className='text-gray-400 font-semibold '>N/A</p>
+								</li>
+							</ul>
+						</section>
 
 						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-2 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
 							Gallery
@@ -251,16 +397,16 @@ export default function Jag() {
 						<div className='fixed'>
 							<div className=''>
 								<h3 className='font-title italic text-[1.75rem] '>US Men's Shoe</h3>
-								<h1 className='font-title text-[2.35rem] -mt-2 font-bold '>Kito Jag Foam Shoe</h1>
+								<h1 className='font-title text-[2.35rem] -mt-2 font-bold '>Fossil-X Jaguar Runner</h1>
 								<h3 className='font-title text-[1.65rem] mt-3 '>$98</h3>
 							</div>
 
 							<div className=''>
 								<p className='text-gray-500 w-[400px] text-[.95rem] mt-3 '>
 									Purchase of this product enters you into the{' '}
-									<span className='font-semibold'>Kito Jag Foam Shoe raffle.</span> If your order is
-									not selected as a winner then you will recieve a refund to the card that was charged
-									at purchase.
+									<span className='font-semibold'>Fossil-X Jaguar Runner raffle.</span> If your order
+									is not selected as a winner then you will recieve a refund to the card that was
+									charged at purchase.
 								</p>
 							</div>
 

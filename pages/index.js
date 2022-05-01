@@ -80,8 +80,9 @@ export default function Home() {
 							What's Happening Now
 						</h2>
 						<p className='font-title text-lg text-center p-2 text-gray-500 mb-10 lg:text-2xl tracking-wide '>
-							The Jag Foam raffle is live now! Click below to enter. This shoe features premium eva foam,
-							sizes range from 6-14. Please note that there are no half sizes for this product.{' '}
+							The Fossil-X Jaguar Runner raffle is live now! Click below to enter. This shoe features
+							premium eva foam, sizes range from 6-14. Please note that there are no half sizes for this
+							product.{' '}
 						</p>
 						<div className='flex items-center justify-center relative h-[300px] w-full lg:h-[475px] '>
 							<Image src={jagPlane} loading='lazy' alt='jag' layout='fill' objectFit='cover' />
@@ -91,7 +92,7 @@ export default function Home() {
 								<p className='font-title text-[1.5rem] flex items-center justify-center font-semibold tracking-wide lg:text-[2rem] '>
 									{' '}
 									<Typed
-										strings={[ 'Jag Foam Raffle', 'Enter Now' ]}
+										strings={[ 'Jag Raffle Live', 'Enter Now' ]}
 										typeSpeed={100}
 										backSpeed={50}
 										loop

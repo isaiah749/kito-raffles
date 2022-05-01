@@ -32,9 +32,10 @@ function entrySuccess() {
 					</div>
 					<div className='p-3 bg-white rounded-md space-y-4'>
 						<p className='text-center text-sm'>
-							Thank you for entering the <span className='font-semibold'>Pompeii Custom NB 550</span>{' '}
-							raffle! The shoes are custom made therefore please allow 14-16 weeks for your order to be
-							processed and shipped.
+							Thank you for entering the <span className='font-semibold'>
+								Fossil-X Jaguar Runner
+							</span>{' '}
+							raffle!
 						</p>
 						<p className='text-center text-sm'>
 							If you believe the information entered is incorrect, please reach out to{' '}

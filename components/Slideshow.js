@@ -34,7 +34,7 @@ const Slideshow = () => {
 							onClick={() => router.push('/jag')}
 							className='absolute cursor-pointer top-5 left-5 border-[1px] border-gray-100 shadow-lg rounded-lg bg-blur-background backdrop-blur-sm w-[max-content] px-4 py-2 h-[max-content] '>
 							<h1 className='font-title italic tracking-wide text-[1.75rem] lg:text-[2.5rem] '>
-								Kito Jag Foam Raffle
+								Jaguar Runner Raffle
 							</h1>
 							<h2 className='font-title -mt-4 text-center font-semibold text-[1.5rem] lg:text-[2rem] '>
 								Live Now
