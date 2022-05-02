@@ -307,7 +307,7 @@ export default function Jag() {
 							/> */}
 							<img
 								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
-								className='w-full'
+								className='w-full h-full object-cover'
 								alt=''
 							/>
 						</div>
