@@ -1,6 +1,8 @@
 // creating this api allows us to make a call to the api. "../api/create-checkout-sessions"
 // anything in the "api" folder is backend code, anything inside of pages is frontend code
 
+//for some error
+
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async (req, res) => {
