@@ -4,7 +4,11 @@ import { Fade } from 'react-slideshow-image';
 import { useRouter } from 'next/router';
 
 const Slideshow = () => {
-	const images = [ '/images/jag-2.png', '/images/jag-nyc.png', '/images/jag-wood.png' ];
+	const images = [
+		'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/jag-2.png?v=1651515528',
+		'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/jag-nyc.png?v=1651515528',
+		'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/jag-wood.png?v=1651515529'
+	];
 
 	const router = useRouter();
 

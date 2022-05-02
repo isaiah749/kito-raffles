@@ -124,11 +124,23 @@ export default function Jag() {
 					</div>
 
 					<div className='relative mt-10 h-full md:hidden '>
-						<Image src={jag} loading='lazy' height={450} width={450} objectFit='cover' />
+						<Image
+							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+							loading='lazy'
+							height={450}
+							width={450}
+							objectFit='cover'
+						/>
 					</div>
 
 					<div className='hidden relative mt-10 h-full md:flex md:items-center md:justify-center md:mb-16 '>
-						<Image src={jag} loading='lazy' height={620} width={620} objectFit='cover' />
+						<Image
+							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+							loading='lazy'
+							height={620}
+							width={620}
+							objectFit='cover'
+						/>
 					</div>
 				</section>
 
@@ -282,7 +294,7 @@ export default function Jag() {
 					<section className='col-span-8 2xl:col-span-9 w-full h-[max-content] pb-[5rem]  border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
 						<div className='relative h-[750px] w-full'>
 							<Image
-								src={jag}
+								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
 								loading='lazy'
 								layout='fill'
 								objectFit='cover'
@@ -318,7 +330,12 @@ export default function Jag() {
 								</p>
 							</div>
 							<div className='2xl:h-[400px] 2xl:w-[400px] h-[350px] w-[350px] relative '>
-								<Image src={jagTwo} layout='fill' loading='lazy' objectFit='cover' />
+								<Image
+									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/jag-2.png?v=1651515528'
+									layout='fill'
+									loading='lazy'
+									objectFit='cover'
+								/>
 							</div>
 						</div>
 
@@ -328,7 +345,12 @@ export default function Jag() {
 
 						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] py-5 space-x-6 2xl:space-x-16'>
 							<div className='2xl:h-[400px] 2xl:w-[400px] h-[350px] w-[350px] relative '>
-								<Image src={jag} layout='fill' loading='lazy' objectFit='cover' />
+								<Image
+									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+									layout='fill'
+									loading='lazy'
+									objectFit='cover'
+								/>
 							</div>
 							<div className='mt-10 bg-white p-2 border-2 border-black'>
 								<h1 className='font-title text-4xl tracking-wide font-semibold '>Custom Foam Design</h1>
@@ -384,11 +406,22 @@ export default function Jag() {
 						<div className='w-full relative flex flex-wrap items-center justify-center space-x-5 mx-auto px-[4.4rem] h-[max-content] '>
 							<div className=''>
 								<div className='2xl:h-[400px] h-[350px] w-[350px] 2xl:w-[400px] relative '>
-									<Image src={jag} layout='fill' loading='lazy' objectFit='cover' />
+									<Image
+										src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+										layout='fill'
+										loading='lazy'
+										objectFit='cover'
+									/>
 								</div>
 							</div>
 							<div className='2xl:h-[400px] h-[350px] w-[350px] 2xl:w-[400px] relative '>
-								<Image src={jagTwo} layout='fill' loading='lazy' className='' objectFit='cover' />
+								<Image
+									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/jag-2.png?v=1651515528'
+									layout='fill'
+									loading='lazy'
+									className=''
+									objectFit='cover'
+								/>
 							</div>
 						</div>
 					</section>
