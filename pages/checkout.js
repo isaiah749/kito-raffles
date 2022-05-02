@@ -46,6 +46,9 @@ const Checkout = () => {
 			if (status === 500) {
 				router.push('/');
 			}
+			if (status === 502) {
+				router.push('/');
+			}
 		});
 
 		// Redirect the user to Stripe Checkout
