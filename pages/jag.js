@@ -123,7 +123,7 @@ export default function Jag() {
 						<p className='font-title text-xl mt-4 pl-2 lg:text-2xl '>$98</p>
 					</div>
 
-					<div className='relative mt-10 h-[450px] w-[450px] md:hidden '>
+					<div className='relative mt-10 h-[400px] w-[400px] md:hidden '>
 						{/* <Image
 							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
 							loading='lazy'
@@ -298,12 +298,17 @@ export default function Jag() {
 					{/* LEFT SECTION */}
 					<section className='col-span-8 2xl:col-span-9 w-full h-[max-content] pb-[5rem]  border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
 						<div className='relative h-[750px] w-full'>
-							<Image
+							{/* <Image
 								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
 								loading='lazy'
 								layout='fill'
 								objectFit='cover'
 								objectPosition='center center'
+							/> */}
+							<img
+								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+								className='w-full'
+								alt=''
 							/>
 						</div>
 
