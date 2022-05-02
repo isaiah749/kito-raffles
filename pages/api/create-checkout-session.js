@@ -102,7 +102,7 @@ export default async (req, res) => {
 			res.status(200).json({ id: session.id });
 			// res.redirect(303, session.url);
 		} catch (err) {
-			res.status(err.statusCode || 500).json(err.message);
+			res.status(err.statusCode || 500 || 502).json(err.message);
 		}
 	} else {
 		res.setHeader('Allow', 'POST');
