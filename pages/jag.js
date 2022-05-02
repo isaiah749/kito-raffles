@@ -205,7 +205,7 @@ export default function Jag() {
 							Features
 						</h3>
 						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
-							Foam jaguar skull design. Comfortable and breathable materials allow for not onlyh a unique
+							Foam jaguar skull design. Comfortable and breathable materials allow for not only a unique
 							design with precise detail, but a one of a kind experience as well.
 						</p>
 					</section>
