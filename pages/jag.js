@@ -279,7 +279,7 @@ export default function Jag() {
 			<div className='hidden xl:block text-black xl:pb-5 xl:relative xl:mt-[5rem] '>
 				<main className='grid grid-cols-12 relative w-full h-[100vh] '>
 					{/* LEFT SECTION */}
-					<section className='col-span-8 2xl:col-span-9 w-full h-[max-content] pb-[5rem] main-background border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
+					<section className='col-span-8 2xl:col-span-9 w-full h-[max-content] pb-[5rem]  border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
 						<div className='relative h-[750px] w-full'>
 							<Image
 								src={jag}
@@ -294,7 +294,7 @@ export default function Jag() {
 							Product Description
 						</h2>
 
-						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] main-background py-5 space-x-6 2xl:space-x-16'>
+						<div className='w-full flex mx-auto px-10 justify-center h-[max-content]  py-5 space-x-6 2xl:space-x-16'>
 							<div className='mt-10 bg-white p-2 border-2 border-black'>
 								<h1 className='font-title text-4xl tracking-wide font-semibold '>
 									Fossil-X Jaguar Runner
@@ -326,7 +326,7 @@ export default function Jag() {
 							Product Features
 						</h2>
 
-						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] main-background py-5 space-x-6 2xl:space-x-16'>
+						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] py-5 space-x-6 2xl:space-x-16'>
 							<div className='2xl:h-[400px] 2xl:w-[400px] h-[350px] w-[350px] relative '>
 								<Image src={jag} layout='fill' loading='lazy' objectFit='cover' />
 							</div>
