@@ -24,8 +24,8 @@ const Checkout = () => {
 	const [ buy, setBuy ] = useState(false);
 
 	const createCheckoutSession = async () => {
-		setBuy(true);
 		const stripe = await stripePromise;
+		setBuy(true);
 
 		// Call the backend to create a checkout session.. this is our own backend that we will create
 
