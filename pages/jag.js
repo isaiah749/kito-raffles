@@ -123,13 +123,18 @@ export default function Jag() {
 						<p className='font-title text-xl mt-4 pl-2 lg:text-2xl '>$98</p>
 					</div>
 
-					<div className='relative mt-10 h-full md:hidden '>
-						<Image
+					<div className='relative mt-10 h-[450px] w-[450px] md:hidden '>
+						{/* <Image
 							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
 							loading='lazy'
 							height={450}
 							width={450}
 							objectFit='cover'
+						/> */}
+						<img
+							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+							className='w-full'
+							alt=''
 						/>
 					</div>
 
@@ -345,11 +350,10 @@ export default function Jag() {
 
 						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] py-5 space-x-6 2xl:space-x-16'>
 							<div className='2xl:h-[400px] 2xl:w-[400px] h-[350px] w-[350px] relative '>
-								<Image
+								<img
 									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
-									layout='fill'
-									loading='lazy'
-									objectFit='cover'
+									className='w-full'
+									alt=''
 								/>
 							</div>
 							<div className='mt-10 bg-white p-2 border-2 border-black'>
@@ -406,11 +410,10 @@ export default function Jag() {
 						<div className='w-full relative flex flex-wrap items-center justify-center space-x-5 mx-auto px-[4.4rem] h-[max-content] '>
 							<div className=''>
 								<div className='2xl:h-[400px] h-[350px] w-[350px] 2xl:w-[400px] relative '>
-									<Image
+									<img
 										src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
-										layout='fill'
-										loading='lazy'
-										objectFit='cover'
+										className='w-full'
+										alt=''
 									/>
 								</div>
 							</div>

@@ -14,7 +14,12 @@ const CheckoutProduct = ({ id, title, price, size, description, image }) => {
 		<div className='lg:border-2 lg:border-gray-500 xl:w-[50%] xl:mx-auto '>
 			<div id={id} className='flex justify-center space-x-2 lg:justify-start lg:space-x-4 '>
 				<div className='h-[175px] w-[175px] relative text-sm flex items-center justify-center lg:h-[300px] lg:w-[300px] '>
-					<Image loading='lazy' src={image} layout='fill' objectFit='cover' />
+					<Image
+						loading='lazy'
+						src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+						layout='fill'
+						objectFit='cover'
+					/>
 				</div>
 
 				<div className=' flex-col space-y-2 pt-2 items-center lg:pt-8 '>
