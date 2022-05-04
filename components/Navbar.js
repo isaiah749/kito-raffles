@@ -6,6 +6,7 @@ import bagIcon from '../pages/styles/Icons/bag-icon.svg';
 import { useRouter } from 'next/router';
 import { selectItems } from '../slices/basketSlice';
 import { useSelector } from 'react-redux';
+import Head from 'next/head'
 
 function Navbar({ toggle, reload }) {
 	const router = useRouter();
@@ -13,6 +14,27 @@ function Navbar({ toggle, reload }) {
 
 	return (
 		<div className='bg-black grid grid-cols-3 h-20 w-full z-[1000] fixed shadow-lg xl:px-8 xl:py-2'>
+
+			<Head>
+
+				{/* <script>
+				!function(f,b,e,v,n,t,s)
+				{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+				if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+				n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t,s)}(window, document,'script',
+				'https://connect.facebook.net/en_US/fbevents.js');
+				fbq('init', '4957337474386732');
+				fbq('track', 'PageView');
+				</script>
+				<noscript><img height="1" width="1" style="display:none"
+				src="https://www.facebook.com/tr?id=4957337474386732&ev=PageView&noscript=1"
+				/></noscript> */}
+
+			</Head>
+
 			<div className=' flex items-center text-white cursor-pointer font-title tracking-widest text-[1.7rem] col-span-2 xl:col-span-1 md:text-4xl '>
 				{/* <Image
 					onClick={() => router.push('/')}

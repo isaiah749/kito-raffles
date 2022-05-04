@@ -2805,6 +2805,11 @@ react-elastic-carousel@^0.11.5:
     react-swipeable "^5.5.1"
     resize-observer-polyfill "1.5.0"
 
+react-facebook-pixel@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-facebook-pixel/-/react-facebook-pixel-1.0.4.tgz#4760b60dc0451e345649d9710152b4b5419cf989"
+  integrity sha512-givZY8MS0v/mdbRzvcvouBo/j0TtDiu/93f4gIjJXwDDgwlf6bYUiQvb2qcqjluOOD/hIKUQHNYLNsSOnoEklg==
+
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
