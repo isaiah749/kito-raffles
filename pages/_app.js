@@ -10,6 +10,7 @@ import { useRouter } from 'next/router';
 import Router from 'next/router';
 import * as gtag from '../lib/gtag';
 import * as fbq from '../lib/fpixel'
+import Head from 'next/head'
 
 // function MyApp({ Component, pageProps }) {
 // 	return (
@@ -130,6 +131,9 @@ const App = ({ Component, pageProps }) => {
           `,
         }}
       />
+      <Head>
+      <meta name="facebook-domain-verification" content="iniy7mzndmgdw8gpq92gh082kexra3" />
+      </Head>
 <Provider store={store}>
   <Component {...pageProps} />
 </Provider>
