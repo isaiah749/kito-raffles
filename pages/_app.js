@@ -37,36 +37,7 @@ const App = ({ Component, pageProps }) => {
   const router = useRouter()
 
 
-  // <script>
-  // !function(f,b,e,v,n,t,s)
-  // {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  // n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  // if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  // n.queue=[];t=b.createElement(e);t.async=!0;
-  // t.src=v;s=b.getElementsByTagName(e)[0];
-  // s.parentNode.insertBefore(t,s)}(window, document,'script',
-  // 'https://connect.facebook.net/en_US/fbevents.js');
-  // fbq('init', '4957337474386732');
-  // fbq('track', 'PageView');
-  // </script>
-  // <noscript><img height="1" width="1" style="display:none"
-  // src="https://www.facebook.com/tr?id=4957337474386732&ev=PageView&noscript=1"
-  // /></noscript>
 
-
-
-  // useEffect(() => {
-  //   import('react-facebook-pixel')
-  //   .then((x) => x.default)
-  //   .then((ReactPixel) => {
-  //     ReactPixel.init('4957337474386732')
-  //     ReactPixel.pageView()
-
-  //     router.events.on('routeChangeComplete', () => {
-  //       ReactPixel.pageView()
-  //     })
-  //   })
-  // }, [router.events])
 
   useEffect(() => {
     // This pageview only triggers the first time (it's important for Pixel to have real information)
@@ -91,6 +62,27 @@ const App = ({ Component, pageProps }) => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
+
+
+  // <!-- Meta Pixel Code -->
+  // <script>
+  // !function(f,b,e,v,n,t,s)
+  // {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  // n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  // if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  // n.queue=[];t=b.createElement(e);t.async=!0;
+  // t.src=v;s=b.getElementsByTagName(e)[0];
+  // s.parentNode.insertBefore(t,s)}(window, document,'script',
+  // 'https://connect.facebook.net/en_US/fbevents.js');
+  // fbq('init', '1386771871837846');
+  // fbq('track', 'PageView');
+  // </script>
+  // <noscript><img height="1" width="1" style="display:none"
+  // src="https://www.facebook.com/tr?id=1386771871837846&ev=PageView&noscript=1"
+  // /></noscript>
+  // <!-- End Meta Pixel Code -->
+
+
 
   return (
     <>
@@ -119,15 +111,21 @@ const App = ({ Component, pageProps }) => {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', ${fbq.FB_PIXEL_ID});
+           <script>
+           !function(f,b,e,v,n,t,s)
+           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+           if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+           n.queue=[];t=b.createElement(e);t.async=!0;
+           t.src=v;s=b.getElementsByTagName(e)[0];
+           s.parentNode.insertBefore(t,s)}(window, document,'script',
+           'https://connect.facebook.net/en_US/fbevents.js');
+           fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
+           fbq('track', 'PageView');
+           </script>
+           <noscript><img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1"
+           /></noscript>
           `,
         }}
       />
