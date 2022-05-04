@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import HamburgerDropdown from '../components/HamburgerDropdown';
 import Link from 'next/link';
 import jag from './styles/Jag/jag-2.png';
+import * as fbq from '../lib/fpixel';
 import { useRouter } from 'next/router';
 
 function entrySuccess() {
@@ -14,6 +15,10 @@ function entrySuccess() {
 	const toggle = () => {
 		setOpen(!open);
 	};
+
+	useEffect(() => {
+		fbq.event('Purchsae', { currency: 'USD', value: 98.0 });
+	}, []);
 
 	return (
 		<section id='submitSuccess' className='min-h-screen flex flex-col'>
