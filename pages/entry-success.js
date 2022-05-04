@@ -17,7 +17,7 @@ function entrySuccess() {
 	};
 
 	useEffect(() => {
-		fbq.event('Purchsae', { currency: 'USD', value: 98.0 });
+		fbq.event('Purchase', { currency: 'USD', value: 98.0 });
 	}, []);
 
 	return (
