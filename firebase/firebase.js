@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import * as fb from 'firebase/analytics';
 import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore';
 import { data } from 'autoprefixer';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -24,8 +23,6 @@ const app = initializeApp(firebaseConfig);
 
 let allData = [];
 
-const adData = app.fb();
-
 // Getting Data From Firebase Based On Collection Name 'CustomerInfo'
 const db = getFirestore(app);
 const afterlifeCol = collection(db, 'CustomerInfo');
@@ -47,4 +44,4 @@ const raeCol = collection(db, 'RAE-raffle');
 
 const pompeiiCol = collection(db, 'pompeii-raffle');
 
-export { db, afterlifeCol, subscriptionCol, pompeiiCol, raeCol, addDoc, adData };
+export { db, afterlifeCol, subscriptionCol, pompeiiCol, raeCol, addDoc };

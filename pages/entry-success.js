@@ -5,6 +5,7 @@ import HamburgerDropdown from '../components/HamburgerDropdown';
 import Link from 'next/link';
 import jag from './styles/Jag/jag-2.png';
 import * as fbq from '../lib/fpixel';
+import * as gtag from '../lib/gtag';
 import { useRouter } from 'next/router';
 import { adData } from '../firebase/firebase';
 
@@ -22,7 +23,15 @@ function entrySuccess() {
 	}, []);
 
 	useEffect(() => {
-		adData.logEvent('purchase success');
+		const handleRouteChange = (url) => {
+			gtag.pageview(url);
+		};
+		gtag.event({
+			action: 'purchase_success',
+			category: 'successful_entries',
+			label: 'Purchase Success',
+			value: 'Jag Runner'
+		});
 	}, []);
 
 	return (
