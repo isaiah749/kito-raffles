@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { selectItems } from '../slices/basketSlice';
 import { useSelector } from 'react-redux';
 import CheckoutProduct from '../components/CheckoutProduct';
+import * as gtag from '../lib/gtag';
 import { useRouter } from 'next/router';
 import { loadStripe } from '@stripe/stripe-js';
 import axios, { AxiosResponse } from 'axios';
@@ -27,6 +28,12 @@ const Checkout = () => {
 		const stripe = await stripePromise;
 		setBuy(true);
 
+		gtag.event({
+			action: 'checkout_button_clicked',
+			category: 'checkout_redirects',
+			label: 'Redirect to Checkout Success',
+			value: 'Jag Runner Checkout Redirect Value'
+		});
 		// Call the backend to create a checkout session.. this is our own backend that we will create
 
 		// Make request to the "create-checkout-session.js" thats in the api folder
