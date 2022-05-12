@@ -6,6 +6,7 @@ import Link from 'next/link';
 import jag from './styles/Jag/jag-2.png';
 import * as fbq from '../lib/fpixel';
 import { useRouter } from 'next/router';
+import { adData } from '../firebase/firebase';
 
 function entrySuccess() {
 	const [ open, setOpen ] = useState(false);
@@ -18,6 +19,10 @@ function entrySuccess() {
 
 	useEffect(() => {
 		fbq.event('Purchase', { currency: 'USD', value: 98.0 });
+	}, []);
+
+	useEffect(() => {
+		adData.logEvent('purchase success');
 	}, []);
 
 	return (
