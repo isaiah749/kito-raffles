@@ -125,18 +125,18 @@ const App = ({ Component, pageProps }) => {
         }}
       />
 
-{/* <Script
+<Script
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MN8VQSM');
+          var head = document.head;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "https://182469.t.hyros.com/v1/lst/universal-script?ph=f566cb6ade9f8327dac6df633ef56ba859182d234327f2a0e315aec1f20b4d4d&tag=!clicked";
+head.appendChild(script);
           `,
         }}
-      /> */}
+      />
 
       <Head>
       <meta name="facebook-domain-verification" content="iniy7mzndmgdw8gpq92gh082kexra3" />
