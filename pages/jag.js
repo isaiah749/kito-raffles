@@ -13,6 +13,7 @@ import { addToBasket } from '../slices/basketSlice';
 import jagTwo from './styles/Jag/jag-2.png';
 import checkmark from './styles/Icons/check-icon.svg';
 import { useRouter } from 'next/router';
+import newJag from './styles/Jag/new-jag.png'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -31,7 +32,7 @@ export default function Jag() {
 	const addToBag = () => {
 		const title = 'Fossil-X Jaguar Runner';
 		const price = 98;
-		const image = 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948';
+		const image = 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876';
 		const description =
 			"Eye-catching footwear with a natural touch. Inspired by 850,000 years of evolution, the Fossil-X Jaguar Runner encapsulates the sleek nature of the Jaguar's natural bonearchitecture.";
 		if (sizeSelected == '') {
@@ -123,16 +124,16 @@ export default function Jag() {
 						<p className='font-title text-xl mt-4 pl-2 lg:text-2xl '>$98</p>
 					</div>
 
-					<div className='relative mt-10 h-[400px] w-[400px] md:hidden '>
+					<div className='relative mt-10 h-[max-content] w-[400px] md:hidden '>
 						{/* <Image
-							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 							loading='lazy'
 							height={450}
 							width={450}
 							objectFit='cover'
 						/> */}
 						<img
-							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 							className='w-full'
 							alt=''
 						/>
@@ -140,7 +141,7 @@ export default function Jag() {
 
 					<div className='hidden relative mt-10 h-full md:flex md:items-center md:justify-center md:mb-16 '>
 						<Image
-							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 							loading='lazy'
 							height={620}
 							width={620}
@@ -299,14 +300,14 @@ export default function Jag() {
 					<section className='col-span-8 2xl:col-span-9 w-full h-[max-content] pb-[5rem]  border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
 						<div className='relative h-[750px] w-full'>
 							{/* <Image
-								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 								loading='lazy'
 								layout='fill'
 								objectFit='cover'
 								objectPosition='center center'
 							/> */}
 							<img
-								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 								className='w-full h-full object-cover'
 								alt=''
 							/>
@@ -349,19 +350,19 @@ export default function Jag() {
 							</div>
 						</div>
 
-						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+						<h2 className='font-title mt-10 mb-3 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
 							Product Features
 						</h2>
 
 						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] py-5 space-x-6 2xl:space-x-16'>
-							<div className='2xl:h-[400px] 2xl:w-[400px] h-[350px] w-[350px] relative '>
+							<div className='2xl:h-[500px] 2xl:w-[500px] h-[350px] w-[350px] relative pt-[5rem] '>
 								<img
-									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 									className='w-full'
 									alt=''
 								/>
 							</div>
-							<div className='mt-10 bg-white p-2 border-2 border-black'>
+							<div className='mt-10 bg-white h-[max-content] py-10 px-2 border-2 border-black'>
 								<h1 className='font-title text-4xl tracking-wide font-semibold '>Custom Foam Design</h1>
 								<h3 className='font-title text-2xl tracking-wide text-black mt-3 italic '>
 									Extremely Comfortable and breathable

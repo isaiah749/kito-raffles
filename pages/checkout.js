@@ -146,7 +146,7 @@ const Checkout = () => {
 							<button
 								role='link'
 								onClick={createCheckoutSession}
-								className='bg-black rounded-sm font-title mb-2 shadow-lg w-[250px] h-12 text-[1.4rem] text-white tracking-widest active:scale-90 transition duration-300 flex items-center justify-between px-3 '>
+								className='bg-black rounded-sm font-title mb-2 shadow-lg w-[230px] h-12 text-[1.4rem] text-white tracking-widest active:scale-90 transition duration-300 flex items-center justify-between px-3 '>
 								<p className=''>{buy ? 'Loading...' : 'Checkout'}</p>
 								<Image src={rightArrow} height={25} width={25} />
 							</button>
