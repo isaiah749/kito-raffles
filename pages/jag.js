@@ -214,7 +214,7 @@ export default function Jag() {
 							Eye-catching
 						</h3>
 						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
-							Designed using the skull of a jaguar, these paris are hard to miss.
+							Designed using the skull of a jaguar, these pairs are hard to miss.
 						</p>
 					</section>
 
