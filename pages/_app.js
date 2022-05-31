@@ -138,6 +138,16 @@ head.appendChild(script);
         }}
       />
 
+<Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          <script src="https://my.rtmark.net/p.js?f=sync&lr=1&partner=9bb9f9a0bc7af64e03d7f4e9c825aca093cd5f5f076fde7c03ec9f9604ff8094" defer></script>
+<noscript><img src="https://my.rtmark.net/img.gif?f=sync&lr=1&partner=9bb9f9a0bc7af64e03d7f4e9c825aca093cd5f5f076fde7c03ec9f9604ff8094" width="1" height="1" /></noscript>
+          `,
+        }}
+      />
+
       <Head>
       <meta name="facebook-domain-verification" content="iniy7mzndmgdw8gpq92gh082kexra3" />
       </Head>
