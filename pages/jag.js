@@ -15,6 +15,7 @@ import checkmark from './styles/Icons/check-icon.svg';
 import { useRouter } from 'next/router';
 import Script from 'next/script'
 import newJag from './styles/Jag/new-jag.png'
+import ShopifyForm from '../components/ShopifyForm';
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -125,7 +126,7 @@ export default function Jag() {
 						<p className='font-title text-xl mt-4 pl-2 lg:text-2xl '>$98</p>
 					</div>
 
-					<div className='relative mt-10 h-[max-content] w-[400px] md:hidden '>
+					<div className='relative mt-10 h-[max-content] w-[full] md:hidden '>
 						{/* <Image
 							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 							loading='lazy'
@@ -140,23 +141,20 @@ export default function Jag() {
 						/>
 					</div>
 
-					<div className='hidden relative mt-10 h-full md:flex md:items-center md:justify-center md:mb-16 '>
+					<div className='hidden relative h-[500px] mt-10 md:flex md:items-center md:justify-center md:mb-16 '>
 						<Image
 							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 							loading='lazy'
-							height={620}
-							width={620}
+							layout='fill'
 							objectFit='cover'
+							objectPosition='center center'
 						/>
 					</div>
-					<Script
-						strategy="afterInteractive"
-						dangerouslySetInnerHTML={{
-							__html: `
-		  <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/6023735.js" data-role="form" data-default-width="650px"></script>
-          `,
-						}}
-					/>
+
+					<div className='border-2 w-[400px] mx-auto h-[max-content] py-5 my-5 md:w-[600px] shadow-md '>
+						<ShopifyForm />
+					</div>
+
 				</section>
 
 				<section className='flex items-center justify-around space-x-20 mt-8 lg:justify-between lg:space-x-0 lg:px-10 mb-2 '>
@@ -322,6 +320,10 @@ export default function Jag() {
 							/>
 						</div>
 
+						<div className='border-2 w-[400px] mx-auto h-[max-content] py-5 my-8 md:w-[600px] shadow-md '>
+								<ShopifyForm />
+							</div>
+
 						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
 							Product Description
 						</h2>
@@ -461,14 +463,10 @@ export default function Jag() {
 								</p>
 							</div>
 
-							<Script
-								strategy="afterInteractive"
-								dangerouslySetInnerHTML={{
-									__html: `
-		  <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/6023735.js" data-role="form" data-default-width="650px"></script>
-          `,
-								}}
-							/>
+							{/* <div className='border-2 w-[400px] mx-auto h-[max-content] py-5 my-2 md:w-[600px] shadow-md '>
+								<ShopifyForm />
+							</div> */}
+
 
 							<div className='mt-6 flex items-center justify-between px-5 '>
 								<p className='font-semibold text-md'>Select Size</p>

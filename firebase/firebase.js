@@ -44,4 +44,6 @@ const raeCol = collection(db, 'RAE-raffle');
 
 const pompeiiCol = collection(db, 'pompeii-raffle');
 
-export { db, afterlifeCol, subscriptionCol, pompeiiCol, raeCol, addDoc };
+const JagPhoneCol = collection(db, 'JagPhoneCol')
+
+export { db, afterlifeCol, subscriptionCol, pompeiiCol, raeCol, JagPhoneCol, addDoc };
