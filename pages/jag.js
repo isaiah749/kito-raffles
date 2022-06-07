@@ -38,7 +38,7 @@ export default function Jag() {
 		const description =
 			"Eye-catching footwear with a natural touch. Inspired by 850,000 years of evolution, the Fossil-X Jaguar Runner encapsulates the sleek nature of the Jaguar's natural bonearchitecture.";
 		if (sizeSelected == '') {
-			alert('nothing selected');
+			console.log('nothing selected');
 		} else {
 			const header = document.querySelector('#header');
 			let html = `<div id='modal' class='flex items-center mt-28 fixed justify-center z-[100] w-full '>
@@ -163,7 +163,7 @@ export default function Jag() {
 				</section>
 
 				<section className='w-full'>
-					<form className='grid grid-cols-2 lg:grid-cols-4 items-center justify-items-center gap-1 py-2 px-4 w-full'>
+					{/* <form className='grid grid-cols-2 lg:grid-cols-4 items-center justify-items-center gap-1 py-2 px-4 w-full'>
 						{sizeData.map(({ id, size }) => (
 							<RadioGroup key={id} value={sizeSelected} onChange={setSizeSelected}>
 								<RadioGroup.Option className='h-12 w-40 flex items-center justify-center' value={size}>
@@ -182,7 +182,7 @@ export default function Jag() {
 								</RadioGroup.Option>
 							</RadioGroup>
 						))}
-					</form>
+					</form> */}
 
 					<section className='px-4 py-2 my-2 w-full h-[max-content]'>
 						<h2 className='font-title text-2xl lg:px-7 lg:text-3xl lg:mb-8 '>Product Description</h2>
@@ -473,7 +473,7 @@ export default function Jag() {
 								<p className='font-semibold text-gray-500 text-md'>US Men's Size</p>
 							</div>
 
-							<form className='grid grid-cols-2 items-center justify-items-center gap-1 py-2 px-4 w-full'>
+							{/* <form className='grid grid-cols-2 items-center justify-items-center gap-1 py-2 px-4 w-full'>
 								{sizeData.map(({ id, size }) => (
 									<RadioGroup key={id} value={sizeSelected} onChange={setSizeSelected}>
 										<RadioGroup.Option
@@ -494,7 +494,7 @@ export default function Jag() {
 										</RadioGroup.Option>
 									</RadioGroup>
 								))}
-							</form>
+							</form> */}
 							<button
 								onClick={(e) => {
 									e.preventDefault();
