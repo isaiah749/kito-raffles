@@ -13,6 +13,7 @@ import { addToBasket } from '../slices/basketSlice';
 import jagTwo from './styles/Jag/jag-2.png';
 import checkmark from './styles/Icons/check-icon.svg';
 import { useRouter } from 'next/router';
+import Script from 'next/script'
 import newJag from './styles/Jag/new-jag.png'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
@@ -20,8 +21,8 @@ import newJag from './styles/Jag/new-jag.png'
 export default function Jag() {
 	const dispatch = useDispatch();
 
-	const [ open, setOpen ] = useState(false);
-	const [ sizeSelected, setSizeSelected ] = useState('6');
+	const [open, setOpen] = useState(false);
+	const [sizeSelected, setSizeSelected] = useState('6');
 
 	const router = useRouter();
 
@@ -148,6 +149,14 @@ export default function Jag() {
 							objectFit='cover'
 						/>
 					</div>
+					<Script
+						strategy="afterInteractive"
+						dangerouslySetInnerHTML={{
+							__html: `
+		  <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/6023735.js" data-role="form" data-default-width="650px"></script>
+          `,
+						}}
+					/>
 				</section>
 
 				<section className='flex items-center justify-around space-x-20 mt-8 lg:justify-between lg:space-x-0 lg:px-10 mb-2 '>
@@ -451,6 +460,15 @@ export default function Jag() {
 									charged at purchase.
 								</p>
 							</div>
+
+							<Script
+								strategy="afterInteractive"
+								dangerouslySetInnerHTML={{
+									__html: `
+		  <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/6023735.js" data-role="form" data-default-width="650px"></script>
+          `,
+								}}
+							/>
 
 							<div className='mt-6 flex items-center justify-between px-5 '>
 								<p className='font-semibold text-md'>Select Size</p>
