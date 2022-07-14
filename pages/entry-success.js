@@ -47,11 +47,11 @@ function entrySuccess() {
 				<div className='border-2 flex flex-col items-center mx-auto border-black rounded-md mb-5 lg:mb-0 p-2 max-w-[400px] xl:max-w-xl pt-16'>
 					<Image src={jag} width={550} height={400} objectFit='contain' />
 					<div className='text-center font-title tracking-wider mt-5 font-bold text-2xl'>
-						<h1 className='text-green-500'>Submission Recieved</h1>
+						<h1 className='text-green-500'>Purchase Complete</h1>
 					</div>
 					<div className='p-3 bg-white rounded-md space-y-4'>
 						<p className='text-center text-sm'>
-							Thank you for entering the <span className='font-semibold'>
+							Thank you for your purchase of the <span className='font-semibold'>
 								Fossil-X Jaguar Runner
 							</span>{' '}
 							raffle!

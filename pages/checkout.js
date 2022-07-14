@@ -109,12 +109,12 @@ const Checkout = () => {
 							</button>
 						</div>
 
-						<p className='text-gray-500 mt-8 text-sm ml-10  '>
+						{/* <p className='text-gray-500 mt-8 text-sm ml-10  '>
 							<span className='font-bold text-lg block mb-3'>PLEASE ADVISE:</span> You will be charged
 							full price upon enter the raffle, however if your entry is not a selected winner the you
 							will be refunded the full amount. The money will be refunded to the card that was used to
 							enter the raffle.
-						</p>
+						</p> */}
 						<p className='text-gray-500 mt-3 text-sm ml-10 '>
 							For any assistance at all please reach out to our customer service team,{' '}
 							<span className='font-semibold text-black '>info@kito.online.</span>
@@ -218,12 +218,12 @@ const Checkout = () => {
 							</div>
 						</section>
 
-						<p className='text-gray-500 relative h-[max-content] mt-8 text-sm'>
+						{/* <p className='text-gray-500 relative h-[max-content] mt-8 text-sm'>
 							<span className='font-bold text-lg block mb-3'>PLEASE ADVISE:</span> You will be charged
 							full price upon enter the raffle, however if your entry is not a selected winner the you
 							will be refunded the full amount. The money will be refunded to the card that was used to
 							enter the raffle.
-						</p>
+						</p> */}
 						{/* IMAGE GALLERY */}
 						<button
 							role='link'

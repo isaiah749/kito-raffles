@@ -454,14 +454,14 @@ export default function Jag() {
 								<h3 className='font-title text-[1.65rem] mt-3 '>$98</h3>
 							</div>
 
-							<div className=''>
+							{/* <div className=''>
 								<p className='text-gray-500 w-[400px] text-[.95rem] mt-3 '>
 									Purchase of this product enters you into the{' '}
 									<span className='font-semibold'>Fossil-X Jaguar Runner raffle.</span> If your order
 									is not selected as a winner then you will recieve a refund to the card that was
 									charged at purchase.
 								</p>
-							</div>
+							</div> */}
 
 							{/* <div className='border-2 w-[400px] mx-auto h-[max-content] py-5 my-2 md:w-[600px] shadow-md '>
 								<ShopifyForm />
