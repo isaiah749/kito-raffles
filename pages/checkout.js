@@ -104,7 +104,7 @@ const Checkout = () => {
 									router.push('/jag');
 								}}
 								className='bg-black font-title min-w-[175px] xl:mr-10 h-12 text-[1.4rem] max-w-[400px] text-white tracking-wider flex items-center justify-between px-3 '>
-								<p className=''>Enter Raffle</p>
+								<p className='pt-1'>Fossil-X Jaguar Runner</p>
 								<Image src={rightArrow} height={25} width={25} />
 							</button>
 						</div>
@@ -126,7 +126,7 @@ const Checkout = () => {
 								router.push('/jag');
 							}}
 							className='bg-black font-title w-[90%] lg:w-[70%] xl:w-[50%] mx-auto left-0 right-0 rounded-sm h-12 text-[1.4rem] text-white tracking-wider flex items-center justify-between px-3 fixed bottom-2 '>
-							<p className=''>Enter Raffle</p>
+							<p className='pt-1'>Fossil-X Jaguar Runner</p>
 							<Image src={rightArrow} height={25} width={25} />
 						</button>
 					</div>

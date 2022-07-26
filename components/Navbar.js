@@ -81,13 +81,13 @@ function Navbar({ toggle, reload }) {
 			</div>
 			<div className='flex items-center space-x-3 justify-end pt-2 pr-3 '>
 				<div className='lg:hidden relative cursor-pointer'>
-					<span className='absolute top-[.65rem] right-[.97rem] text-[.8rem] text-white font-semibold'>
+					<span className='absolute top-[.65rem] right-[.9rem] text-[.8rem] text-white font-semibold'>
 						{items.length}
 					</span>
 					<Image onClick={() => router.push('/checkout')} src={bagIcon} height={35} width={35} />
 				</div>
 				<div className='hidden lg:block relative cursor-pointer'>
-					<span className='absolute top-[1rem] right-[1.2rem] text-[.8rem] text-white font-semibold'>
+					<span className='absolute top-[1rem] right-[1.21rem] text-[.8rem] text-white font-semibold'>
 						{items.length}
 					</span>
 					<Image onClick={() => router.push('/checkout')} src={bagIcon} height={45} width={45} />

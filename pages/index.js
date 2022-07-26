@@ -81,7 +81,7 @@ export default function Home() {
 						</h2>
 						<p className='font-title text-lg text-center p-2 text-gray-500 mb-10 lg:text-2xl tracking-wide '>
 							The Fossil-X Jaguar Runner raffle is live now! Click below to enter. This shoe features
-							premium eva foam, sizes range from 6-14. Please note that there are no half sizes for this
+							premium eva foam, sizes range from 6-14. Please note: that there are no half sizes for this
 							product.{' '}
 						</p>
 						<div className='flex items-center justify-center relative h-[300px] w-full lg:h-[475px] '>

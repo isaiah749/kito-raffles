@@ -324,7 +324,7 @@ export default function Jag() {
 								<ShopifyForm />
 							</div> */}
 
-						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-2 border-black text-3xl '>
 							Product Description
 						</h2>
 
@@ -361,7 +361,7 @@ export default function Jag() {
 							</div>
 						</div>
 
-						<h2 className='font-title mt-10 mb-3 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+						<h2 className='font-title mt-10 mb-3 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-2 border-black text-3xl '>
 							Product Features
 						</h2>
 
@@ -373,7 +373,7 @@ export default function Jag() {
 									alt=''
 								/>
 							</div>
-							<div className='mt-10 bg-white h-[max-content] py-10 px-2 border-2 border-black'>
+							<div className='mt-10 bg-white h-[max-content] py-5 px-2 border-2 border-black'>
 								<h1 className='font-title text-4xl tracking-wide font-semibold '>Custom Foam Design</h1>
 								<h3 className='font-title text-2xl tracking-wide text-black mt-3 italic '>
 									Extremely Comfortable and breathable
@@ -395,7 +395,7 @@ export default function Jag() {
 							</div>
 						</div>
 
-						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-2 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-2 py-2 mx-auto rounded-md border-2 border-black text-3xl '>
 							Details
 						</h2>
 
@@ -420,7 +420,7 @@ export default function Jag() {
 							</ul>
 						</section>
 
-						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-2 py-2 mx-auto rounded-md border-[1px] border-black text-3xl '>
+						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-2 py-2 mx-auto rounded-md border-2 border-black text-3xl '>
 							Gallery
 						</h2>
 
