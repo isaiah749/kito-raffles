@@ -280,7 +280,7 @@ export default function Jag() {
 					</section>
 				</section>
 			</main>
-			<div className='w-full fixed bottom-0 flex items-center justify-center px-4 pb-5 mt-5 xl:hidden '>
+			{/* <div className='w-full fixed bottom-0 flex items-center justify-center px-4 pb-5 mt-5 xl:hidden '>
 				<button
 					className='w-full h-14 bg-black shadow-lg text-white rounded-lg '
 					onClick={(e) => {
@@ -298,7 +298,7 @@ export default function Jag() {
 						</div>
 					</div>
 				</button>
-			</div>
+			</div> */}
 
 			{/* DESKTOP LAYOUT */}
 			<div className='hidden xl:block text-black xl:pb-5 xl:relative xl:mt-[5rem] '>
@@ -495,7 +495,7 @@ export default function Jag() {
 									</RadioGroup>
 								))}
 							</form>
-							<button
+							{/* <button
 								onClick={(e) => {
 									e.preventDefault();
 									addToBag();
@@ -506,7 +506,7 @@ export default function Jag() {
 								<div className='pt-1'>
 									<Image src={bagIcon} height={35} width={35} />
 								</div>
-							</button>
+							</button> */}
 						</div>
 					</section>
 				</main>
