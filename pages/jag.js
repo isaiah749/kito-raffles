@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import HamburgerDropdown from '../components/HamburgerDropdown';
 import Image from 'next/image';
 import jag from './styles/Jag/jag-1.jpg';
 import sizeData from './context/shoeSizeData.json';
@@ -16,6 +14,8 @@ import { useRouter } from 'next/router';
 import Script from 'next/script'
 import newJag from './styles/Jag/new-jag.png'
 import ShopifyForm from '../components/ShopifyForm';
+import NavTop from '../components/Nav/NavTop';
+import blackJag from './styles/Jag/black-whitebg.jpeg'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -34,7 +34,7 @@ export default function Jag() {
 	const addToBag = () => {
 		const title = 'Fossil-X Jaguar Runner';
 		const price = 98;
-		const image = 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876';
+		const image = 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/black-whitebg.jpg?v=1659459253';
 		const description =
 			"Eye-catching footwear with a natural touch. Inspired by 850,000 years of evolution, the Fossil-X Jaguar Runner encapsulates the sleek nature of the Jaguar's natural bonearchitecture.";
 		if (sizeSelected == '') {
@@ -96,16 +96,13 @@ export default function Jag() {
 	}, []);
 
 	return (
-		<div className='h-[max-content] pb-[8rem] relative w-full flex flex-col '>
+		<div className='h-[max-content] pb-[8rem] mt-5 relative w-full flex flex-col '>
 			<Head>
 				<title>KITO Jag Raffle</title>
 			</Head>
 
 			<header id='header' className=' relative '>
-				<Navbar toggle={toggle} />
-				<div className=''>
-					<HamburgerDropdown isOpen={open} toggle={toggle} />
-				</div>
+				<NavTop />
 			</header>
 			{/* <div className='flex items-center mt-28 absolute justify-center z-[100] w-full '>
 				<div className='border-2 text-green-600 font-semibold h-10 w-36 rounded-full bg-white flex items-center justify-center absolute '>
@@ -114,7 +111,7 @@ export default function Jag() {
 			</div> */}
 
 			{/* MOBILE AND TABLET LAYOUT */}
-			<main className='pt-24 w-full h-[max-content] relative xl:hidden'>
+			<main className='pt-16 w-full h-[max-content] relative xl:hidden'>
 				<section className='w-full'>
 					<div className='px-5'>
 						<h2 className='font-title text-[2.15rem] tracking-wide lg:text-[2.4rem] '>
@@ -134,16 +131,16 @@ export default function Jag() {
 							width={450}
 							objectFit='cover'
 						/> */}
-						<img
+						{/* <img
 							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 							className='w-full'
 							alt=''
-						/>
+						/> */}
 					</div>
 
-					<div className='hidden relative h-[500px] mt-10 md:flex md:items-center md:justify-center md:mb-16 '>
+					<div className='relative h-[250px] md:flex md:items-center md:justify-center md:mb-16 '>
 						<Image
-							src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
+							src={blackJag}
 							loading='lazy'
 							layout='fill'
 							objectFit='cover'
@@ -201,7 +198,7 @@ export default function Jag() {
 							Benefits
 						</h3>
 						<p className='text-md w-[320px] lg:w-[500px] lg:mt-2 mx-auto pl-1 text-gray-400 '>
-							Very lightweight. Created from a luxurious plastic foam in Los Angeles, this model has been
+							Very lightweight. Created from a luxurious foam in Los Angeles, this model has been
 							made for comfort and utility.
 						</p>
 					</section>
@@ -262,7 +259,7 @@ export default function Jag() {
 						<ul className='mx-auto mt-2 flex-col space-y-4 px-2 '>
 							<li className='flex items-center justify-between border-b-[1px] border-black '>
 								<p className='text-gray-400 '>Colorway</p>
-								<p className='text-gray-400 font-semibold '>Aged Bone</p>
+								<p className='text-gray-400 font-semibold '>Black Aged Bone</p>
 							</li>
 							<li className='flex items-center justify-between border-b-[1px] border-black '>
 								<p className='text-gray-400 '>Waterproof</p>
@@ -280,7 +277,7 @@ export default function Jag() {
 					</section>
 				</section>
 			</main>
-			{/* <div className='w-full fixed bottom-0 flex items-center justify-center px-4 pb-5 mt-5 xl:hidden '>
+			<div className='w-full fixed bottom-0 flex items-center justify-center px-4 pb-5 mt-5 xl:hidden '>
 				<button
 					className='w-full h-14 bg-black shadow-lg text-white rounded-lg '
 					onClick={(e) => {
@@ -298,31 +295,31 @@ export default function Jag() {
 						</div>
 					</div>
 				</button>
-			</div> */}
+			</div>
 
 			{/* DESKTOP LAYOUT */}
-			<div className='hidden xl:block text-black xl:pb-5 xl:relative xl:mt-[5rem] '>
+			<div className='hidden xl:block text-black xl:pb-5 xl:relative xl:mt-[5.2rem] '>
 				<main className='grid grid-cols-12 relative w-full h-[100vh] '>
 					{/* LEFT SECTION */}
-					<section className='col-span-8 2xl:col-span-9 w-full h-[max-content] pb-[5rem]  border-2 border-r-black border-t-0 border-l-0 border-b-0 '>
+					<section className='col-span-8 2xl:col-span-9 w-full h-[max-content] pb-[5rem]  border-r-2 border-r-black '>
 						<div className='relative h-[750px] w-full'>
-							{/* <Image
-								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
+							<Image
+								src={blackJag}
 								loading='lazy'
 								layout='fill'
 								objectFit='cover'
 								objectPosition='center center'
-							/> */}
-							<img
+							/>
+							{/* <img
 								src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
 								className='w-full h-full object-cover'
 								alt=''
-							/>
+							/> */}
 						</div>
 
-						{/* <div className='border-2 w-[400px] mx-auto h-[max-content] py-5 my-8 md:w-[600px] shadow-md '>
+						<div className='border-2 w-[400px] mx-auto h-[max-content] py-5 my-20 md:w-[600px] shadow-md '>
 								<ShopifyForm />
-							</div> */}
+							</div>
 
 						<h2 className='font-title my-10 text-center bg-white w-[max-content] px-4 py-2 mx-auto rounded-md border-2 border-black text-3xl '>
 							Product Description
@@ -403,7 +400,7 @@ export default function Jag() {
 							<ul className='mx-auto mt-2 flex-col space-y-4 px-2 '>
 								<li className='flex items-center justify-between border-b-[1px] border-black '>
 									<p className='text-gray-400 '>Colorway</p>
-									<p className='text-gray-400 font-semibold '>Aged Bone</p>
+									<p className='text-gray-400 font-semibold '>Black Aged Bone</p>
 								</li>
 								<li className='flex items-center justify-between border-b-[1px] border-black '>
 									<p className='text-gray-400 '>Waterproof</p>
@@ -446,7 +443,7 @@ export default function Jag() {
 						</div>
 					</section>
 					{/* RIGHT SECTION */}
-					<section className='col-span-4 2xl:col-span-3 w-full z-20 h-full relative px-8 py-5 '>
+					<section className='col-span-4 2xl:col-span-3 w-full z-20 h-full relative px-8 pb-5 '>
 						<div className='fixed'>
 							<div className=''>
 								<h3 className='font-title italic text-[1.75rem] '>US Men's Shoe</h3>
@@ -454,14 +451,14 @@ export default function Jag() {
 								<h3 className='font-title text-[1.65rem] mt-3 '>$98</h3>
 							</div>
 
-							{/* <div className=''>
+							<div className=''>
 								<p className='text-gray-500 w-[400px] text-[.95rem] mt-3 '>
 									Purchase of this product enters you into the{' '}
 									<span className='font-semibold'>Fossil-X Jaguar Runner raffle.</span> If your order
 									is not selected as a winner then you will recieve a refund to the card that was
 									charged at purchase.
 								</p>
-							</div> */}
+							</div>
 
 							{/* <div className='border-2 w-[400px] mx-auto h-[max-content] py-5 my-2 md:w-[600px] shadow-md '>
 								<ShopifyForm />
@@ -495,7 +492,7 @@ export default function Jag() {
 									</RadioGroup>
 								))}
 							</form>
-							{/* <button
+							<button
 								onClick={(e) => {
 									e.preventDefault();
 									addToBag();
@@ -506,7 +503,7 @@ export default function Jag() {
 								<div className='pt-1'>
 									<Image src={bagIcon} height={35} width={35} />
 								</div>
-							</button> */}
+							</button>
 						</div>
 					</section>
 				</main>

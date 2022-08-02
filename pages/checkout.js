@@ -9,6 +9,10 @@ import { useSelector } from 'react-redux';
 import CheckoutProduct from '../components/CheckoutProduct';
 import * as gtag from '../lib/gtag';
 import { useRouter } from 'next/router';
+import NavBottom from '../components/Nav/NavBottom';
+import NavLeft from '../components/Nav/NavLeft';
+import NavRight from '../components/Nav/NavRight';
+import NavTop from '../components/Nav/NavTop';
 import { loadStripe } from '@stripe/stripe-js';
 import axios, { AxiosResponse } from 'axios';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
@@ -80,12 +84,9 @@ const Checkout = () => {
 				<title>Kito - Checkout</title>
 			</Head>
 
-			<header className=' relative '>
-				<Navbar toggle={toggle} />
-				<div className=''>
-					<HamburgerDropdown isOpen={open} toggle={toggle} />
-				</div>
-			</header>
+			<NavTop />
+      <NavRight />
+      <NavLeft />
 
 			<main className='pt-24 px-5 '>
 				<h2 className='font-title text-[2.15rem] font-bold tracking-wide lg:text-[2.3rem] xl:px-10 '>

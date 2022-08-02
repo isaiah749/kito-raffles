@@ -1,14 +1,12 @@
+import NavBottom from '../components/Nav/NavBottom';
+import NavLeft from '../components/Nav/NavLeft';
+import NavRight from '../components/Nav/NavRight';
+import NavTop from '../components/Nav/NavTop';
 import Head from 'next/head';
 import { useState } from 'react';
-import HamburgerDropdown from '../components/HamburgerDropdown';
-import Navbar from '../components/Navbar';
+import {motion} from 'framer-motion'
 
-function policy() {
-	const [ open, setOpen ] = useState(false);
-
-	const toggle = () => {
-		setOpen(!open);
-	};
+function Policy() {
 
 	return (
 		<div className='min-h-screen flex flex-col'>
@@ -16,10 +14,23 @@ function policy() {
 				<title>Policy</title>
 			</Head>
 
-			<Navbar toggle={toggle} />
-			<HamburgerDropdown isOpen={open} toggle={toggle} />
+			<NavTop />
+      <NavRight />
+      <NavLeft />
 
-			<main className='mt-20 flex items-center p-2 justify-center'>
+			<motion.main initial='hidden' animate='visible' variants={{
+        hidden: {
+          scale: 0.8,
+          opacity: 0
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: .4
+          }
+        }
+      }} className='mt-20 flex items-center p-2 justify-center'>
 				<div className='border-2 mt-12 w-[45rem]
                 text-center font-title tracking-wide p-2 rounded-md border-black'>
 					{/* Title */}
@@ -41,9 +52,10 @@ function policy() {
 						</p>
 					</div>
 				</div>
-			</main>
+			</motion.main>
+      <NavBottom />
 		</div>
 	);
 }
 
-export default policy;
+export default Policy;

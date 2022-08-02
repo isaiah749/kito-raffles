@@ -11,7 +11,7 @@ import Router from 'next/router';
 import * as gtag from '../lib/gtag';
 import * as fbq from '../lib/fpixel'
 import Head from 'next/head'
-
+import { motion } from 'framer-motion';
 // function MyApp({ Component, pageProps }) {
 // 	return (
 // 		<Provider store={store}>
@@ -85,7 +85,14 @@ const App = ({ Component, pageProps }) => {
 
 
   return (
-    <>
+    <motion.div className='' key={router.route} initial="pageInitial" animate="pageAnimate" variants={{
+      pageInitial: {
+        opacity: 0
+      },
+      pageAnimate: {
+        opacity: 1
+      }
+    }}>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
@@ -154,7 +161,7 @@ head.appendChild(script);
 <Provider store={store}>
   <Component {...pageProps} />
 </Provider>
-    </>
+    </motion.div>
   )
 }
 
