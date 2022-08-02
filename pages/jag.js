@@ -34,7 +34,7 @@ export default function Jag() {
 	const addToBag = () => {
 		const title = 'Fossil-X Jaguar Runner';
 		const price = 98;
-		const image = 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/black-whitebg.jpg?v=1659459253';
+		const image = 'https://cdn.shopify.com/s/files/1/0274/1351/2301/files/blackjagside1_1_croppded.jpg?v=1659406463';
 		const description =
 			"Eye-catching footwear with a natural touch. Inspired by 850,000 years of evolution, the Fossil-X Jaguar Runner encapsulates the sleek nature of the Jaguar's natural bonearchitecture.";
 		if (sizeSelected == '') {
