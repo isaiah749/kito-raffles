@@ -27,7 +27,7 @@ const Home = () => {
 
       <div className='min-h-screen w-full hidden xl:block '>
         <Head>Kito Raffles ~ Home</Head>
-        <header className="w-full relative h-screen jag-background ">
+        <header className="w-full relative h-screen ">
           <nav className='hidden xl:block'>
             <NavTop />
             <NavBottom />
@@ -36,6 +36,7 @@ const Home = () => {
           </nav>
 
         </header>
+
 
         <div className="absolute top-28 px-36 ">
           <h2 onClick={() => router.push('/jag')} className="font-title cursor-pointer text-3xl font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Jaguar Runner Raffle - Live Now</h2>
