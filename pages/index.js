@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 import Typed from 'react-typed';
 import Image from 'next/image'
 import HamburgerDropdown from '../components/HamburgerDropdown'
-import image from './styles/Jag/black-transp.png'
+import image from './styles/Jag/product-shot.PNG'
 import Hero from '../components/Hero'
 
 const Home = () => {
@@ -37,14 +37,25 @@ const Home = () => {
 
         </header>
 
-
-        <div className="absolute top-28 px-36 ">
+		<div className="h-[100vh]  fixed top-0 w-full ">
+			<Image src={image} layout='fill' objectFit='cover' />
+			<div className="absolute top-28 px-36 ">
           <h2 onClick={() => router.push('/jag')} className="font-title cursor-pointer text-3xl font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Jaguar Runner Raffle - Live Now</h2>
         </div>
 
         <div className="absolute bottom-28 right-0 px-36 ">
           <h2 onClick={() => router.push('/jag')} className="font-title text-3xl cursor-pointer font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Enter Jag Raffle</h2>
         </div>
+		</div>
+
+
+        {/* <div className="absolute top-28 px-36 ">
+          <h2 onClick={() => router.push('/jag')} className="font-title cursor-pointer text-3xl font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Jaguar Runner Raffle - Live Now</h2>
+        </div>
+
+        <div className="absolute bottom-28 right-0 px-36 ">
+          <h2 onClick={() => router.push('/jag')} className="font-title text-3xl cursor-pointer font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Enter Jag Raffle</h2>
+        </div> */}
 
       {/* <main className="border-2 absolute top-28 px-36 border-red-400 w-full h-[80%] ">
         <div className="">hello</div>
