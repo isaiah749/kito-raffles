@@ -24,7 +24,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 const Checkout = () => {
 	const items = useSelector(selectItems);
 	const router = useRouter();
-	const [ open, setOpen ] = useState(false);
+	const [ isOpen, setIsOpen ] = useState(false);
 
 	const [ buy, setBuy ] = useState(false);
 
@@ -75,7 +75,7 @@ const Checkout = () => {
 	// WHAT HAPPENS - make a request to the backend to create the checkout session, comes back to the frontend, then redirects them to the checkout page. At that point it is up to Stripe and the fall back urls (success and cancel)
 
 	const toggle = () => {
-		setOpen(!open);
+		setIsOpen(!isOpen);
 	};
 
 	return (
@@ -83,10 +83,19 @@ const Checkout = () => {
 			<Head>
 				<title>Kito - Checkout</title>
 			</Head>
-
+			<div className="hidden xl:block">
 			<NavTop />
+			
       <NavRight />
       <NavLeft />
+
+			</div>
+			<nav className="xl:hidden fixed top-0 z-50  ">
+			<Navbar toggle={toggle} />
+			<div className="transition-all duration-300 ease-in-out ">
+				<HamburgerDropdown isOpen={isOpen} toggle={toggle} />
+			</div>
+		  </nav>
 
 			<main className='pt-24 px-5 '>
 				<h2 className='font-title text-[2.15rem] font-bold tracking-wide lg:text-[2.3rem] xl:px-10 '>
@@ -105,7 +114,7 @@ const Checkout = () => {
 									router.push('/jag');
 								}}
 								className='bg-black font-title min-w-[175px] xl:mr-10 h-12 text-[1.4rem] max-w-[400px] text-white tracking-wider flex items-center justify-between px-3 '>
-								<p className='pt-1'>Fossil-X Jaguar Runner</p>
+								<p className='pt-1'>Enter Raffle</p>
 								<Image src={rightArrow} height={25} width={25} />
 							</button>
 						</div>
@@ -127,7 +136,7 @@ const Checkout = () => {
 								router.push('/jag');
 							}}
 							className='bg-black font-title w-[90%] lg:w-[70%] xl:w-[50%] mx-auto left-0 right-0 rounded-sm h-12 text-[1.4rem] text-white tracking-wider flex items-center justify-between px-3 fixed bottom-2 '>
-							<p className='pt-1'>Fossil-X Jaguar Runner</p>
+							<p className='pt-1'>Enter Raffle</p>
 							<Image src={rightArrow} height={25} width={25} />
 						</button>
 					</div>

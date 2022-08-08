@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import bagIcon from '../../pages/styles/Icons/bag-icon.svg'
+import bagIcon from '../../pages/styles/Icons/bag-icon-nav.svg'
 import Image from 'next/image'
 import logo from '../../pages/styles/KW.svg'
 import { selectItems } from '../../slices/basketSlice';

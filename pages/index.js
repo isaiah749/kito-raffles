@@ -3,27 +3,38 @@ import NavLeft from '../components/Nav/NavLeft'
 import NavRight from '../components/Nav/NavRight'
 import NavTop from '../components/Nav/NavTop'
 import Head from 'next/head'
-import React from 'react'
+import Navbar from '../components/Navbar'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Typed from 'react-typed';
+import Image from 'next/image'
+import HamburgerDropdown from '../components/HamburgerDropdown'
+import image from './styles/Jag/black-transp.png'
+import Hero from '../components/Hero'
 
 const Home = () => {
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+	setIsOpen(!isOpen)
+  }
 
 
   return (
     <div className='min-h-screen w-full'>
 
 
-      <div className='min-h-screen w-full relative '>
+      <div className='min-h-screen w-full hidden xl:block '>
         <Head>Kito Raffles ~ Home</Head>
         <header className="w-full relative h-screen jag-background ">
-          <nav>
+          <nav className='hidden xl:block'>
             <NavTop />
             <NavBottom />
             <NavRight />
             <NavLeft />
           </nav>
+
         </header>
 
         <div className="absolute top-28 px-36 ">
@@ -38,6 +49,17 @@ const Home = () => {
         <div className="">hello</div>
       </main> */}
       </div>
+	  <div className="min-h-screen w-full  xl:hidden ">
+	  <nav className="xl:hidden fixed top-0 z-50  ">
+			<Navbar toggle={toggle} />
+			<div className="transition-all duration-300 ease-in-out ">
+				<HamburgerDropdown isOpen={isOpen} toggle={toggle} />
+			</div>
+		  </nav>
+		  <div className=" ">
+	  		<Hero />
+		  </div>
+	  </div>
 
     </div>
   )

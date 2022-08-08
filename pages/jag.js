@@ -8,14 +8,15 @@ import { RadioGroup } from '@headlessui/react';
 import bagIcon from './styles/Icons/bag-icon.svg';
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '../slices/basketSlice';
-import jagTwo from './styles/Jag/jag-2.png';
+import jagTwo from './styles/Jag/black-top.png';
 import checkmark from './styles/Icons/check-icon.svg';
 import { useRouter } from 'next/router';
 import Script from 'next/script'
-import newJag from './styles/Jag/new-jag.png'
+import newJag from './styles/Jag/two-black.png'
 import ShopifyForm from '../components/ShopifyForm';
 import NavTop from '../components/Nav/NavTop';
-import blackJag from './styles/Jag/black-whitebg.jpeg'
+import blackJag from './styles/Jag/product-shot.png'
+import jagThree from './styles/Jag/three-black.png'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -287,7 +288,7 @@ export default function Jag() {
 					}}>
 					<div className='flex items-center justify-center'>
 						<p className='mr-1 font-title text-2xl py-2 lg:text-3xl '>Add to bag</p>
-						<div className='lg:hidden'>
+						<div className='lg:hidden mt-1'>
 							<Image src={bagIcon} height={25} width={25} />
 						</div>
 						<div className='hidden lg:block'>
@@ -350,7 +351,7 @@ export default function Jag() {
 							</div>
 							<div className='2xl:h-[400px] 2xl:w-[400px] h-[350px] w-[350px] relative '>
 								<Image
-									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/jag-2.png?v=1651515528'
+									src={newJag}
 									layout='fill'
 									loading='lazy'
 									objectFit='cover'
@@ -364,9 +365,10 @@ export default function Jag() {
 
 						<div className='w-full flex mx-auto px-10 justify-center h-[max-content] py-5 space-x-6 2xl:space-x-16'>
 							<div className='2xl:h-[500px] 2xl:w-[500px] h-[350px] w-[350px] relative pt-[5rem] '>
-								<img
-									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/new-jag.png?v=1653062876'
+								<Image
+									src={jagTwo}
 									className='w-full'
+									layout='fill'
 									alt=''
 								/>
 							</div>
@@ -424,8 +426,9 @@ export default function Jag() {
 						<div className='w-full relative flex flex-wrap items-center justify-center space-x-5 mx-auto px-[4.4rem] h-[max-content] '>
 							<div className=''>
 								<div className='2xl:h-[400px] h-[350px] w-[350px] 2xl:w-[400px] relative '>
-									<img
-										src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Jag.jpg?v=1651160948'
+									<Image
+										src={jagThree}
+										layout='fill'
 										className='w-full'
 										alt=''
 									/>
@@ -433,7 +436,7 @@ export default function Jag() {
 							</div>
 							<div className='2xl:h-[400px] h-[350px] w-[350px] 2xl:w-[400px] relative '>
 								<Image
-									src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/jag-2.png?v=1651515528'
+									src={newJag}
 									layout='fill'
 									loading='lazy'
 									className=''

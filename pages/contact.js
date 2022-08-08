@@ -5,13 +5,14 @@ import { useState } from 'react';
 import NavRight from '../components/Nav/NavRight';
 import NavLeft from '../components/Nav/NavLeft';
 import {motion} from 'framer-motion'
-
+import Navbar from '../components/Navbar';
+import HamburgerDropdown from '../components/HamburgerDropdown';
 
 function Contact() {
-	const [ open, setOpen ] = useState(false);
+	const [ isOpen, setIsOpen ] = useState(false);
 
 	const toggle = () => {
-		setOpen(!open);
+		setIsOpen(!isOpen);
 	};
 
 	return (
@@ -20,10 +21,19 @@ function Contact() {
 				<title>Contact</title>
 			</Head>
 
-      <NavTop />
+			<div className="hidden xl:block">
+			<NavTop />
+			
       <NavRight />
       <NavLeft />
 
+			</div>
+			<nav className="xl:hidden fixed top-0 z-50  ">
+			<Navbar toggle={toggle} />
+			<div className="transition-all duration-300 ease-in-out ">
+				<HamburgerDropdown isOpen={isOpen} toggle={toggle} />
+			</div>
+		  </nav>
 			<motion.main initial='hidden' animate='visible' variants={{
         hidden: {
           scale: 0.8,
@@ -72,7 +82,10 @@ function Contact() {
 					</div>
 				</div>
 			</motion.main>
-      <NavBottom />
+			<div className="hidden xl:block">
+     		 <NavBottom />
+
+			</div>
 		</div>
 	);
 }

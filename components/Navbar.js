@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import menuIcon from '../pages/styles/Icons/menu-icon.svg';
-import bagIcon from '../pages/styles/Icons/bag-icon.svg';
+import bagIcon from '../pages/styles/Icons/bag-icon-nav.svg';
 import { useRouter } from 'next/router';
 import { selectItems } from '../slices/basketSlice';
 import { useSelector } from 'react-redux';
@@ -13,7 +13,7 @@ function Navbar({ toggle, reload }) {
 	const items = useSelector(selectItems);
 
 	return (
-		<div className='bg-black grid grid-cols-3 h-20 w-full z-[1000] fixed shadow-lg xl:px-8 xl:py-2'>
+		<div className='bg-white grid grid-cols-3 h-20 w-full z-[1000] fixed shadow-lg xl:px-8 xl:py-2'>
 
 			<Head>
 
@@ -35,7 +35,7 @@ function Navbar({ toggle, reload }) {
 
 			</Head>
 
-			<div className=' flex items-center text-white cursor-pointer font-title tracking-widest text-[1.7rem] col-span-2 xl:col-span-1 md:text-4xl '>
+			<div className=' flex items-center text-black cursor-pointer font-title tracking-widest text-[1.7rem] col-span-2 xl:col-span-1 md:text-4xl '>
 				{/* <Image
 					onClick={() => router.push('/')}
 					src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/SkullGraphicSpinningsmall.gif?v=1627671973'
@@ -80,14 +80,14 @@ function Navbar({ toggle, reload }) {
 				</ul>
 			</div>
 			<div className='flex items-center space-x-3 justify-end pt-2 pr-3 '>
-				<div className='lg:hidden relative cursor-pointer'>
-					<span className='absolute top-[.65rem] right-[.9rem] text-[.8rem] text-white font-semibold'>
+				<div className='xl:hidden relative cursor-pointer'>
+					<span className='absolute top-[.65rem] right-[1rem] text-[.8rem] text-black font-semibold'>
 						{items.length}
 					</span>
 					<Image onClick={() => router.push('/checkout')} src={bagIcon} height={35} width={35} />
 				</div>
-				<div className='hidden lg:block relative cursor-pointer'>
-					<span className='absolute top-[1rem] right-[1.21rem] text-[.8rem] text-white font-semibold'>
+				<div className='hidden xl:block relative cursor-pointer'>
+					<span className='absolute top-[1rem] right-[1.21rem] text-[.8rem] text-black font-semibold'>
 						{items.length}
 					</span>
 					<Image onClick={() => router.push('/checkout')} src={bagIcon} height={45} width={45} />

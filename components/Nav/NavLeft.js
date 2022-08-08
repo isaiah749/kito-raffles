@@ -13,7 +13,7 @@ const bounceTransition = {
 
 const NavLeft = () => {
   return (
-    <div className='fixed left-2 top-1/2 cursor-pointer -rotate-90 '>
+    <div className='fixed left-2 top-1/2 cursor-pointer z-50 -rotate-90 '>
         <Link href='contact'>
             <motion.h2 transition={bounceTransition} animate={{y: ["150%", "-150%"]}} className="font-semibold text-[1.2rem] text-black hover:scale-110 transition duration-300 hover:text-gray-500 ">Contact</motion.h2>
         </Link>

@@ -4,9 +4,15 @@ import NavRight from '../components/Nav/NavRight';
 import NavTop from '../components/Nav/NavTop';
 import Head from 'next/head';
 import { useState } from 'react';
+import Navbar from '../components/Navbar';
 import {motion} from 'framer-motion'
+import HamburgerDropdown from '../components/HamburgerDropdown';
 
 function Policy() {
+	const [isOpen, setIsOpen] = useState(false);
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
 
 	return (
 		<div className='min-h-screen flex flex-col'>
@@ -14,9 +20,19 @@ function Policy() {
 				<title>Policy</title>
 			</Head>
 
+			<div className="hidden xl:block">
 			<NavTop />
+			
       <NavRight />
       <NavLeft />
+
+			</div>
+			<nav className="xl:hidden fixed top-0 z-50  ">
+			<Navbar toggle={toggle} />
+			<div className="transition-all duration-300 ease-in-out ">
+				<HamburgerDropdown isOpen={isOpen} toggle={toggle} />
+			</div>
+		  </nav>
 
 			<motion.main initial='hidden' animate='visible' variants={{
         hidden: {
@@ -52,8 +68,11 @@ function Policy() {
 						</p>
 					</div>
 				</div>
+				<div className="hidden xl:block">
+     		 <NavBottom />
+
+			</div>
 			</motion.main>
-      <NavBottom />
 		</div>
 	);
 }
