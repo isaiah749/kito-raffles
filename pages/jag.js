@@ -15,7 +15,7 @@ import Script from 'next/script'
 import newJag from './styles/Jag/two-black.png'
 import ShopifyForm from '../components/ShopifyForm';
 import NavTop from '../components/Nav/NavTop';
-import blackJag from './styles/Jag/product-shot.png'
+import blackJag from './styles/Jag/product-shot.PNG'
 import jagThree from './styles/Jag/three-black.png'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
