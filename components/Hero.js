@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import image from '../pages/styles/Jag/product-shot.png'
+import image from '../pages/styles/Jag/product-shot.PNG'
 import { useRouter } from 'next/router'
 
 function Hero() {
