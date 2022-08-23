@@ -33,7 +33,7 @@ function entryUnsuccessful() {
 						</p>
 						<div className='w-full flex items-cente justify-center'>
 							<button
-								onClick={() => router.push('/jag')}
+								onClick={() => router.push('https://kitoraffle.online/products/jaguar-runner-black')}
 								className='border-2 border-black text-white shadow-lg w-[200px] hover:bg-white hover:text-black transition ease-in-out duration-500 h-[50px] text-md tracking-wide bg-black '>
 								Back to Jag raffle
 							</button>
