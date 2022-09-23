@@ -18,7 +18,8 @@ export default async (req, res) => {
 					unit_amount: item.price * 100,
 					product_data: {
 						name: item.title + ' ' + item.sizeSelected,
-						images: [ item.image ]
+						images: [ item.image ],
+						description: item.title + ' ' + item.sizeSelected
 					}
 				}
 			}));
@@ -97,7 +98,9 @@ export default async (req, res) => {
 				success_url: `${req.headers.origin}/entry-success`,
 				cancel_url: `${req.headers.origin}/entry-failed`,
 				metadata: {
-					images: JSON.stringify(items.map((item) => item.image))
+					images: JSON.stringify(items.map((item) => item.image)),
+					itemData: JSON.stringify(items.map((item) => item.title)),
+					sizeData: JSON.stringify(items.map((item) => item.sizeSelected)),
 				}
 			});
 

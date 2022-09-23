@@ -40,11 +40,11 @@ const Home = () => {
 		<div className="h-[100vh]  fixed top-0 w-full ">
 			<Image src={image} layout='fill' objectFit='cover' />
 			<div className="absolute top-28 px-36 ">
-          <h2 onClick={() => router.push('https://kitoraffle.online/products/jaguar-runner-black')} className="font-title cursor-pointer text-3xl font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Jaguar Runner Raffle - Live Now</h2>
+          <h2 onClick={() => router.push('https://kito.online')} className="font-title cursor-pointer text-3xl font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Jaguar Runner Raffle - Live Now</h2>
         </div>
 
         <div className="absolute bottom-28 right-0 px-36 ">
-          <h2 onClick={() => router.push('https://kitoraffle.online/products/jaguar-runner-black')} className="font-title text-3xl cursor-pointer font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Enter Jag Raffle</h2>
+          <h2 onClick={() => router.push('https://kito.online')} className="font-title text-3xl cursor-pointer font-semibold tracking-wide italic border-2 border-gray-700 p-3 rounded-md shadow-lg hover:text-white hover:bg-black transition duration-300 hover:scale-105 backdrop-blur-sm ">Enter Jag Raffle</h2>
         </div>
 		</div>
 

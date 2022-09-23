@@ -29,6 +29,33 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.boxNeon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 355px;
+  /* border: 2px solid white; */
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+@media (min-width: 820px) {
+  
+}
+
+.boxNeon h2 {
+  font-weight: 600;
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgb(50, 221, 50),
+  0 0 20px rgb(50, 221, 50),
+  0 0 40px rgb(50, 221, 50),
+  0 0 80px rgb(50, 221, 50),
+  0 0 120px rgb(50, 221, 50);
+}
+
+
 .blur {
   backdrop-filter: blur(1rem);
 }

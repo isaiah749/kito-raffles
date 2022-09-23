@@ -56,23 +56,23 @@ function Navbar({ toggle, reload }) {
 				</Link>
 			</div>
 			<div className='hidden xl:flex xl:items-center xl:justify-center'>
-				<ul className='text-white flex lg:space-x-8 md:space-x-4 font-title tracking-widest'>
-					<li className='hover:underline hover:underline-offset-4 text-lg pt-2'>
+				<ul className='text-black flex lg:space-x-8 md:space-x-4 font-title tracking-widest'>
+					<li className='hover:underline hover:underline-offset-4 text-xl pt-2'>
 						<Link href='/'>
 							<a>Home</a>
 						</Link>
 					</li>
-					<li className='hover:underline hover:underline-offset-4 text-lg pt-2'>
+					<li className='hover:underline hover:underline-offset-4 text-xl pt-2'>
 						<Link href='/contact'>
 							<a>Contact</a>
 						</Link>
 					</li>
-					<li className='hover:underline hover:underline-offset-4 text-lg pt-2'>
+					<li className='hover:underline hover:underline-offset-4 text-xl pt-2'>
 						<Link href='/policy'>
 							<a>Policy</a>
 						</Link>
 					</li>
-					<li className='hover:underline hover:underline-offset-4 text-lg pt-2'>
+					<li className='hover:underline hover:underline-offset-4 text-xl pt-2'>
 						<Link href='https://kito.online'>
 							<a>KITO.online</a>
 						</Link>

@@ -1,3 +1,5 @@
+const { keyframes } = require("styled-components");
+
 module.exports = {
 	mode: 'jit',
 	purge: [ './pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}' ],
@@ -47,6 +49,13 @@ module.exports = {
 			},
 			gridTemplateRows: {
 				'md-mason': 'repeat(3, 120px);'
+			},
+			keyframes: {
+				lightbar: {
+					'0%, 5%' : { transform: 'scale(0) translateX(0)' },
+					'10%' : { transform: 'scaleY(1) translateX(0)' },
+					'90%' : { transform: 'scaleY(1) translateX(calc(355px -10px))' }
+				}
 			}
 		}
 	},
