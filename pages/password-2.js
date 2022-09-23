@@ -48,7 +48,7 @@ const PasswordTwo = () => {
             {/* Verticle Image */}
             <div className="border-2 border-black pb-10 mt-5 px-2 rounded-md bg-white shadow-xl ">
               <div className="relative h-[290px] md:h-[350px] xl:h-[600px] ">
-                <Image src={shotEleven} layout="fill" objectFit="contain" />
+                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Dunes_Scanned-21.png?v=1663954486' layout="fill" objectFit="contain" />
               </div>
             </div>
             <div className="border-2 border-black mt-8 mb-6 pb-10 px-2 rounded-md bg-white shadow-xl ">
@@ -67,12 +67,12 @@ const PasswordTwo = () => {
             </div>
             <div className="border-2 border-black pb-5 mb-8 px-2 rounded-md bg-white shadow-xl ">
               <div className="relative h-[220px] xl:h-[450px] ">
-                <Image src={shotNine} layout="fill" objectFit="contain" />
+                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/hori3.png?v=1654881203' layout="fill" objectFit="contain" />
               </div>
             </div>
             <div className="border-2 border-black pb-10 px-2 rounded-md bg-white shadow-xl ">
               <div className="relative h-[260px] md:h-[380px] xl:h-[650px] ">
-                <Image src={shotTen} layout="fill" objectFit="contain" />
+                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Dunes_Scanned-24.png?v=1663954483' layout="fill" objectFit="contain" />
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ const PasswordTwo = () => {
             {/* Verticle Image */}
             <div className="border-2 border-black pb-10 px-2 mt-5 mb-4 rounded-md bg-white shadow-xl ">
               <div className="relative h-[290px] md:h-[350px] xl:h-[650px] ">
-                <Image src={shotSeven} layout="fill" objectFit="contain" />
+                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Dunes_Scanned-11.png?v=1663954485' layout="fill" objectFit="contain" />
               </div>
             </div>
             <div className="border-2 border-black pb-10 px-2 mb-9 rounded-md bg-white shadow-xl ">
@@ -140,7 +140,7 @@ const PasswordTwo = () => {
             </div>
             <div className="border-2 border-black pb-10 px-2 mb-6 mt-10 rounded-md bg-white shadow-xl ">
               <div className="relative h-[340px] xl:h-[650px] ">
-                <Image src={shotEight} layout="fill" objectFit="contain" />
+                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Dunes_Scanned-4.png?v=1663954597' layout="fill" objectFit="contain" />
               </div>
             </div>
             <div className="border-2 border-black pb-10 mb-9 px-2 rounded-md bg-white shadow-xl ">
