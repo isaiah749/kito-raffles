@@ -22,7 +22,7 @@ const Home = () => {
 
 
   return (
-    <div className='min-h-screen w-full'>
+    <div className='min-h-screen w-full overflow-hidden'>
 
 
       <div className='min-h-screen w-full hidden xl:block '>
