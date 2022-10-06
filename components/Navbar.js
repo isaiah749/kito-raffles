@@ -81,7 +81,7 @@ function Navbar({ toggle, reload }) {
 			</div>
 			<div className='flex items-center space-x-3 justify-end pt-2 pr-3 '>
 				<div className='xl:hidden relative cursor-pointer'>
-					<span className='absolute top-[.65rem] right-[1rem] text-[.8rem] text-black font-semibold'>
+					<span className='absolute top-[.65rem] right-[.9rem] text-[.8rem] text-black font-semibold'>
 						{items.length}
 					</span>
 					<Image onClick={() => router.push('/checkout')} src={bagIcon} height={35} width={35} />

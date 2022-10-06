@@ -46,10 +46,12 @@ const passwordTwoCol = collection(db, 'password2')
 
 const passwordThreeCol = collection(db, 'password3')
 
+const passwordFourCol = collection(db, 'password4')
+
 const raeCol = collection(db, 'RAE-raffle');
 
 const pompeiiCol = collection(db, 'pompeii-raffle');
 
 const JagPhoneCol = collection(db, 'JagPhoneCol')
 
-export { db, afterlifeCol, subscriptionCol, pompeiiCol, raeCol, passwordOneCol, JagPhoneCol, passwordTwoCol, passwordThreeCol, addDoc };
+export { db, afterlifeCol, subscriptionCol, pompeiiCol, raeCol, passwordOneCol, JagPhoneCol, passwordTwoCol, passwordThreeCol, passwordFourCol, addDoc };

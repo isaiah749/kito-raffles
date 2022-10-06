@@ -55,6 +55,25 @@ input[type=number] {
   0 0 120px rgb(50, 221, 50);
 }
 
+.boxNeon2 h2 {
+  font-weight: 600;
+  white-space: nowrap;
+  text-shadow: 0 0 10px white,
+  0 0 20px white,
+  0 0 40px white,
+  0 0 80px white,
+  0 0 120px white;
+}
+.boxNeon2 h1 {
+  font-weight: 600;
+  white-space: nowrap;
+  text-shadow: 0 0 10px white,
+  0 0 20px white,
+  0 0 40px white,
+  0 0 80px white,
+  0 0 120px white;
+}
+
 
 .blur {
   backdrop-filter: blur(1rem);
