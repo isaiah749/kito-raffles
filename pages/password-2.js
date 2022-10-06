@@ -13,9 +13,9 @@ import shotSix from "./styles/Jag/Edits/Scanned Edits/Edit4scan.png";
 // import shotNine from "./styles/Jag/Edits/Scanned Edits/Edit7scan.png";
 // import shotTen from "./styles/Jag/Scanned/Dunes_scanned-24.png";
 // import shotEleven from "./styles/Jag/Scanned/Dunes_scanned-21.png";
-import shotTwelve from "./styles/Jag/Scanned/Dunes_scanned-7.png";
+// import shotTwelve from "./styles/Jag/Scanned/Dunes_scanned-7.png";
 import shotThirt from "./styles/Jag/Edits/Scanned Edits/Edit5Scanned.png";
-import shotFourt from "./styles/Jag/Edits/Scanned Edits/Edit10scan.png";
+// import shotFourt from "./styles/Jag/Edits/Scanned Edits/Edit10scan.png";
 import HamburgerDropdown from "../components/HamburgerDropdown";
 
 const PasswordTwo = () => {
@@ -111,7 +111,7 @@ const PasswordTwo = () => {
             {/* Verticle Image */}
             <div className="border-2 border-black pb-10 px-2 rounded-md bg-white shadow-xl ">
               <div className="relative h-[240px] md:h-[340px] xl:h-[650px] ">
-                <Image src={shotFourt} layout="fill" objectFit="contain" />
+                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Edit10Scan.png?v=1665066036' layout="fill" objectFit="contain" />
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@ const PasswordTwo = () => {
             </div>
             <div className="border-2 border-black pb-10 mb-9 px-2 rounded-md bg-white shadow-xl ">
               <div className="relative lg:h-[215px] xl:h-[450px] ">
-                <Image src={shotTwelve} layout="fill" objectFit="contain" />
+                <Image src='https://cdn.shopify.com/s/files/1/0274/1351/2301/files/Dunes_Scanned-7.png?v=1665066029' layout="fill" objectFit="contain" />
               </div>
             </div>
           </div>
